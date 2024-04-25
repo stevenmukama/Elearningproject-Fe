@@ -1,13 +1,15 @@
 import './App.css';
+import Herosection from './components/Herosection';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      hi there        
-      </header>
+     <Navbar />
+     <Herosection/>
     </div>
   );
 }
 
 export default App;
+
