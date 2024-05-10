@@ -46,8 +46,8 @@ function CertificationSection() {
 				<section>
 					<div className='flex items-center gap-10 mb-16 max-sm:flex-col'>
 						<div>
-							<div className='p-2 bg-white w-fit'>
-								<h1 className='text-start w-fit font-bold text-[#20B486] text-xl'>
+							<div className='p-2 mb-3 bg-white rounded-md w-fit'>
+								<h1 className='text-start w-fit font-bold  text-[#20B486] text-xl'>
 									{' '}
 									Benefits!
 								</h1>
