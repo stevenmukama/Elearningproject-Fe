@@ -61,8 +61,13 @@ const Navbar = () => {
 							/>
 						</div>
 					</div>
-					<a className='nav-item'>Sign in </a>{' '}
-					<a className='button box-account'>Sign up </a>
+					<a className='nav-item'>Sign in </a>
+
+					{windowWidth <= 768 ? (
+						<a className='button box-account'>Sign up </a>
+					) : (
+						<a className='button box-account'>Create account </a>
+					)}
 					<div className='hidden max-sm:block'>
 						<button className='border max-sm:border-[#888686] max-sm:mt-2 max-sm:border-solid max-sm:border max-sm:rounded-lg'>
 							<img
