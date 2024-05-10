@@ -1,1 +1,0 @@
-This project is built with react and css
