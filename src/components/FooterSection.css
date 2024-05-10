@@ -1,0 +1,9 @@
+.bar-line {
+	border-width: 1px 0;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #ffff;
+	width: 100%;
+	padding: 12px 0;
+}
