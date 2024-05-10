@@ -18,7 +18,7 @@ function WhyUs() {
 	return (
 		<>
 			<div className='bg-[#20B486] '>
-				<section className=' rounded-2xl pt-7 max-sm:px-0'>
+				<section className='py-8  rounded-2xl max-sm:px-0'>
 					<div className='flex gap-5 text-white justify-evenly text-start  max-sm:text-[22px] max-sm:flex-col-reverse'>
 						<div className='max-sm:flex max-sm:flex-col'>
 							{windowWidth <= 768 ? (
