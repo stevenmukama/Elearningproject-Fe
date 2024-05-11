@@ -60,7 +60,7 @@ function CourseSection() {
 
 	return (
 		<>
-			<section className='pt-16 max-sm:mx-8'>
+			<section className='pt-16 max-sm:mx-8 md:max-xl:pt-0 max-sm:pt-0'>
 				<div className='courses-section-header '>
 					<h1 className='popular-courses max-sm:text-xl'>
 						Our <span className='courses-title'>Courses</span>{' '}
@@ -101,7 +101,7 @@ function CourseSection() {
 						</div>
 
 						<div className='card-info'>
-							<div className='lessons-rating'>
+							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 								<div className='lessons-count '>
 									<img
 										src={numberImage}
@@ -127,7 +127,7 @@ function CourseSection() {
 								Advanced Cleaning Techniques and Equipment Usage
 							</p>
 							<div className='discount-section'>
-								<div className='dollar-discounted'>
+								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-sm:text-[15px]'>
 										{' '}
 										$ 5
@@ -150,7 +150,7 @@ function CourseSection() {
 						</div>
 
 						<div className='card-info'>
-							<div className='lessons-rating'>
+							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 								<div className='lessons-count '>
 									<img
 										src={numberImage}
@@ -176,8 +176,8 @@ function CourseSection() {
 								Advanced Cleaning Techniques and Equipment Usage
 							</p>
 							<div className='discount-section'>
-								<div className='dollar-discounted'>
-									<span className='dollar-numbers-five max-sm:text-[15px]'>
+								<div className='dollar-discounted md:max-xl:text-[17px]'>
+									<span className='dollar-numbers-five max-sm:text-[15px] '>
 										{' '}
 										$ 5
 									</span>
@@ -199,7 +199,7 @@ function CourseSection() {
 						</div>
 
 						<div className='card-info'>
-							<div className='lessons-rating'>
+							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 								<div className='lessons-count'>
 									<img
 										src={numberImage}
@@ -224,7 +224,7 @@ function CourseSection() {
 								Advanced Cleaning Techniques and Equipment Usage
 							</p>
 							<div className='discount-section'>
-								<div className='dollar-discounted'>
+								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-sm:text-[15px]'>
 										{' '}
 										$ 5

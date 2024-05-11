@@ -24,9 +24,9 @@ function HowItWorks() {
 	];
 	return (
 		<section className='max-sm:flex-col max-sm:text-center'>
-			<h1 className='text-6xl font-bold text-[#21B573] mb-16 max-sm:text-xl'>
+			<h1 className='text-6xl font-bold text-[#21B573] mb-16 max-sm:text-xl font-koho'>
 				{' '}
-				How Spid-Education Works!
+				How Spid-Education Work
 			</h1>
 			<div className='flex gap-10 max-sm:flex-col max-sm:m-0'>
 				<div className='flex-col items-center justify-center h-full pt-6 mt-8 max-sm:mt-2'>

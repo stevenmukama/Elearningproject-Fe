@@ -42,19 +42,19 @@ function CertificationSection() {
 	];
 	return (
 		<>
-			<div className="bg-[url('/public/whiteBg.svg')] bg-no-repeat pt-12 pb-12 bg-cover max-sm:bg-contain">
+			<div className="bg-[url('/public/whiteBg.svg')] bg-no-repeat pt-12 pb-12 bg-cover max-sm:bg-cover">
 				<section>
-					<div className='flex items-center gap-10 mb-16 max-sm:flex-col'>
+					<div className='flex items-center gap-10 mb-16 max-sm:flex-col md:max-xl:flex-col'>
 						<div>
 							<div className='p-2 mb-3 bg-white rounded-md w-fit'>
-								<h1 className='text-start w-fit font-bold  text-[#20B486] text-xl'>
+								<h1 className='text-start w-fit font-bold  text-[#20B486] text-xl max-sm:text-sm'>
 									{' '}
 									Benefits!
 								</h1>
 							</div>
 							<h2
 								className='font-bold text-start pb-6 w-fit
-				 text-[#F49406] text-4xl font-koho'>
+				 text-[#F49406] text-4xl font-koho max-sm:text-xl md:max-xl:w-full'>
 								Get Your Certificate!
 							</h2>
 							<div>
@@ -77,10 +77,14 @@ function CertificationSection() {
 						<img src='/blurcertificate.png' />
 					</div>
 
-					<div className='flex gap-10 pb-5 text-start max-sm:flex-col-reverse'>
-						<img src='/waitresslady.png' />
+					<div className='flex gap-10 pb-5 text-start max-sm:flex-col-reverse md:max-xl:flex-col-reverse'>
+						<img
+							src='/waitresslady.png'
+							alt='waitresslady'
+							className='object-contain'
+						/>
 						<div>
-							<h1 className='mb-8 text-3xl font-bold font-koho text-[#20B486]'>
+							<h1 className='mb-8 text-3xl font-bold font-koho text-[#20B486] md:max-xl:text-4xl'>
 								Helping you Find a job!
 							</h1>
 							{moreBenefits.map((moreBenefit) => (
@@ -90,7 +94,7 @@ function CertificationSection() {
 									<div className='p-4 bg-white rounded-full '>
 										<img
 											src={moreBenefit.imgSrc}
-											className='bg-white '
+											className='bg-white'
 											alt={moreBenefit.altText}
 										/>
 									</div>

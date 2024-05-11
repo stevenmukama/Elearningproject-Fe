@@ -5,7 +5,7 @@ import './HeroSection.css';
 function HeroSection() {
 	return (
 		<>
-			<section className='Home-section max-sm:flex-col-reverse max-sm:mt-5'>
+			<section className='Home-section md:max-xl:block max-sm:flex-col-reverse max-sm:mt-5'>
 				<img
 					className='circleBg max-sm:hidden'
 					src={circleBg}

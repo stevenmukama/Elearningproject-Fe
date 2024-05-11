@@ -18,8 +18,8 @@ function WhyUs() {
 	return (
 		<>
 			<div className='bg-[#20B486] '>
-				<section className='py-8  rounded-2xl max-sm:px-0'>
-					<div className='flex gap-5 text-white justify-evenly text-start  max-sm:text-[22px] max-sm:flex-col-reverse'>
+				<section className='py-8 rounded-2xl max-sm:px-0'>
+					<div className='flex gap-5 text-white justify-evenly text-start  max-sm:text-[22px] max-sm:flex-col-reverse md:max-xl:flex-col-reverse'>
 						<div className='max-sm:flex max-sm:flex-col'>
 							{windowWidth <= 768 ? (
 								<h2 className='font-bold font-koho text-start max-sm:text-xl max-sm:mb-8'>
@@ -69,7 +69,10 @@ function WhyUs() {
 							</button>
 						</div>
 
-						<img src='/ladywithcertificate.png' />
+						<img
+							src='/ladywithcertificate.png'
+							alt='ladywithcertificate'
+						/>
 					</div>
 				</section>
 			</div>

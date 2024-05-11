@@ -19,7 +19,9 @@ function FooterSection() {
 
 	return (
 		<>
-			<div className='bg-[#1E1E1E] pb-9'>
+			{/*  */}
+			{/* max-xl:max-lg:h-[70vh] */}
+			<div className='footerSection md:max-xl:h-[70vh]  bg-[#1E1E1E] pb-9  max-md:h-[50vh] '>
 				<section className='pb-4 pt-9 max-sm:mx-8'>
 					<div className='mb-11'>
 						<div className='flex justify-between text-white mb-11 max-sm:items-center'>

@@ -42,7 +42,10 @@ button {
 
 @media screen and (max-width: 768px) {
 	.nav-item {
-		font-size: 11px;
+		font-size: 14px;
+	}
+	.searchbox-text {
+		display: none;
 	}
 }
 

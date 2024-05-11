@@ -40,7 +40,7 @@ const Navbar = () => {
 					<a className='nav-item max-sm:hidden'>Home</a>
 					<a className='nav-item max-sm:hidden'>Courses</a>
 					<a className='nav-item max-sm:hidden'>Contact us</a>
-					<div className='searchbox-text max-sm:hidden'>
+					<div className='searchbox-text md:max-xl:hidden max-sm:hidden'>
 						<div className='search-box'>
 							<img
 								src={search}
