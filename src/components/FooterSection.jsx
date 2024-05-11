@@ -70,9 +70,9 @@ function FooterSection() {
 						</div>
 						<div className='flex items-start justify-between text-white max-sm:text-xs max-sm:items-center'>
 							<div className='leading-5 text-start max-sm:leading-normal'>
-								<p>info.spided@gmail.com</p>
-								<p className='py-1'>+250 784 673 524</p>
-								<p className='py-1'>+250 789 129 482</p>
+								<p className='py-2'>info.spided@gmail.com</p>
+								<p className='py-2'>+250 784 673 524</p>
+								<p className='py-2'>+250 789 129 482</p>
 							</div>
 							<div className='flex gap-2 max-sm:flex-col max-sm:text-start'>
 								<p>Home</p>
