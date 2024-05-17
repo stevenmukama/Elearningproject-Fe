@@ -19,24 +19,22 @@ function FooterSection() {
 
 	return (
 		<>
-			{/*  */}
-			{/* max-xl:max-lg:h-[70vh] */}
-			<div className='footerSection md:max-xl:h-[70vh]  bg-[#1E1E1E] pb-9  max-md:h-[50vh] '>
-				<section className='pb-4 pt-9 max-sm:mx-8'>
+			<div className="footerSection md:max-xl:h-[70vh] pb-9 bg-[url('/public/bgfooter.svg')]  max-md:h-[50vh]">
+				<section className='pt-20 pb-4 max-sm:mx-8'>
 					<div className='mb-11'>
-						<div className='flex justify-between text-white mb-11 max-sm:items-center'>
-							<h1 className='font-bold max-sm:text-xs'>
+						<div className='flex items-center justify-between text-white mb-11 max-sm:items-center'>
+							<h1 className='text-lg font-bold max-sm:text-xs'>
 								Get In touch with Us
 							</h1>
 							<div className='flex items-center gap-12'>
 								<img
 									src='/logoFooter.svg'
-									className='max-sm:h-[17px]'
+									className='h-16 max-sm:h-[17px]'
 								/>
 								<div className='flex gap-1 max-sm:hidden'>
 									{/* <div className='bar-line' /> */}
 									<hr className='h-auto border border-solid max-sm:hidden' />
-									<div className='flex font-bold text-start max-sm:hidden'>
+									<div className='flex text-xl font-bold font-koho text-start max-sm:hidden'>
 										<div>
 											<span>
 												{' '}
@@ -80,25 +78,42 @@ function FooterSection() {
 								<p>Contact us</p>
 							</div>
 							<div className='max-sm:flex-col'>
-								<div className='flex items-start gap-2'>
-									<p className='text-[#F49406] font-bold text-2xl max-sm:text-xs'>
-										SignUp
-									</p>
-									<img
-										src='/gosign.svg'
-										alt='gosign'
-										className='max-sm:w-3'
-									/>
-								</div>
-								<div className='max-sm:mt-1 max-sm:text-start'>
-									<h1 className='max-sm:mt-1'>Languages</h1>
-									<p className='max-sm:mt-1 max-sm:hover:text-[#21B573]'>
-										French
-									</p>
-									<p className='max-sm:mt-1 max-sm:hover:text-[#21B573]'>
-										English
-									</p>
-								</div>
+								{windowWidth <= 768 ? (
+									<>
+										<div className='flex items-start gap-2'>
+											<p className='text-[#F49406] font-bold text-2xl max-sm:text-xs'>
+												SignUp
+											</p>
+											<img
+												src='/gosign.svg'
+												alt='gosign'
+												className='max-sm:w-3'
+											/>
+										</div>
+										<div className='max-sm:mt-1 max-sm:text-start'>
+											<h1 className='max-sm:mt-1'>Languages</h1>
+											<p className='max-sm:mt-1 max-sm:hover:text-[#21B573]'>
+												French
+											</p>
+											<p className='max-sm:mt-1 max-sm:hover:text-[#21B573]'>
+												English
+											</p>
+										</div>
+									</>
+								) : (
+									<>
+										<div className='flex items-start gap-2'>
+											<p className='text-[#F49406] font-bold text-xl max-sm:text-xs'>
+												SignUp
+											</p>
+											<img
+												src='/gosign.svg'
+												alt='gosign'
+												className='max-sm:w-3'
+											/>
+										</div>
+									</>
+								)}
 							</div>
 						</div>
 					</div>

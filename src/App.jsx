@@ -8,6 +8,7 @@ import WhyUs from './components/WhyUs';
 import FooterSection from './components/FooterSection';
 import CourseSection from './components/CourseSection';
 import './App.css';
+import ContactForm from './components/ContactForm';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 			<HowItWorks />
 			<ReviewSection />
 			<WhyUs />
+			<ContactForm />
 			<FooterSection />
 		</div>
 	);

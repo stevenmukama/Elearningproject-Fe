@@ -1,24 +1,53 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import logo from './../img/spidedlogo.svg';
-import search from './../img/search.svg';
-import icon from './../img/Icon.svg';
 import './Navbar.css';
+
+const languages = [
+	{
+		value: 'English',
+		label: 'English',
+		flag: '/EnglishLang.svg',
+	},
+	{
+		value: 'French',
+		label: 'French',
+		flag: '/FrenchLang.svg',
+	},
+];
+
 const Navbar = () => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
 	const [isOpen, setIsOpen] = useState(false);
+	const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+	const dropdownRef = useRef(null);
 
 	useEffect(() => {
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth);
 		};
 
+		const handleClickOutside = (event) => {
+			if (
+				dropdownRef.current &&
+				!dropdownRef.current.contains(event.target)
+			) {
+				setIsOpen(false);
+			}
+		};
+
 		window.addEventListener('resize', handleResize);
+		document.addEventListener('mousedown', handleClickOutside);
 
 		return () => {
 			window.removeEventListener('resize', handleResize);
+			document.removeEventListener('mousedown', handleClickOutside);
 		};
 	}, []);
+
+	const handleLanguageChange = (lang) => {
+		setSelectedLanguage(lang);
+		setIsOpen(false);
+	};
 
 	return (
 		<>
@@ -40,29 +69,7 @@ const Navbar = () => {
 					<a className='nav-item max-sm:hidden'>Home</a>
 					<a className='nav-item max-sm:hidden'>Courses</a>
 					<a className='nav-item max-sm:hidden'>Contact us</a>
-					<div className='searchbox-text md:max-xl:hidden max-sm:hidden'>
-						<div className='search-box'>
-							<img
-								src={search}
-								alt='search'
-								className='search'
-							/>
-							<input
-								className='search-input'
-								placeholder='What do you want to learn?'
-							/>
-						</div>
-						<div className='explore-more'>
-							<p className='explore-more-text'>Explore</p>
-							<img
-								src={icon}
-								alt='down-icon'
-								className='explore-more-icon'
-							/>
-						</div>
-					</div>
 					<a className='nav-item'>Sign in </a>
-
 					{windowWidth <= 768 ? (
 						<a className='button box-account'>Sign up </a>
 					) : (
@@ -75,6 +82,40 @@ const Navbar = () => {
 								className='pl-2 pr-2 max-sm:w-8 max-sm:h-8'
 							/>
 						</button>
+					</div>
+					<div
+						className='px-4 py-3 bg-[#4B4B4B] text-white rounded-md relative custom-select'
+						ref={dropdownRef}>
+						<button
+							className='bg-[#4B4B4B] text-white flex items-center gap-2'
+							onClick={() => setIsOpen(!isOpen)}>
+							<img
+								src={selectedLanguage.flag}
+								alt={selectedLanguage.label}
+								className='w-6 h-6 mr-2'
+							/>
+							<span>{selectedLanguage.label}</span>
+							<img src='/public/downEng.svg' />
+						</button>
+						{isOpen && (
+							<ul className='absolute bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
+								{languages.map((lang) => (
+									<>
+										<li
+											key={lang.value}
+											className='flex items-center p-2 cursor-pointer hover:bg-[#3a3a3a]'
+											onClick={() => handleLanguageChange(lang)}>
+											<img
+												src={lang.flag}
+												alt={lang.label}
+												className='w-6 h-6 mr-2'
+											/>
+											<span>{lang.label}</span>
+										</li>
+									</>
+								))}
+							</ul>
+						)}
 					</div>
 				</div>
 				<div

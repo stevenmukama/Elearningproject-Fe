@@ -29,16 +29,15 @@ function ReviewSection() {
 		<>
 			<div className='bg-[#F0FAF7]'>
 				<section className='p-8 mb-11 mt-11 max-sm:text-center'>
-					{/* <h1 className='p-12 text-4xl text-center'>
-						{reviews[activeIndex].comment}
-					</h1> */}
-					{reviews[activeIndex].comment.split('\n').map((line, index) => (
-						<h1
-							key={index}
-							className='p-2 text-5xl text-center text-[#101828] max-sm:text-[22px]'>
-							{line}
-						</h1>
-					))}
+					{reviews[activeIndex].comment
+						.split('\n')
+						.map((comment, index) => (
+							<h1
+								key={index}
+								className='p-2 text-4xl text-center text-[#101828] max-sm:text-[22px]'>
+								{comment}
+							</h1>
+						))}
 
 					<div className='relative items-center'>
 						<div className='w-full p-4 transition-opacity duration-300 ease-in-out'>
