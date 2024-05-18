@@ -28,6 +28,7 @@ const ContactForm = () => {
 	const [errors, setErrors] = useState({});
 	const [isFormValid, setIsFormValid] = useState(false);
 	const [touchedFields, setTouchedFields] = useState({});
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 	const validateForm = useCallback(() => {
 		const newErrors = {};
@@ -60,14 +61,33 @@ const ContactForm = () => {
 		validateForm();
 	}, [formValues, validateForm]);
 
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		const handleScroll = () => {
+			setTouchedFields({});
+			setErrors({});
+		};
+
+		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
 		<section className='pb-20'>
-			<div className='flex pt-10 pb-20'>
-				<div className='mb-8 w-[45%]'>
+			<div className='flex pt-10 pb-20 max-md:flex-col'>
+				<div className='mb-8 w-[45%] max-md:w-full'>
 					{contactSection.map((section, index) => (
 						<div
 							key={index}
-							className='text-start py-16 px-4 leading-7 rounded-lg text-white bg-[#07614C] rounded-r-none rounded-x relative'>
+							className='text-start py-16 px-4 leading-7 rounded-lg text-white bg-[#07614C] rounded-r-none rounded-x relative max-md:rounded-lg max-md:rounded-b-none'>
 							<h1 className='mb-2 text-3xl font-bold font-Santepheap'>
 								{section.HeaderText}
 							</h1>
@@ -110,10 +130,10 @@ const ContactForm = () => {
 						</div>
 					</div>
 				</div>
-				<div className='relative w-[100%] flex px-12 bg-[#F9F8EC] rounded-lg'>
+				<div className='relative w-[100%] flex px-12 bg-[#F9F8EC] rounded-lg  max-md:pl-2'>
 					<img
 						src='/lineContact.svg'
-						className='w-4 pt-9 h-[61%]'
+						className='w-4 pt-9 h-[61%] max-md:h-[353px]'
 					/>
 					<form className='relative w-full px-3 font-Poppins'>
 						{FormData.map((data, index) => (
@@ -167,10 +187,10 @@ const ContactForm = () => {
 						))}
 						<div className='flex items-end justify-end py-4'>
 							<button
-								className={`px-4 py-4 font-bold rounded focus:outline-none focus:shadow-outline flex gap-3 items-center ${
+								className={`px-4 py-4 font-bold rounded focus:outline-none focus:shadow-outline flex gap-3 items-center max-sm:px-3 max-sm:gap-5 max-sm:py-2 ${
 									isFormValid
 										? 'bg-[#07614C] text-white'
-										: 'bg-[#7d8d89] text-white'
+										: 'bg-[#07614C] text-white'
 								}`}
 								type='button'
 								disabled={!isFormValid}>
@@ -180,16 +200,30 @@ const ContactForm = () => {
 						</div>
 					</form>
 				</div>
-				<div className='border w-1/6 h-[312px] bg-[#07614C] rounded-lg rounded-l-none'></div>
+				<div className='border w-1/6 h-[312px] bg-[#07614C] rounded-lg rounded-l-none max-md:hidden'></div>
 			</div>
-			<div className='flex justify-between'>
-				<h2 className='text-3xl font-Santepheap'>
-					Prefer to chat with us via Whats-app?
-				</h2>
-				<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-Poppins'>
-					<span>Let&apos;s Chat</span>
-					<img src='/whatsappIcon.svg' />
-				</button>
+			<div className='flex items-center justify-between '>
+				{windowWidth <= 768 ? (
+					<>
+						<h2 className=' font-Santephea max-md:text-[15px]'>
+							Chat with us via Whats-app?
+						</h2>
+						<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-Poppins max-md:text-[13px] max-md:px-2 max-md:py-1'>
+							<span>Let&apos;s Chat</span>
+							<img src='/whatsappIcon.svg' />
+						</button>{' '}
+					</>
+				) : (
+					<>
+						<h2 className='text-3xl font-Santephea'>
+							Prefer to chat with us via Whats-app?
+						</h2>
+						<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-Poppins'>
+							<span>Let&apos;s Chat</span>
+							<img src='/whatsappIcon.svg' />
+						</button>
+					</>
+				)}
 			</div>
 		</section>
 	);

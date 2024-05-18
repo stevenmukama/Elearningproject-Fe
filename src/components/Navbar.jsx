@@ -84,10 +84,10 @@ const Navbar = () => {
 						</button>
 					</div>
 					<div
-						className='px-4 py-3 bg-[#4B4B4B] text-white rounded-md relative custom-select'
+						className='px-4 py-3 bg-[#4B4B4B] text-white rounded-md relative  max-sm:hidden'
 						ref={dropdownRef}>
 						<button
-							className='bg-[#4B4B4B] text-white flex items-center gap-2'
+							className='bg-[#4B4B4B] text-white flex items-center gap-2 '
 							onClick={() => setIsOpen(!isOpen)}>
 							<img
 								src={selectedLanguage.flag}

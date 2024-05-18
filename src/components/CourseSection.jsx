@@ -66,9 +66,9 @@ function CourseSection() {
 						Our <span className='courses-title'>Courses</span>{' '}
 					</h1>
 
-					<div className='explore-course-container max-sm:gap-0 max-sm:items-center'>
+					<div className='explore-course-container max-sm:gap-0 max-sm:items-center max-sm:w-1/3'>
 						{windowWidth <= 768 ? (
-							<h2 className='Explore-courses font-koho max-sm:text-[15px] '>
+							<h2 className='Explore-courses font-koho max-sm:text-[15px]'>
 								More Courses
 							</h2>
 						) : (

@@ -19,22 +19,21 @@ function FooterSection() {
 
 	return (
 		<>
-			<div className="footerSection md:max-xl:h-[70vh] pb-9 bg-[url('/public/bgfooter.svg')]  max-md:h-[50vh]">
-				<section className='pt-20 pb-4 max-sm:mx-8'>
+			<div className="footerSection md:max-xl:h-[100vh] pb-9 bg-[url('/public/bgfooter.svg')]   max-md:h-[75vh] max-md:['/public/smallBgFooter.svg'] max-md:bg-cover   max-md:bg-no-repeat max-md:bg-top">
+				<section className='pt-20 pb-4 max-md:mx-8 '>
 					<div className='mb-11'>
-						<div className='flex items-center justify-between text-white mb-11 max-sm:items-center'>
-							<h1 className='text-lg font-bold max-sm:text-xs'>
+						<div className='flex items-center justify-between text-white mb-11 max-md:items-center'>
+							<h1 className='text-lg font-bold max-md:text-xs'>
 								Get In touch with Us
 							</h1>
 							<div className='flex items-center gap-12'>
 								<img
 									src='/logoFooter.svg'
-									className='h-16 max-sm:h-[17px]'
+									className='h-16 max-md:h-6'
 								/>
-								<div className='flex gap-1 max-sm:hidden'>
-									{/* <div className='bar-line' /> */}
-									<hr className='h-auto border border-solid max-sm:hidden' />
-									<div className='flex text-xl font-bold font-koho text-start max-sm:hidden'>
+								<div className='flex gap-1 max-md:hidden'>
+									<hr className='h-auto border border-solid max-md:hidden' />
+									<div className='flex text-xl font-bold font-koho text-start max-md:hidden'>
 										<div>
 											<span>
 												{' '}
@@ -55,7 +54,7 @@ function FooterSection() {
 							<p className='font-bold text-start'>
 								{windowWidth <= 768 ? (
 									<>
-										<span className='max-sm:text-xs'> Learn with us?</span>
+										<span className='max-md:text-xs'> Learn with us?</span>
 									</>
 								) : (
 									<>
@@ -66,36 +65,36 @@ function FooterSection() {
 								)}
 							</p>
 						</div>
-						<div className='flex items-start justify-between text-white max-sm:text-xs max-sm:items-center'>
-							<div className='leading-5 text-start max-sm:leading-normal'>
+						<div className='flex items-start justify-between text-white max-md:text-xs max-md:items-center'>
+							<div className='leading-5 text-start max-md:leading-normal'>
 								<p className='py-2'>info.spided@gmail.com</p>
 								<p className='py-2'>+250 784 673 524</p>
 								<p className='py-2'>+250 789 129 482</p>
 							</div>
-							<div className='flex gap-2 max-sm:flex-col max-sm:text-start'>
+							<div className='flex gap-2 max-md:flex-col max-md:text-start'>
 								<p>Home</p>
 								<p>Courses</p>
 								<p>Contact us</p>
 							</div>
-							<div className='max-sm:flex-col'>
+							<div className='max-md:flex-col'>
 								{windowWidth <= 768 ? (
 									<>
 										<div className='flex items-start gap-2'>
-											<p className='text-[#F49406] font-bold text-2xl max-sm:text-xs'>
+											<p className='text-[#F49406] font-bold text-2xl max-md:text-xs'>
 												SignUp
 											</p>
 											<img
 												src='/gosign.svg'
 												alt='gosign'
-												className='max-sm:w-3'
+												className='max-md:w-3'
 											/>
 										</div>
-										<div className='max-sm:mt-1 max-sm:text-start'>
-											<h1 className='max-sm:mt-1'>Languages</h1>
-											<p className='max-sm:mt-1 max-sm:hover:text-[#21B573]'>
+										<div className='max-md:mt-1 max-md:text-start'>
+											<h1 className='max-md:mt-1'>Languages</h1>
+											<p className='max-md:mt-1 max-md:hover:text-[#21B573]'>
 												French
 											</p>
-											<p className='max-sm:mt-1 max-sm:hover:text-[#21B573]'>
+											<p className='max-md:mt-1 max-md:hover:text-[#21B573]'>
 												English
 											</p>
 										</div>
@@ -103,13 +102,13 @@ function FooterSection() {
 								) : (
 									<>
 										<div className='flex items-start gap-2'>
-											<p className='text-[#F49406] font-bold text-xl max-sm:text-xs'>
+											<p className='text-[#F49406] font-bold text-xl max-md:text-xs'>
 												SignUp
 											</p>
 											<img
 												src='/gosign.svg'
 												alt='gosign'
-												className='max-sm:w-3'
+												className='max-md:w-3'
 											/>
 										</div>
 									</>
@@ -124,28 +123,28 @@ function FooterSection() {
 						<div className='flex items-center gap-2'>
 							<img
 								src='/tiktokicon.svg'
-								className='max-sm:h-[12px]'
+								className='max-md:h-[12px]'
 							/>
 							<img
 								src='/linkedinicon.svg'
-								className='max-sm:h-[12px]'
+								className='max-md:h-[12px]'
 							/>
 							<img
 								src='/facebookicon.svg'
-								className='max-sm:h-[12px]'
+								className='max-md:h-[12px]'
 							/>
 							<img
 								src='/instagramicon.svg'
-								className='max-sm:h-[12px]'
+								className='max-md:h-[12px]'
 							/>
-							<p className='max-sm:text-[12px]'> Spided</p>
+							<p className='max-md:text-[12px]'> Spided</p>
 						</div>
 
-						<p className='max-sm:text-[12px]'>
+						<p className='max-md:text-[12px]'>
 							© 2024{' '}
-							<span className='max-sm:hidden'>All-Right Reserved.</span>
+							<span className='max-md:hidden'>All-Right Reserved.</span>
 						</p>
-						<p className='max-sm:text-[12px]'>Developed by Mayllos</p>
+						<p className='max-md:text-[12px]'>Developed by Mayllos</p>
 					</div>
 				</section>
 			</div>
