@@ -95,7 +95,7 @@ const Navbar = () => {
 								className='w-6 h-6 mr-2'
 							/>
 							<span>{selectedLanguage.label}</span>
-							<img src='/public/downEng.svg' />
+							<img src='/downEng.svg' />
 						</button>
 						{isOpen && (
 							<ul className='absolute bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
