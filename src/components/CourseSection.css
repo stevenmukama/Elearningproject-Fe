@@ -59,7 +59,7 @@
 
 .card-info {
 	padding: 0px 30px 20px;
-	border: 1px solid rgb(32, 180, 134);
+	border: 1px solid rgba(32, 180, 134, 0.5);
 	text-align: left;
 	border-top: none;
 	border-bottom-left-radius: 8px;

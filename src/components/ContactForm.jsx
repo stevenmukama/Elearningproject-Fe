@@ -88,7 +88,7 @@ const ContactForm = () => {
 						<div
 							key={index}
 							className='text-start py-16 px-4 leading-7 rounded-lg text-white bg-[#07614C] rounded-r-none rounded-x relative max-md:rounded-lg max-md:rounded-b-none'>
-							<h1 className='mb-2 text-3xl font-bold font-Santepheap'>
+							<h1 className='mb-2 text-3xl font-bold font-koh'>
 								{section.HeaderText}
 							</h1>
 							<p className='font-Poppins'>{section.TextDescription}</p>
