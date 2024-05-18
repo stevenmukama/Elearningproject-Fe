@@ -205,20 +205,20 @@ const ContactForm = () => {
 			<div className='flex items-center justify-between '>
 				{windowWidth <= 768 ? (
 					<>
-						<h2 className=' font-Santephea max-md:text-xs'>
+						<h2 className=' font-koh max-md:text-xs'>
 							Chat with us via Whats-app?
 						</h2>
-						<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-Poppins max-md:text-[13px] max-md:px-2 max-md:py-1'>
+						<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-koh max-md:text-[13px] max-md:px-2 max-md:py-1'>
 							<span>Let&apos;s Chat</span>
 							<img src='/whatsappIcon.svg' />
 						</button>{' '}
 					</>
 				) : (
 					<>
-						<h2 className='text-3xl font-Santephea'>
+						<h2 className='text-3xl font-light font-koh'>
 							Prefer to chat with us via Whats-app?
 						</h2>
-						<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-Poppins'>
+						<button className='flex items-center gap-2 px-4 py-2 font-semibold border rounded font-koh'>
 							<span>Let&apos;s Chat</span>
 							<img src='/whatsappIcon.svg' />
 						</button>
