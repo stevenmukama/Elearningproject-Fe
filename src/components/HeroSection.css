@@ -64,6 +64,7 @@ button {
 	align-items: center;
 	gap: 40px;
 	font-family: 'Inter', sans-serif;
+	justify-content: center;
 }
 .cta-button,
 .contact-button {
