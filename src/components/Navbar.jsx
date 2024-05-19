@@ -36,14 +36,17 @@ const Navbar = () => {
 		const handleClickOutside = (event) => {
 			if (
 				dropdownRef.current &&
-				!dropdownRef.current.contains(event.target) &&
+				!dropdownRef.current.contains(event.target)
+			) {
+				setIsOpen(false);
+			}
+			if (
 				smallScreenMenuRef.current &&
 				!smallScreenMenuRef.current.contains(event.target) &&
 				buttonRef.current &&
 				!buttonRef.current.contains(event.target)
 			) {
 				setIsSmallScreenMenuOpen(false);
-				setIsOpen(false);
 			}
 		};
 
@@ -128,7 +131,7 @@ const Navbar = () => {
 					</div>
 
 					<div
-						className='px-4 py-3 bg-[#4B4B4B] text-white rounded-md relative max-md:hidden'
+						className='pr-4 py-3 w-max bg-[#4B4B4B] text-white rounded-md relative max-md:hidden'
 						ref={dropdownRef}>
 						<button
 							className='bg-[#4B4B4B] text-white flex items-center gap-2 '
@@ -136,7 +139,7 @@ const Navbar = () => {
 							<img
 								src={selectedLanguage.flag}
 								alt={selectedLanguage.label}
-								className='w-6 h-6 mr-2'
+								className='w-6 h-6'
 							/>
 							<span>{selectedLanguage.label}</span>
 							<img src='/downEng.svg' />
@@ -146,12 +149,12 @@ const Navbar = () => {
 								{languages.map((lang) => (
 									<li
 										key={lang.value}
-										className='flex items-center p-2 cursor-pointer hover:bg-[#3a3a3a]'
+										className='flex items-center px-4 py-3 gap-2 cursor-pointer hover:bg-[#3a3a3a]'
 										onClick={() => handleLanguageChange(lang)}>
 										<img
 											src={lang.flag}
 											alt={lang.label}
-											className='w-6 h-6 mr-2'
+											className='w-6 h-6 '
 										/>
 										<span>{lang.label}</span>
 									</li>
