@@ -12,7 +12,7 @@ import ContactForm from './components/ContactForm';
 
 function App() {
 	return (
-		<div>
+		<>
 			<Navbar />
 			<HeroSection />
 			<CeoSection />
@@ -23,7 +23,7 @@ function App() {
 			<WhyUs />
 			<ContactForm />
 			<FooterSection />
-		</div>
+		</>
 	);
 }
 

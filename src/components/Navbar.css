@@ -7,16 +7,20 @@ button {
 .Navbar {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 60px;
+	padding: 0 60px;
 	align-items: center;
 	background: #ffffff;
 	font-size: 15px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
 	.Navbar {
-		margin: 0 30px;
 		align-items: center;
+		padding: 0 30px;
 	}
 }
 

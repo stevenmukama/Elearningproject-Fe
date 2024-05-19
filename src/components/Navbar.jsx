@@ -77,7 +77,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className='Navbar'>
+			<nav className='Navbar border-b border-solid border-[#d6d2d2] '>
 				{windowWidth <= 768 ? (
 					<img
 						src='/smallLogo.svg'
@@ -131,10 +131,10 @@ const Navbar = () => {
 					</div>
 
 					<div
-						className='pr-4 py-3 w-max bg-[#4B4B4B] text-white rounded-md relative max-md:hidden'
+						className='px-4 py-3 w-max bg-[#4B4B4B] text-white rounded-md  max-md:hidden  cursor-pointer relative'
 						ref={dropdownRef}>
-						<button
-							className='bg-[#4B4B4B] text-white flex items-center gap-2 '
+						<div
+							className='bg-[#4B4B4B] text-white flex items-center gap-2'
 							onClick={() => setIsOpen(!isOpen)}>
 							<img
 								src={selectedLanguage.flag}
@@ -143,9 +143,9 @@ const Navbar = () => {
 							/>
 							<span>{selectedLanguage.label}</span>
 							<img src='/downEng.svg' />
-						</button>
+						</div>
 						{isOpen && (
-							<ul className='absolute bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
+							<ul className='absolute left-0 bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
 								{languages.map((lang) => (
 									<li
 										key={lang.value}
@@ -167,25 +167,25 @@ const Navbar = () => {
 			{isSmallScreenMenuOpen && (
 				<div
 					ref={smallScreenMenuRef}
-					className='bg-[#4B4B4B] text-white p-4 rounded-lg'>
+					className='bg-[#4B4B4B] text-white pt-[60px] px-4 rounded-lg'>
 					<a
-						className='block mb-2'
+						className='block pb-2'
 						onClick={() => handleNavItemClick('home')}>
 						Home
 					</a>
 					<a
-						className='block mb-2'
+						className='block pb-2'
 						onClick={() => handleNavItemClick('courses')}>
 						Courses
 					</a>
 					<a
-						className='block mb-2'
+						className='block pb-2'
 						onClick={() => handleNavItemClick('contact')}>
 						Contact us
 					</a>
 				</div>
 			)}
-			<hr className='w-auto my-3 border border-solid' />
+			<div className='border-b border-solid border-[#d6d2d2] mt-2 w-full'></div>
 		</>
 	);
 };

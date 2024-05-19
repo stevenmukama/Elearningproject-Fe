@@ -29,6 +29,7 @@ button {
 	overflow: visible;
 	position: relative;
 	width: 100%;
+	margin-top: 15%;
 }
 
 .circleBg {
