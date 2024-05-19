@@ -42,19 +42,19 @@ function CertificationSection() {
 	];
 	return (
 		<>
-			<div className="bg-[url('/public/whiteBg.svg')] bg-no-repeat pt-12 pb-12 bg-cover max-sm:bg-cover">
+			<div className="bg-[url('/public/whiteBg.svg')] bg-no-repeat pt-12 pb-12 bg-cover max-md:bg-cover">
 				<section>
-					<div className='flex items-center gap-10 mb-16 max-sm:flex-col md:max-xl:flex-col'>
+					<div className='flex items-center gap-10 mb-16 max-md:flex-col md:max-xl:flex-col'>
 						<div>
 							<div className='p-2 mb-3 bg-white rounded-md w-fit'>
-								<h1 className='text-start w-fit font-bold  text-[#20B486] text-xl max-sm:text-sm'>
+								<h1 className='text-start w-fit font-bold  text-[#20B486] text-xl max-md:text-sm'>
 									{' '}
 									Benefits!
 								</h1>
 							</div>
 							<h2
 								className='font-bold text-start pb-6 w-fit
-				 text-[#F49406] text-4xl font-koho max-sm:text-xl md:max-xl:w-full'>
+				 text-[#F49406] text-4xl font-koho max-md:text-xl md:max-xl:w-full'>
 								Get Your Certificate!
 							</h2>
 							<div>
@@ -65,7 +65,7 @@ function CertificationSection() {
 										<div className='p-4 bg-white rounded-full '>
 											<img
 												src={courseBenefit.imgSrc}
-												className='w-full bg-white max-sm:w-20'
+												className='w-full bg-white max-md:w-20'
 												alt={courseBenefit.altText}
 											/>
 										</div>
@@ -77,7 +77,7 @@ function CertificationSection() {
 						<img src='/blurcertificate.png' />
 					</div>
 
-					<div className='flex gap-10 pb-5 text-start max-sm:flex-col-reverse md:max-xl:flex-col-reverse'>
+					<div className='flex gap-10 pb-5 text-start max-md:flex-col-reverse md:max-xl:flex-col-reverse'>
 						<img
 							src='/waitresslady.png'
 							alt='waitresslady'
@@ -90,7 +90,7 @@ function CertificationSection() {
 							{moreBenefits.map((moreBenefit) => (
 								<div
 									key={moreBenefit.id}
-									className='flex items-center gap-3 mb-8 max-sm:gap-3'>
+									className='flex items-center gap-3 mb-8 max-md:gap-3'>
 									<div className='p-4 bg-white rounded-full '>
 										<img
 											src={moreBenefit.imgSrc}
@@ -98,7 +98,7 @@ function CertificationSection() {
 											alt={moreBenefit.altText}
 										/>
 									</div>
-									<p className='max-sm:text-[14px] max-sm:pb-4'>
+									<p className='max-md:text-[14px] max-md:pb-4'>
 										{moreBenefit.text}{' '}
 									</p>
 								</div>
@@ -108,14 +108,14 @@ function CertificationSection() {
 				</section>
 			</div>
 			<div className="pt-5 pb-5 bg-[url('/bgGroup.svg')] mb-10">
-				<section className='flex justify-between pt-5 pb-12 text-white text-start'>
-					<div className='max-sm:text-center max-sm:mx-3'>
-						<p className='mb-10 text-5xl font-bold font-koho max-sm:text-2xl '>
+				<section className='flex justify-between text-white text-start'>
+					<div className='max-md:text-center max-md:mx-3'>
+						<p className='mb-10 text-5xl font-bold font-koho max-md:text-2xl '>
 							Request In-Person Learning
 						</p>
-						<p className='mb-5 text-xl font-Poppins max-sm:text-[15px] max-sm:font-extralight'>
+						<p className='mb-5 text-xl font-Poppins max-md:text-[15px] max-md:font-extralight'>
 							Prefer face-to-face learning? Submit your request today for{' '}
-							<br className='max-sm:hidden'></br>
+							<br className='max-md:hidden'></br>
 							engaging sessions that will elevate your skills!
 						</p>
 						<button className='p-3 mb-5 rounded-md  bg-[#F49406] text-white'>
@@ -125,7 +125,7 @@ function CertificationSection() {
 					<img
 						src='/groupdiscussing.png'
 						alt='groupdiscussing'
-						className='object-contain w-1/4 max-sm:hidden'
+						className='object-contain w-1/4 max-md:hidden'
 					/>
 				</section>
 			</div>

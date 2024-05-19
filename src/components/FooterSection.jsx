@@ -119,7 +119,7 @@ function FooterSection() {
 				</section>
 				<hr className='w-auto my-3 border border-solid' />
 				<section>
-					<div className='flex items-center justify-between text-white'>
+					<div className='flex items-center content-center justify-between text-white'>
 						<div className='flex items-center gap-2'>
 							<img
 								src='/tiktokicon.svg'

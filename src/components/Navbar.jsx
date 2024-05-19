@@ -23,18 +23,24 @@ const Navbar = () => {
 	const [isSmallScreenMenuOpen, setIsSmallScreenMenuOpen] =
 		useState(false);
 	const smallScreenMenuRef = useRef(null);
+	const buttonRef = useRef(null);
 
 	useEffect(() => {
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth);
+			if (window.innerWidth > 768) {
+				setIsSmallScreenMenuOpen(false);
+			}
 		};
 
 		const handleClickOutside = (event) => {
 			if (
-				(dropdownRef.current &&
-					!dropdownRef.current.contains(event.target)) ||
-				(smallScreenMenuRef.current &&
-					!smallScreenMenuRef.current.contains(event.target))
+				dropdownRef.current &&
+				!dropdownRef.current.contains(event.target) &&
+				smallScreenMenuRef.current &&
+				!smallScreenMenuRef.current.contains(event.target) &&
+				buttonRef.current &&
+				!buttonRef.current.contains(event.target)
 			) {
 				setIsSmallScreenMenuOpen(false);
 				setIsOpen(false);
@@ -57,13 +63,10 @@ const Navbar = () => {
 
 	const toggleSmallScreenMenu = () => {
 		setIsSmallScreenMenuOpen(!isSmallScreenMenuOpen);
-		setIsOpen(false); // Close the dropdown menu if open
-		// setIsSmallScreenMenuOpen(false);
 	};
 
 	const handleNavItemClick = (section) => {
 		setIsSmallScreenMenuOpen(false);
-		// Add your navigation logic here, for example:
 		document
 			.getElementById(section)
 			?.scrollIntoView({ behavior: 'smooth' });
@@ -85,7 +88,9 @@ const Navbar = () => {
 						className='nav-logo'
 					/>
 				)}
-				<div className={`nav-items ${isOpen && 'open'}`}>
+				<div
+					className={`nav-items ${isOpen && 'open'}`}
+					onClick={() => setIsOpen(!isOpen)}>
 					<a
 						className='nav-item max-md:hidden'
 						onClick={() => handleNavItemClick('home')}>
@@ -107,8 +112,12 @@ const Navbar = () => {
 					) : (
 						<a className='button box-account'>Create account </a>
 					)}
-					<div className='hidden max-md:block'>
+					<div
+						className={` ${
+							isOpen ? 'hidden max-md:block open' : 'hidden max-md:block'
+						}`}>
 						<button
+							ref={buttonRef}
 							className='border max-md:border-[#888686] max-md:mt-2 max-md:border-solid max-md:border max-md:rounded-lg'
 							onClick={toggleSmallScreenMenu}>
 							<img
@@ -117,6 +126,7 @@ const Navbar = () => {
 							/>
 						</button>
 					</div>
+
 					<div
 						className='px-4 py-3 bg-[#4B4B4B] text-white rounded-md relative max-md:hidden'
 						ref={dropdownRef}>
@@ -170,8 +180,6 @@ const Navbar = () => {
 						onClick={() => handleNavItemClick('contact')}>
 						Contact us
 					</a>
-					<a className='block mb-2'>Sign in</a>
-					<a className='block button box-account'>Sign up</a>
 				</div>
 			)}
 			<hr className='w-auto my-3 border border-solid' />

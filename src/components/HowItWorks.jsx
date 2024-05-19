@@ -23,28 +23,28 @@ function HowItWorks() {
 		},
 	];
 	return (
-		<section className='max-sm:flex-col max-sm:text-center'>
-			<h1 className='text-6xl font-bold text-[#21B573] mb-16 max-sm:text-xl font-koho'>
+		<section className='max-md:flex-col max-md:text-center max-md:justify-center'>
+			<h1 className='text-6xl font-bold text-[#20B486] mb-16 max-md:mb-4 max-md:text-2xl font-koho'>
 				{' '}
-				How Spid-Education Work
+				How Spid-Education Works
 			</h1>
-			<div className='flex gap-10 max-sm:flex-col max-sm:m-0'>
-				<div className='flex-col items-center justify-center h-full pt-6 mt-8 max-sm:mt-2'>
+			<div className='flex gap-10 max-md:flex-col max-md:m-0'>
+				<div className='flex-col items-center justify-center h-full pt-6 mt-8 max-md:mt-2'>
 					{SpidProcess.map((process) => (
 						<div
 							key={process.id}
-							className='flex items-center gap-3 mb-10 border pl-10 border-[#21B573] border-opacity-35 rounded-md text-start p-8 max-sm:p-4'>
+							className='flex items-center gap-3 mb-10 border pl-10 border-[#21B573] border-opacity-35 rounded-md text-start p-8 max-md:p-4'>
 							<div className='p-4 mr-4 rounded-full bg-[#D9ECFF] w-fit'>
 								<img
 									src={process.imageSrc}
-									className='max-sm:h-auto max-sm:w-16'
+									className='max-md:h-auto max-md:w-16'
 								/>
 							</div>
 							<div>
-								<h1 className='mb-4 text-xl font-bold max-sm:text-[17px]'>
+								<h1 className='mb-4 text-xl font-bold max-md:text-[17px]'>
 									{process.title}{' '}
 								</h1>
-								<p className='max-sm:text-[16px]'>
+								<p className='max-md:text-[16px]'>
 									{process.description}{' '}
 								</p>
 							</div>

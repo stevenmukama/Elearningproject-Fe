@@ -28,13 +28,13 @@ function ReviewSection() {
 	return (
 		<>
 			<div className='bg-[#F0FAF7]'>
-				<section className='p-8 mb-11 mt-11 max-sm:text-center'>
+				<section className='p-8 mb-11 mt-11 max-md:text-center max-md:p-0'>
 					{reviews[activeIndex].comment
 						.split('\n')
 						.map((comment, index) => (
 							<h1
 								key={index}
-								className='p-2 text-4xl text-center text-[#101828] max-sm:text-[22px]'>
+								className='p-2 text-4xl text-center text-[#101828] max-md:text-[22px]'>
 								{comment}
 							</h1>
 						))}
