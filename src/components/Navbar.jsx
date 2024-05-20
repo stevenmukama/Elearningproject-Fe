@@ -41,8 +41,8 @@ const Navbar = () => {
 				setIsOpen(false);
 			}
 			if (
-				smallScreenMenuRef.current &&
-				!smallScreenMenuRef.current.contains(event.target) &&
+				// smallScreenMenuRef.current &&
+				// !smallScreenMenuRef.current.contains(event.target) &&
 				buttonRef.current &&
 				!buttonRef.current.contains(event.target)
 			) {
@@ -69,6 +69,7 @@ const Navbar = () => {
 	};
 
 	const handleNavItemClick = (section) => {
+		setIsOpen(false);
 		setIsSmallScreenMenuOpen(false);
 		document
 			.getElementById(section)
@@ -91,9 +92,7 @@ const Navbar = () => {
 						className='nav-logo'
 					/>
 				)}
-				<div
-					className={`nav-items ${isOpen && 'open'}`}
-					onClick={() => setIsOpen(!isOpen)}>
+				<div className={`nav-items ${isOpen && 'open'}`}>
 					<a
 						className='nav-item max-md:hidden'
 						onClick={() => handleNavItemClick('home')}>
@@ -135,7 +134,10 @@ const Navbar = () => {
 						ref={dropdownRef}>
 						<div
 							className='bg-[#4B4B4B] text-white flex items-center gap-2'
-							onClick={() => setIsOpen(!isOpen)}>
+							onClick={(e) => {
+								e.stopPropagation();
+								setIsOpen(!isOpen);
+							}}>
 							<img
 								src={selectedLanguage.flag}
 								alt={selectedLanguage.label}
