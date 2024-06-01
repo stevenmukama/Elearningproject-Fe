@@ -48,7 +48,7 @@ function CeoSection() {
 		};
 	}, []);
 	return (
-		<div className="items-start flex mt-16 bg-cover mb-11 pt-[8rem] p-16 max-md:py-7 max-md:px-7 gap-x-16 max-md:flex-col max-md:pt-3 max-md: max-md:h-full md:max-xl:h-full md:max-xl:gap-0 md:max-xl:pt-0 bg-[url('/ceoBgImg.svg')] max-md:bg-[url('/phoneBg.svg')]">
+		<div className="items-start flex mt-16 bg-cover mb-11 pt-[8rem] p-16 max-md:py-7 max-md:px-7 gap-x-16 max-md:flex-col max-md:pt-3 max-md: max-md:h-full md:max-xl:h-full md:max-xl:gap-0 bg-[url('/ceoBgImg.svg')] max-md:bg-[url('/phoneBg.svg')]">
 			<div className='w-1/2 max-md:w-full max-md:pt-20'>
 				{windowWidth <= 768 ? (
 					<>
