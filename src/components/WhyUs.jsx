@@ -70,7 +70,7 @@ function WhyUs() {
 						</div>
 
 						<img
-							src='/ladyWithCertificate.png'
+							src='/ladywithcertificate.png'
 							alt='ladywithcertificate'
 						/>
 					</div>
