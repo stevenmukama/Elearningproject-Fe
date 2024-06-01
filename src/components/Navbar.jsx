@@ -40,12 +40,7 @@ const Navbar = () => {
 			) {
 				setIsOpen(false);
 			}
-			if (
-				// smallScreenMenuRef.current &&
-				// !smallScreenMenuRef.current.contains(event.target) &&
-				buttonRef.current &&
-				!buttonRef.current.contains(event.target)
-			) {
+			if (buttonRef.current && !buttonRef.current.contains(event.target)) {
 				setIsSmallScreenMenuOpen(false);
 			}
 		};
