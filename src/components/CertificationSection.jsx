@@ -42,7 +42,7 @@ function CertificationSection() {
 	];
 	return (
 		<>
-			<div className="bg-[url('/public/whiteBg.svg')] bg-no-repeat pt-12 pb-12 bg-cover max-md:bg-cover">
+			<div className="bg-[url('/whiteBg.svg')] bg-no-repeat pt-12 pb-12 bg-cover max-md:bg-cover">
 				<section>
 					<div className='flex items-center gap-10 mb-16 max-md:flex-col md:max-xl:flex-col'>
 						<div>
