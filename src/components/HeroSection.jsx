@@ -50,6 +50,14 @@ function HeroSection() {
 							<button className='contact-button max-md:text-sm max-md:px-2 max-md:h-14'>
 								Contact Us
 							</button>
+							<div className='flex gap-4 font-Poppins'>
+								<img
+									src='/certificationVector.svg'
+									alt='certification icon'
+									className='w-auto h-auto'
+								/>
+								<p>Cert Verification</p>
+							</div>
 						</div>
 					</div>
 				</div>

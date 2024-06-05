@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import ContactForm from './ContactForm';
 import logo from './../img/spidedlogo.svg';
 import './Navbar.css';
+// import link from react
+import { Link } from 'react-router-dom';
 
 const languages = [
 	{
@@ -144,6 +146,12 @@ const Navbar = () => {
 							/>
 						</div>
 					</div>
+
+					<Link
+						to='/certification'
+						className='nav-item max-md:hidden'>
+						Cert Verification
+					</Link>
 					<a
 						className='nav-item max-md:hidden'
 						onClick={() =>
