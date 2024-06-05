@@ -21,6 +21,7 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
 	const dropdownRef = useRef(null);
+	const contactFormRef = useRef(null); // Added reference for the contact form
 	const [isSmallScreenMenuOpen, setIsSmallScreenMenuOpen] =
 		useState(false);
 	const smallScreenMenuRef = useRef(null);
@@ -46,6 +47,12 @@ const Navbar = () => {
 			}
 			if (buttonRef.current && !buttonRef.current.contains(event.target)) {
 				setIsSmallScreenMenuOpen(false);
+			}
+			if (
+				contactFormRef.current &&
+				!contactFormRef.current.contains(event.target)
+			) {
+				setIsContactFormOpen(false); // Added to close contact form when clicking outside
 			}
 		};
 
@@ -203,7 +210,9 @@ const Navbar = () => {
 			</nav>
 			{isContactFormOpen && (
 				<div className='inset-0 z-10 flex items-center justify-center mt-16 bg-black bg-opacity-50 '>
-					<div className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
+					<div
+						ref={contactFormRef}
+						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
 						<span
 							onClick={() => setIsContactFormOpen(false)}
 							className='float-right text-2xl font-bold text-gray-500 cursor-pointer hover:text-black'>
