@@ -202,8 +202,8 @@ const Navbar = () => {
 				</div>
 			</nav>
 			{isContactFormOpen && (
-				<div className='inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 '>
-					<div className='w-4/5 p-6 bg-white rounded shadow-lg md:w-1/2'>
+				<div className='inset-0 z-10 flex items-center justify-center mt-16 bg-black bg-opacity-50 '>
+					<div className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
 						<span
 							onClick={() => setIsContactFormOpen(false)}
 							className='float-right text-2xl font-bold text-gray-500 cursor-pointer hover:text-black'>
