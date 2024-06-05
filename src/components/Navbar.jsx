@@ -230,7 +230,7 @@ const Navbar = () => {
 					</ul>
 				</div>
 			)}
-			{isSmallScreenMenuOpen && isCoursesDropdownOpen && (
+			{isSmallScreenMenuOpen && (
 				<div
 					ref={smallScreenMenuRef}
 					className='bg-[#4B4B4B] text-white pt-[60px] px-4 rounded-lg'>
@@ -239,16 +239,61 @@ const Navbar = () => {
 						onClick={() => handleNavItemClick('home')}>
 						Home
 					</a>
-					<a
+					{/* <a
 						className='block pb-2'
 						onClick={() => handleNavItemClick('courses')}>
 						Courses
-					</a>
+					</a> */}
+					<div
+						className='relative block pb-2 nav-item'
+						onMouseEnter={() => setIsCoursesDropdownOpen(true)}
+						onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
+						<div className='flex items-center w-full gap-4'>
+							Courses
+							<img
+								src='/moreCoursesIcon.webp'
+								alt='arrowRightUpIcon'
+								className='w-auto h-auto'
+							/>
+						</div>
+					</div>
 					<a
 						className='block pb-2'
 						onClick={() => handleNavItemClick('contact')}>
 						Contact us
 					</a>
+				</div>
+			)}
+			{isSmallScreenMenuOpen && isCoursesDropdownOpen && (
+				<div className='absolute block flex-col mx-auto left-0 top-16 right-0 z-50 mt-4 w-full rounded-md shadow-lg bg-[#F0FAF7] '>
+					<div className='relative flex-col px-4 pt-6'>
+						<span className='text-[#24D198] text-2xl font-bold font-koho'>
+							Course Categories
+						</span>
+						<span className='flex items-center gap-1 cursor-pointer bg-white p-3 text-black hover:text-[#24D198]'>
+							View All
+							<img
+								src='/arrowRightIcon.svg'
+								alt='arrowRightUpIcon'
+								className='w-auto h-auto'
+							/>
+						</span>
+					</div>
+					<ul className='py-2'>
+						{[...Array(5)].map((_, rowIndex) => (
+							<div
+								key={rowIndex}
+								className='flex items-center '>
+								{[...Array(5)].map((_, colIndex) => (
+									<li
+										key={colIndex}
+										className={`px-4 py-2 text-start items-center w-1/5 text-black hover:text-[#24D198] cursor-pointer ${coursesDropdownItems[rowIndex * 5 + colIndex] === 'Coming Soon' ? 'bg-white p-2' : ''}`}>
+										{coursesDropdownItems[rowIndex * 5 + colIndex]}
+									</li>
+								))}
+							</div>
+						))}
+					</ul>
 				</div>
 			)}
 			<div className='border-b border-solid border-[#d6d2d2] mt-2 w-full'></div>
