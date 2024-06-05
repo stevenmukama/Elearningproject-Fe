@@ -21,7 +21,7 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
 	const dropdownRef = useRef(null);
-	const contactFormRef = useRef(null); // Added reference for the contact form
+	const contactFormRef = useRef(null);
 	const [isSmallScreenMenuOpen, setIsSmallScreenMenuOpen] =
 		useState(false);
 	const smallScreenMenuRef = useRef(null);
@@ -52,7 +52,7 @@ const Navbar = () => {
 				contactFormRef.current &&
 				!contactFormRef.current.contains(event.target)
 			) {
-				setIsContactFormOpen(false); // Added to close contact form when clicking outside
+				setIsContactFormOpen(false);
 			}
 		};
 
@@ -215,7 +215,7 @@ const Navbar = () => {
 					<div
 						ref={contactFormRef}
 						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
-						<div className='flex justify-end gap-4 pr-16'>
+						<div className='flex justify-end gap-4 pt-2 pr-16'>
 							<span
 								onClick={() => setIsContactFormOpen(false)}
 								className='p-3 text-2xl font-bold text-gray-500 bg-black rounded-r-none cursor-pointer rounded-xl float- hover:text-black'>
@@ -278,10 +278,7 @@ const Navbar = () => {
 						onClick={() => handleNavItemClick('home')}>
 						Home
 					</a>
-					<div
-						className='relative block pb-2 nav-item'
-						onMouseEnter={() => setIsCoursesDropdownOpen(true)}
-						onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
+					<div className='relative block pb-2 nav-item'>
 						<div className='flex items-center w-full gap-4'>
 							Courses
 							<img
@@ -298,38 +295,7 @@ const Navbar = () => {
 					</a>
 				</div>
 			)}
-			{isSmallScreenMenuOpen && (
-				<div className='absolute block flex-col mx-auto left-0 top-16 right-0 z-50 mt-4 w-full rounded-md shadow-lg bg-[#F0FAF7] '>
-					<div className='relative flex-col pt-6 pl-10'>
-						<span className='text-[#24D198] text-2xl font-bold font-koho'>
-							Course Categories
-						</span>
-						<span className='flex w-fit mt-4 items-center gap-1 cursor-pointer bg-white p-3 text-black hover:text-[#24D198]'>
-							View All
-							<img
-								src='/arrowRightIcon.svg'
-								alt='arrowRightUpIcon'
-								className='w-auto h-auto'
-							/>
-						</span>
-					</div>
-					<ul className='py-2 '>
-						{[...Array(5)].map((_, rowIndex) => (
-							<div
-								key={rowIndex}
-								className='flex-col items-center justify-center '>
-								{[...Array(5)].map((_, colIndex) => (
-									<li
-										key={colIndex}
-										className={`pl-10 py-2 text-start  text-black hover:text-[#24D198] cursor-pointer ${coursesDropdownItems[rowIndex * 5 + colIndex] === 'Coming Soon' ? 'bg-white p-2' : ''}`}>
-										{coursesDropdownItems[rowIndex * 5 + colIndex]}
-									</li>
-								))}
-							</div>
-						))}
-					</ul>
-				</div>
-			)}
+
 			<div className='border-b border-solid border-[#d6d2d2] mt-2 w-full'></div>
 		</>
 	);
