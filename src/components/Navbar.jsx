@@ -254,11 +254,6 @@ const Navbar = () => {
 						onClick={() => handleNavItemClick('home')}>
 						Home
 					</a>
-					{/* <a
-						className='block pb-2'
-						onClick={() => handleNavItemClick('courses')}>
-						Courses
-					</a> */}
 					<div
 						className='relative block pb-2 nav-item'
 						onMouseEnter={() => setIsCoursesDropdownOpen(true)}
