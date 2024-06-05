@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import ContactForm from './ContactForm';
 import logo from './../img/spidedlogo.svg';
 import './Navbar.css';
 
@@ -26,6 +27,7 @@ const Navbar = () => {
 	const buttonRef = useRef(null);
 	const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] =
 		useState(false);
+	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -137,9 +139,10 @@ const Navbar = () => {
 					</div>
 					<a
 						className='nav-item max-md:hidden'
-						onClick={() => handleNavItemClick('contact')}>
+						onClick={() => setIsContactFormOpen(true)}>
 						Contact us
 					</a>
+
 					<a className='nav-item'>Sign in </a>
 					{windowWidth <= 768 ? (
 						<a className='button box-account'>Sign up </a>
@@ -198,6 +201,18 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
+			{isContactFormOpen && (
+				<div className='inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 '>
+					<div className='w-4/5 p-6 bg-white rounded shadow-lg md:w-1/2'>
+						<span
+							onClick={() => setIsContactFormOpen(false)}
+							className='float-right text-2xl font-bold text-gray-500 cursor-pointer hover:text-black'>
+							&times;
+						</span>
+						<ContactForm />
+					</div>
+				</div>
+			)}
 			{isCoursesDropdownOpen && (
 				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 mt-4 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
 					<div className='relative flex justify-between px-4 pt-6'>
@@ -264,13 +279,13 @@ const Navbar = () => {
 					</a>
 				</div>
 			)}
-			{isSmallScreenMenuOpen && isCoursesDropdownOpen && (
+			{isSmallScreenMenuOpen && (
 				<div className='absolute block flex-col mx-auto left-0 top-16 right-0 z-50 mt-4 w-full rounded-md shadow-lg bg-[#F0FAF7] '>
-					<div className='relative flex-col px-4 pt-6'>
+					<div className='relative flex-col pt-6 pl-10'>
 						<span className='text-[#24D198] text-2xl font-bold font-koho'>
 							Course Categories
 						</span>
-						<span className='flex items-center gap-1 cursor-pointer bg-white p-3 text-black hover:text-[#24D198]'>
+						<span className='flex w-fit mt-4 items-center gap-1 cursor-pointer bg-white p-3 text-black hover:text-[#24D198]'>
 							View All
 							<img
 								src='/arrowRightIcon.svg'
@@ -279,15 +294,15 @@ const Navbar = () => {
 							/>
 						</span>
 					</div>
-					<ul className='py-2'>
+					<ul className='py-2 '>
 						{[...Array(5)].map((_, rowIndex) => (
 							<div
 								key={rowIndex}
-								className='flex items-center '>
+								className='flex-col items-center justify-center '>
 								{[...Array(5)].map((_, colIndex) => (
 									<li
 										key={colIndex}
-										className={`px-4 py-2 text-start items-center w-1/5 text-black hover:text-[#24D198] cursor-pointer ${coursesDropdownItems[rowIndex * 5 + colIndex] === 'Coming Soon' ? 'bg-white p-2' : ''}`}>
+										className={`pl-10 py-2 text-start  text-black hover:text-[#24D198] cursor-pointer ${coursesDropdownItems[rowIndex * 5 + colIndex] === 'Coming Soon' ? 'bg-white p-2' : ''}`}>
 										{coursesDropdownItems[rowIndex * 5 + colIndex]}
 									</li>
 								))}
