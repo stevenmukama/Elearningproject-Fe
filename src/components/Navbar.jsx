@@ -146,7 +146,9 @@ const Navbar = () => {
 					</div>
 					<a
 						className='nav-item max-md:hidden'
-						onClick={() => setIsContactFormOpen(true)}>
+						onClick={() =>
+							setIsContactFormOpen((prevState) => !prevState)
+						}>
 						Contact us
 					</a>
 
@@ -213,12 +215,25 @@ const Navbar = () => {
 					<div
 						ref={contactFormRef}
 						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
-						<span
-							onClick={() => setIsContactFormOpen(false)}
-							className='float-right text-2xl font-bold text-gray-500 cursor-pointer hover:text-black'>
-							&times;
-						</span>
-						<ContactForm />
+						<div className='flex justify-end gap-4 pr-16'>
+							<span
+								onClick={() => setIsContactFormOpen(false)}
+								className='p-3 text-2xl font-bold text-gray-500 bg-black rounded-r-none cursor-pointer rounded-xl float- hover:text-black'>
+								<img
+									src='/closeContactVector.svg'
+									alt='closeContactVector'
+									className='w-auto h-auto'
+								/>
+							</span>
+							<p
+								onClick={() => setIsContactFormOpen(false)}
+								className='p-3 text-white bg-black rounded-l-none font-koho rounded-xl'>
+								Close
+							</p>
+						</div>
+						<div className='z-50'>
+							<ContactForm />
+						</div>
 					</div>
 				</div>
 			)}
