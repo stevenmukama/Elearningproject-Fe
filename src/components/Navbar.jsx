@@ -128,11 +128,12 @@ const Navbar = () => {
 					/>
 				)}
 				<div className={`nav-items ${isOpen && 'open'}`}>
-					<a
+					<Link
+						to='/'
 						className='nav-item max-md:hidden'
 						onClick={() => handleNavItemClick('home')}>
 						Home
-					</a>
+					</Link>
 					<div
 						className='relative nav-item max-md:hidden'
 						onMouseEnter={() => setIsCoursesDropdownOpen(true)}
@@ -148,7 +149,7 @@ const Navbar = () => {
 					</div>
 
 					<Link
-						to='/certification'
+						to='/certificationPage'
 						className='nav-item max-md:hidden'>
 						Cert Verification
 					</Link>
