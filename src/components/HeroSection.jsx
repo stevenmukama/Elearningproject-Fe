@@ -1,6 +1,7 @@
 import ladyimage from './../img/ladysitting.png';
 import circleBg from './../img/circlesbg.svg';
 import './HeroSection.css';
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
 	return (
@@ -50,14 +51,16 @@ function HeroSection() {
 							<button className='contact-button max-md:text-sm max-md:px-2 max-md:h-14'>
 								Contact Us
 							</button>
-							<div className='flex gap-4 font-Poppins'>
+							<Link
+								to='/certificationPage'
+								className='flex gap-4 font-Poppins hover:text-[#20B486]'>
 								<img
 									src='/certificationVector.svg'
 									alt='certification icon'
 									className='w-auto h-auto'
 								/>
 								<p>Cert Verification</p>
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>
