@@ -29,7 +29,7 @@ function CertificationPage() {
 						<div className='flex items-center justify-between'>
 							<div>
 								<img
-									src='/public/dangerIcon.svg'
+									src='/dangerIcon.svg'
 									alt='dangerIcon'
 									className='w-auto h-auto'
 								/>
