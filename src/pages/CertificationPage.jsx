@@ -19,7 +19,7 @@ function CertificationPage() {
 					<div className='flex items-center mt-8'>
 						<input
 							placeholder='Enter verification Number|'
-							className='w-full placeholder:bg-white placeholder:text-[##A6A6A6] h-12 '
+							className='w-full px-2 placeholder:bg-white placeholder:text-[##A6A6A6] h-12 '
 						/>
 						<button className='bg-[#000] text-white px-4 py-4 rounded-md'>
 							Verify
