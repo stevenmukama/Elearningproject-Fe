@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import AllCoursesPage from './pages/AllCoursesPage';
 import CertificationPage from './pages/CertificationPage';
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,8 +8,6 @@ function App() {
 	return (
 		<>
 			<Router>
-				<Navbar />
-
 				<Routes>
 					<Route
 						path='/'
@@ -18,6 +16,10 @@ function App() {
 					<Route
 						path='/certificationPage'
 						element={<CertificationPage />}
+					/>
+					<Route
+						path='/AllCoursesPage'
+						element={<AllCoursesPage />}
 					/>
 				</Routes>
 			</Router>

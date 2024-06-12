@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import ContactForm from './ContactForm';
 import logo from './../img/spidedlogo.svg';
 import './Navbar.css';
-// import link from react
 import { Link } from 'react-router-dom';
 
 const languages = [
@@ -26,8 +25,9 @@ const Navbar = () => {
 	const contactFormRef = useRef(null);
 	const [isSmallScreenMenuOpen, setIsSmallScreenMenuOpen] =
 		useState(false);
-	const smallScreenMenuRef = useRef(null);
 	const buttonRef = useRef(null);
+	const smallScreenMenuRef = useRef(null);
+	const coursesDropdownRef = useRef(null);
 	const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] =
 		useState(false);
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -47,7 +47,10 @@ const Navbar = () => {
 			) {
 				setIsOpen(false);
 			}
-			if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+			if (
+				smallScreenMenuRef.current &&
+				!smallScreenMenuRef.current.contains(event.target)
+			) {
 				setIsSmallScreenMenuOpen(false);
 			}
 			if (
@@ -55,6 +58,12 @@ const Navbar = () => {
 				!contactFormRef.current.contains(event.target)
 			) {
 				setIsContactFormOpen(false);
+			}
+			if (
+				coursesDropdownRef.current &&
+				!coursesDropdownRef.current.contains(event.target)
+			) {
+				setIsCoursesDropdownOpen(false);
 			}
 		};
 
@@ -74,14 +83,6 @@ const Navbar = () => {
 
 	const toggleSmallScreenMenu = () => {
 		setIsSmallScreenMenuOpen(!isSmallScreenMenuOpen);
-	};
-
-	const handleNavItemClick = (section) => {
-		setIsOpen(false);
-		setIsSmallScreenMenuOpen(false);
-		document
-			.getElementById(section)
-			?.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	const coursesDropdownItems = [
@@ -130,14 +131,13 @@ const Navbar = () => {
 				<div className={`nav-items ${isOpen && 'open'}`}>
 					<Link
 						to='/'
-						className='nav-item max-md:hidden'
-						onClick={() => handleNavItemClick('home')}>
+						className='nav-item max-md:hidden'>
 						Home
 					</Link>
 					<div
+						ref={coursesDropdownRef}
 						className='relative nav-item max-md:hidden'
-						onMouseEnter={() => setIsCoursesDropdownOpen(true)}
-						onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
+						onMouseEnter={() => setIsCoursesDropdownOpen(true)}>
 						<div className='flex items-center w-full gap-4'>
 							Courses
 							<img
@@ -278,30 +278,69 @@ const Navbar = () => {
 					</ul>
 				</div>
 			)}
+
 			{isSmallScreenMenuOpen && (
 				<div
 					ref={smallScreenMenuRef}
-					className='bg-[#4B4B4B] text-white pt-[60px] px-4 rounded-lg'>
-					<a
-						className='block pb-2'
-						onClick={() => handleNavItemClick('home')}>
+					className='bg-[#4B4B4B] text-white pt-[60px] px-4 rounded-lg flex flex-col flex-wrap '>
+					<Link
+						to='/'
+						className='text-xl '>
 						Home
-					</a>
-					<div className='relative block pb-2 nav-item'>
-						<div className='flex items-center w-full gap-4'>
-							Courses
-							<img
-								src='/moreCoursesIcon.webp'
-								alt='arrowRightUpIcon'
-								className='w-auto h-auto'
-							/>
-						</div>
-					</div>
+					</Link>
+					<Link
+						to='/AllCoursesPage'
+						className='text-xl '>
+						Courses
+					</Link>
+					<Link
+						to='/certificationPage'
+						className='text-xl'>
+						Cert Verification
+					</Link>
 					<a
-						className='block pb-2'
-						onClick={() => handleNavItemClick('contact')}>
+						className='text-xl'
+						onClick={() =>
+							setIsContactFormOpen((prevState) => !prevState)
+						}>
 						Contact us
 					</a>
+
+					<div
+						className='px-4 py-3 w-max bg-[#4B4B4B] text-white rounded-md cursor-pointer relative'
+						ref={dropdownRef}>
+						<div
+							className='bg-[#4B4B4B] text-white flex items-center gap-2'
+							onClick={(e) => {
+								e.stopPropagation();
+								setIsOpen(!isOpen);
+							}}>
+							<img
+								src={selectedLanguage.flag}
+								alt={selectedLanguage.label}
+								className='w-6 h-6'
+							/>
+							<span>{selectedLanguage.label}</span>
+							<img src='/downEng.svg' />
+						</div>
+						{isOpen && (
+							<ul className='absolute left-0 bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
+								{languages.map((lang) => (
+									<li
+										key={lang.value}
+										className='flex items-center px-4 py-3 gap-2 cursor-pointer hover:bg-[#3a3a3a]'
+										onClick={() => handleLanguageChange(lang)}>
+										<img
+											src={lang.flag}
+											alt={lang.label}
+											className='w-6 h-6 '
+										/>
+										<span>{lang.label}</span>
+									</li>
+								))}
+							</ul>
+						)}
+					</div>
 				</div>
 			)}
 

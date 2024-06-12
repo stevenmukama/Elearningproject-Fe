@@ -3,6 +3,7 @@ import numberImage from './../img/number.svg';
 import fullStar from './../img/fullStar.svg';
 import halfStar from './../img/halfStar.svg';
 import './CourseSection.css';
+import { Link } from 'react-router-dom';
 
 const courseLessons = [
 	{
@@ -243,11 +244,11 @@ function CourseSection() {
 				</div>
 
 				<div className='flex items-center justify-center text-center max-md:flex-col max-md:my-0 max-md:mx-auto'>
-					<div>
-						<button className='explore-all-courses-button max-md:text-[15px] max-md:px-6 max-md:py-3 max-md:w-max'>
-							Explore all course
-						</button>
-					</div>
+					<Link
+						to='/AllCoursesPage'
+						className='explore-all-courses-button max-md:text-[15px] max-md:px-6 max-md:py-3 max-md:w-max'>
+						Explore all course
+					</Link>
 				</div>
 			</section>
 		</>
