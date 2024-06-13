@@ -19,7 +19,7 @@ function CeoSection() {
 			<div className='w-1/2 max-md:w-full max-md:pt-20'>
 				{windowWidth <= 768 ? (
 					<>
-						<h1 className='font-bold leading-10 font-koho max-md:mb-2'>
+						<h1 className='font-bold leading-10 font-koho max-md:mb-2 max-md:text-center'>
 							<span className=' text-white max-md:text-[12px]'>
 								Experience Unlimited Learning
 							</span>
