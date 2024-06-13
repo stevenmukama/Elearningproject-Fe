@@ -17,6 +17,18 @@ button {
 	z-index: 999;
 }
 
+@media only screen and (max-width: 1240px) {
+	/* @media screen and (max-width: 1240px) { */
+	.nav-items {
+		gap: 15px;
+	}
+
+	.nav-logo {
+		width: 150px;
+		height: 40px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.Navbar {
 		align-items: center;
@@ -33,7 +45,7 @@ button {
 
 .nav-item {
 	cursor: pointer;
-	font-weight: bold;
+	font-weight: 500;
 	color: #1e1e1e;
 	font-family: 'Poppins', sans-serif;
 	font-style: normal;

@@ -114,7 +114,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className='Navbar border-b border-solid border-[#d6d2d2]'>
+			<nav className='flex justify-between pt-2 px-[60px] items-center bg-white max-xl:text-[15px] fixed top-0 w-full z-[999] border-b border-solid border-[#d6d2d2] '>
 				{windowWidth <= 768 ? (
 					<img
 						src='/smallLogo.svg'
@@ -125,10 +125,11 @@ const Navbar = () => {
 					<img
 						src={logo}
 						alt='Logo'
-						className='nav-logo'
+						className='max-xl:w-[140px] max-xl:h-[52px]'
 					/>
 				)}
-				<div className={`nav-items ${isOpen && 'open'}`}>
+				<div
+					className={`flex gap-3 items-center max-lg:flex max-lg:gap-3 max-lg:text-[12px] ${isOpen && 'open'}`}>
 					<Link
 						to='/'
 						className='nav-item max-md:hidden'>
