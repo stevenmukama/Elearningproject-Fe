@@ -141,11 +141,19 @@ const Navbar = () => {
 						onMouseEnter={() => setIsCoursesDropdownOpen(true)}>
 						<div className='flex items-center w-full gap-4'>
 							Courses
-							<img
-								src='/moreCoursesIcon.webp'
-								alt='arrowRightUpIcon'
-								className='w-auto h-auto'
-							/>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								fill='none'
+								viewBox='0 0 24 24'
+								strokeWidth={2.5}
+								stroke='currentColor'
+								className='size-6'>
+								<path
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									d='m19.5 8.25-7.5 7.5-7.5-7.5'
+								/>
+							</svg>
 						</div>
 					</div>
 
@@ -248,7 +256,7 @@ const Navbar = () => {
 				</div>
 			)}
 			{isCoursesDropdownOpen && (
-				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 mt-4 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
+				<div className='absolute block mx-auto left-0 top-12 right-0 z-50 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
 					<div className='relative flex justify-between px-4 pt-6'>
 						<span className='text-[#24D198] text-2xl font-bold font-koho'>
 							Course Categories
