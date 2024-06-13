@@ -114,7 +114,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className='flex justify-between pt-2 px-[60px] items-center bg-white max-xl:text-[15px] fixed top-0 w-full z-[999] border-b border-solid border-[#d6d2d2] '>
+			<nav className='flex justify-between py-2 px-[60px] items-center bg-white max-xl:text-[15px] fixed top-0 w-full z-[999] border-b border-solid border-[#d6d2d2] '>
 				{windowWidth <= 768 ? (
 					<img
 						src='/smallLogo.svg'
@@ -139,7 +139,7 @@ const Navbar = () => {
 						ref={coursesDropdownRef}
 						className='relative nav-item max-md:hidden'
 						onMouseEnter={() => setIsCoursesDropdownOpen(true)}>
-						<div className='flex items-center w-full gap-4'>
+						<div className='flex items-center w-full gap-2'>
 							Courses
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
@@ -256,7 +256,7 @@ const Navbar = () => {
 				</div>
 			)}
 			{isCoursesDropdownOpen && (
-				<div className='absolute block mx-auto left-0 top-12 right-0 z-50 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
+				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
 					<div className='relative flex justify-between px-4 pt-6'>
 						<span className='text-[#24D198] text-2xl font-bold font-koho'>
 							Course Categories
@@ -270,21 +270,27 @@ const Navbar = () => {
 							/>
 						</span>
 					</div>
-					<ul className='py-2'>
-						{[...Array(5)].map((_, rowIndex) => (
+					<div className='py-2'>
+						{Array.from({ length: 5 }).map((_, rowIndex) => (
 							<div
 								key={rowIndex}
-								className='flex items-center '>
-								{[...Array(5)].map((_, colIndex) => (
-									<li
-										key={colIndex}
-										className={`px-4 py-2 text-start items-center w-1/5 text-black hover:text-[#24D198] cursor-pointer ${coursesDropdownItems[rowIndex * 5 + colIndex] === 'Coming Soon' ? 'bg-white p-2' : ''}`}>
-										{coursesDropdownItems[rowIndex * 5 + colIndex]}
-									</li>
-								))}
+								className='flex'>
+								{Array.from({ length: 5 }).map((_, colIndex) => {
+									const course =
+										coursesDropdownItems[rowIndex * 5 + colIndex];
+									return (
+										<div
+											key={colIndex}
+											className={`px-4 py-2 text-start w-1/5 text-black hover:text-[#24D198] cursor-pointer ${
+												course === 'Coming Soon' ? 'bg-white p-2' : ''
+											}`}>
+											{course}
+										</div>
+									);
+								})}
 							</div>
 						))}
-					</ul>
+					</div>
 				</div>
 			)}
 
