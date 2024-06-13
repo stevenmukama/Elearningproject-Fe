@@ -19,7 +19,7 @@ function FooterSection() {
 
 	return (
 		<>
-			<div className="footerSection md:max-xl:h-[100vh] pb-9 bg-[url('/bgfooter.svg')] bg-no-repeat  max-md:h-[75vh] max-md:['/smallBgFooter.svg'] max-md:bg-cover   max-md:bg-no-repeat max-md:bg-top">
+			<div className="footerSection  pb-9 bg-[url('/bgfooter.svg')] bg-no-repeat  max-md:h-[75vh] max-md:['/smallBgFooter.svg'] max-md:bg-cover   max-md:bg-no-repeat max-md:bg-top">
 				<section className='pt-20 pb-4 max-md:mx-8 '>
 					<div className='mb-11'>
 						<div className='flex items-center justify-between text-white mb-11 max-md:items-center'>
