@@ -72,7 +72,7 @@ function WhyUs() {
 						<img
 							src='/ladywithcertificate.png'
 							alt='ladywithcertificate'
-							className='w-1/3'
+							className='max-md:w-full max-xl:w-4/5 xl:w-1/3'
 						/>
 					</div>
 				</section>

@@ -135,7 +135,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className='flex justify-between py-2 px-[60px] items-center bg-white max-xl:text-[15px] fixed top-0 w-full z-[999] border-b border-solid border-[#d6d2d2] '>
+			<nav className='flex justify-between py-2 px-[60px] max-md:px-[30px] items-center bg-white max-xl:text-[15px] fixed top-0 w-full z-[999] border-b border-solid border-[#d6d2d2] '>
 				{windowWidth <= 768 ? (
 					<>
 						<Link to='/'>
@@ -260,8 +260,8 @@ const Navbar = () => {
 				<div
 					ref={smallScreenMenuRef}
 					className='relative top-16'>
-					<div className='bg-[#4B4B4B] flex justify-between px-5 h-screen'>
-						<div className='relative flex flex-col flex-wrap w-full px-4 text-white rounded-lg pt-7'>
+					<div className='bg-[#4B4B4B] flex justify-between h-screen'>
+						<div className='relative flex flex-col flex-wrap w-full px-[30px] text-white rounded-lg pt-7'>
 							<Link
 								onClick={() => {
 									closeSmallScreenMenu();
@@ -333,7 +333,7 @@ const Navbar = () => {
 						<img
 							src='closeScreenButton.svg'
 							alt='closeScreenButton'
-							className='h-fit pt-[40px] pr-[40px]'
+							className='h-fit pt-[40px] pr-[30px]'
 							onClick={closeSmallScreenMenu}
 						/>
 					</div>
