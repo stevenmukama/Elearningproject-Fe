@@ -260,7 +260,7 @@ const Navbar = () => {
 				<div
 					ref={smallScreenMenuRef}
 					className='relative top-16'>
-					<div className='bg-[#4B4B4B] flex justify-between px-5'>
+					<div className='bg-[#4B4B4B] flex justify-between px-5 h-screen'>
 						<div className='relative flex flex-col flex-wrap w-full px-4 text-white rounded-lg pt-7'>
 							<Link
 								onClick={() => {
