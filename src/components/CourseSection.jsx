@@ -85,14 +85,18 @@ function CourseSection() {
 						/>
 					</div>
 				</div>
-				<div className='flex flex-wrap gap-3 mb-6'>
-					{courseLessons.map((courseLessons) => (
-						<div key={courseLessons.id}>
-							<button className='px-4 py-2 border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486] flex-wrap max-md:text-[8px] max-md:flex '>
-								{courseLessons.text}
-							</button>
-						</div>
-					))}
+				<div className='animate-scroll'>
+					<div className='flex gap-4'>
+						{courseLessons.map((courseLessons) => (
+							<div
+								key={courseLessons.id}
+								className='mb-6 '>
+								<button className='px-4 py-2 border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486] flex-wrap max-md:text-[8px] max-md:flex '>
+									{courseLessons.text}
+								</button>
+							</div>
+						))}
+					</div>
 				</div>
 
 				<div className=' container-card-item max-md:flex-col max-md:my-0 max-md:mx-auto'>
