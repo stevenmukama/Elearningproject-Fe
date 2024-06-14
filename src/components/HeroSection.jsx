@@ -59,7 +59,9 @@ function HeroSection() {
 									alt='certification icon'
 									className='w-auto h-auto'
 								/>
-								<p className='text-sm'>Cert Verification</p>
+								<p className='max-md:text-sm md:text-xl'>
+									Cert Verification
+								</p>
 							</Link>
 						</div>
 					</div>

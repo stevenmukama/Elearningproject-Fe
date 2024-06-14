@@ -106,15 +106,6 @@ const Navbar = () => {
 		console.log('clicked', isSmallScreenMenuOpen);
 	}, [isSmallScreenMenuOpen]);
 
-	// const toggleSmallScreenMenu = () => {
-	// 	setIsSmallScreenMenuOpen((prevState) => {
-	// 		console.log('Previous state:', prevState);
-	// 		const newState = !prevState;
-	// 		console.log('New state:', newState);
-	// 		return newState;
-	// 	});
-	// };
-
 	const coursesDropdownItems = [
 		'Leadership',
 		'House Cleaning',
@@ -351,7 +342,7 @@ const Navbar = () => {
 
 			{isCoursesDropdownOpen && (
 				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
-					<div className='relative flex justify-between px-4 pt-6'>
+					<div className='relative flex justify-between pt-6 pl-4 pr-8'>
 						<span className='text-[#24D198] text-2xl font-bold font-koho'>
 							Course Categories
 						</span>
@@ -392,11 +383,11 @@ const Navbar = () => {
 				<div className='inset-0 z-10 flex items-center justify-center mt-16 bg-black bg-opacity-50 '>
 					<div
 						ref={contactFormRef}
-						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
-						<div className='flex justify-end gap-4 pt-2 pr-16'>
+						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-full'>
+						<div className='flex justify-end gap-4 pt-2 pr-16 max-md:gap-8'>
 							<span
 								onClick={() => setIsContactFormOpen(false)}
-								className='p-3 text-2xl font-bold text-gray-500 bg-black rounded-r-none cursor-pointer rounded-xl float- hover:text-black'>
+								className='p-3 text-xl font-bold text-gray-500 bg-black rounded-r-none cursor-pointer rounded-xl hover:text-black'>
 								<img
 									src='/closeContactVector.svg'
 									alt='closeContactVector'

@@ -67,13 +67,12 @@ button {
 	font-family: 'Inter', sans-serif;
 	margin-bottom: 20px;
 }
+
 .cta-button,
 .contact-button {
 	padding: 10px;
 	border-radius: 8px;
-	/* height: 60px; */
 	font-size: 18px;
-	/* width: 158px; */
 	font-weight: 500;
 	font-family: 'Inter', sans-serif;
 }
@@ -90,7 +89,7 @@ button {
 	.Home-section-buttons {
 		display: flex;
 		justify-content: center;
-		gap: 36px;
+		gap: 20px;
 	}
 }
 
