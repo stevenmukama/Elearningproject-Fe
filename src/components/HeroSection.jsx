@@ -45,10 +45,10 @@ function HeroSection() {
 							acquire valuable skills that truly make a difference.
 						</p>
 						<div className='Home-section-buttons'>
-							<button className='cta-button max-md:text-sm max-md:px-2 max-md:h-14'>
+							<button className='cta-button max-md:text-sm max-md:px-2 '>
 								Get Started
 							</button>
-							<button className='contact-button max-md:text-sm max-md:px-2 max-md:h-14'>
+							<button className='contact-button max-md:text-sm max-md:px-2 '>
 								Contact Us
 							</button>
 							<Link
@@ -59,12 +59,12 @@ function HeroSection() {
 									alt='certification icon'
 									className='w-auto h-auto'
 								/>
-								<p>Cert Verification</p>
+								<p className='text-sm'>Cert Verification</p>
 							</Link>
 						</div>
 					</div>
 				</div>
-				<div className='herosection-lady max-md:flex'>
+				<div className='herosection-lady max-md:flex max-md:mt-6'>
 					<div className='box-herosection'></div>
 					<img
 						src={ladyimage}

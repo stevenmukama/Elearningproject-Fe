@@ -31,6 +31,7 @@ const Navbar = () => {
 	const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] =
 		useState(false);
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+	const ItemRef = useRef(null);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -53,11 +54,23 @@ const Navbar = () => {
 			) {
 				setIsSmallScreenMenuOpen(false);
 			}
+
+			if (
+				smallScreenMenuRef.current &&
+				!smallScreenMenuRef.current.contains(event.target) &&
+				buttonRef.current &&
+				!buttonRef.current.contains(event.target)
+			) {
+				setIsSmallScreenMenuOpen(false);
+			}
 			if (
 				contactFormRef.current &&
 				!contactFormRef.current.contains(event.target)
 			) {
 				setIsContactFormOpen(false);
+			}
+			if (ItemRef.current && ItemRef.current.contains(event.target)) {
+				setIsSmallScreenMenuOpen(false);
 			}
 			if (
 				coursesDropdownRef.current &&
@@ -81,9 +94,26 @@ const Navbar = () => {
 		setIsOpen(false);
 	};
 
-	const toggleSmallScreenMenu = () => {
-		setIsSmallScreenMenuOpen(!isSmallScreenMenuOpen);
+	const closeSmallScreenMenu = () => {
+		setIsSmallScreenMenuOpen(false);
 	};
+
+	const toggleSmallScreenMenu = () => {
+		setIsSmallScreenMenuOpen((prevState) => !prevState);
+		console.log('clicked', isSmallScreenMenuOpen);
+	};
+	useEffect(() => {
+		console.log('clicked', isSmallScreenMenuOpen);
+	}, [isSmallScreenMenuOpen]);
+
+	// const toggleSmallScreenMenu = () => {
+	// 	setIsSmallScreenMenuOpen((prevState) => {
+	// 		console.log('Previous state:', prevState);
+	// 		const newState = !prevState;
+	// 		console.log('New state:', newState);
+	// 		return newState;
+	// 	});
+	// };
 
 	const coursesDropdownItems = [
 		'Leadership',
@@ -116,17 +146,25 @@ const Navbar = () => {
 		<>
 			<nav className='flex justify-between py-2 px-[60px] items-center bg-white max-xl:text-[15px] fixed top-0 w-full z-[999] border-b border-solid border-[#d6d2d2] '>
 				{windowWidth <= 768 ? (
-					<img
-						src='/smallLogo.svg'
-						alt='Logo'
-						className='h-auto'
-					/>
+					<>
+						<Link to='/'>
+							<img
+								src='/smallLogo.svg'
+								alt='Logo'
+								className='h-auto'
+							/>
+						</Link>
+					</>
 				) : (
-					<img
-						src={logo}
-						alt='Logo'
-						className='max-xl:w-[140px] max-xl:h-[52px]'
-					/>
+					<>
+						<Link to='/'>
+							<img
+								src={logo}
+								alt='Logo'
+								className='max-xl:w-[140px] max-xl:h-[52px]'
+							/>
+						</Link>
+					</>
 				)}
 				<div
 					className={`flex gap-3 items-center max-lg:flex max-lg:gap-3 max-lg:text-[12px] ${isOpen && 'open'}`}>
@@ -181,7 +219,6 @@ const Navbar = () => {
 							isOpen ? 'hidden max-md:block open' : 'hidden max-md:block'
 						}`}>
 						<button
-							ref={buttonRef}
 							className='border max-md:border-[#888686] max-md:mt-2 max-md:border-solid max-md:border max-md:rounded-lg'
 							onClick={toggleSmallScreenMenu}>
 							<img
@@ -228,33 +265,90 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-			{isContactFormOpen && (
-				<div className='inset-0 z-10 flex items-center justify-center mt-16 bg-black bg-opacity-50 '>
-					<div
-						ref={contactFormRef}
-						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
-						<div className='flex justify-end gap-4 pt-2 pr-16'>
-							<span
-								onClick={() => setIsContactFormOpen(false)}
-								className='p-3 text-2xl font-bold text-gray-500 bg-black rounded-r-none cursor-pointer rounded-xl float- hover:text-black'>
-								<img
-									src='/closeContactVector.svg'
-									alt='closeContactVector'
-									className='w-auto h-auto'
-								/>
-							</span>
-							<p
-								onClick={() => setIsContactFormOpen(false)}
-								className='p-3 text-white bg-black rounded-l-none font-koho rounded-xl'>
-								Close
-							</p>
+			{isSmallScreenMenuOpen && (
+				<div
+					ref={smallScreenMenuRef}
+					className='relative top-16'>
+					<div className='bg-[#4B4B4B] flex justify-between'>
+						<div className='relative flex flex-col flex-wrap w-full px-4 text-white rounded-lg pt-7'>
+							<Link
+								onClick={() => {
+									closeSmallScreenMenu();
+								}}
+								to='/'
+								className='pb-5 text-sm'>
+								Home
+							</Link>
+							<Link
+								onClick={() => {
+									closeSmallScreenMenu();
+								}}
+								to='/AllCoursesPage'
+								className='pb-5 text-sm'>
+								Courses
+							</Link>
+							<Link
+								onClick={() => {
+									closeSmallScreenMenu();
+								}}
+								to='/certificationPage'
+								className='pb-5 text-sm'>
+								Cert Verification
+							</Link>
+							<div
+								className='pb-5 text-sm'
+								onClick={() => {
+									setIsContactFormOpen((prevState) => !prevState);
+									closeSmallScreenMenu();
+								}}>
+								Contact us
+							</div>
+							<div
+								className=' py-3 w-max bg-[#4B4B4B] text-white rounded-md cursor-pointer relative'
+								ref={dropdownRef}>
+								<div
+									className='bg-[#4B4B4B] text-white flex items-center gap-2'
+									onClick={(e) => {
+										e.stopPropagation();
+										setIsOpen(!isOpen);
+									}}>
+									<img
+										src={selectedLanguage.flag}
+										alt={selectedLanguage.label}
+										className='w-6 h-6'
+									/>
+									<span>{selectedLanguage.label}</span>
+									<img src='/downEng.svg' />
+								</div>
+								{isOpen && (
+									<ul className='absolute left-0 bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
+										{languages.map((lang) => (
+											<li
+												key={lang.value}
+												className='flex items-center px-4 py-3 gap-2 cursor-pointer hover:bg-[#3a3a3a]'
+												onClick={() => handleLanguageChange(lang)}>
+												<img
+													src={lang.flag}
+													alt={lang.label}
+													className='w-6 h-6 '
+												/>
+												<span>{lang.label}</span>
+											</li>
+										))}
+									</ul>
+								)}
+							</div>
 						</div>
-						<div className='z-50'>
-							<ContactForm />
-						</div>
+						<img
+							src='closeScreenButton.svg'
+							alt='closeScreenButton'
+							className='h-fit pt-[40px] pr-[40px]'
+							onClick={closeSmallScreenMenu}
+						/>
 					</div>
 				</div>
 			)}
+
 			{isCoursesDropdownOpen && (
 				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
 					<div className='relative flex justify-between px-4 pt-6'>
@@ -294,67 +388,30 @@ const Navbar = () => {
 				</div>
 			)}
 
-			{isSmallScreenMenuOpen && (
-				<div
-					ref={smallScreenMenuRef}
-					className='bg-[#4B4B4B] text-white pt-[60px] px-4 rounded-lg flex flex-col flex-wrap '>
-					<Link
-						to='/'
-						className='text-xl '>
-						Home
-					</Link>
-					<Link
-						to='/AllCoursesPage'
-						className='text-xl '>
-						Courses
-					</Link>
-					<Link
-						to='/certificationPage'
-						className='text-xl'>
-						Cert Verification
-					</Link>
-					<a
-						className='text-xl'
-						onClick={() =>
-							setIsContactFormOpen((prevState) => !prevState)
-						}>
-						Contact us
-					</a>
-
+			{isContactFormOpen && (
+				<div className='inset-0 z-10 flex items-center justify-center mt-16 bg-black bg-opacity-50 '>
 					<div
-						className='px-4 py-3 w-max bg-[#4B4B4B] text-white rounded-md cursor-pointer relative'
-						ref={dropdownRef}>
-						<div
-							className='bg-[#4B4B4B] text-white flex items-center gap-2'
-							onClick={(e) => {
-								e.stopPropagation();
-								setIsOpen(!isOpen);
-							}}>
-							<img
-								src={selectedLanguage.flag}
-								alt={selectedLanguage.label}
-								className='w-6 h-6'
-							/>
-							<span>{selectedLanguage.label}</span>
-							<img src='/downEng.svg' />
+						ref={contactFormRef}
+						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-1/2'>
+						<div className='flex justify-end gap-4 pt-2 pr-16'>
+							<span
+								onClick={() => setIsContactFormOpen(false)}
+								className='p-3 text-2xl font-bold text-gray-500 bg-black rounded-r-none cursor-pointer rounded-xl float- hover:text-black'>
+								<img
+									src='/closeContactVector.svg'
+									alt='closeContactVector'
+									className='w-auto h-auto'
+								/>
+							</span>
+							<p
+								onClick={() => setIsContactFormOpen(false)}
+								className='p-3 text-white bg-black rounded-l-none font-koho rounded-xl'>
+								Close
+							</p>
 						</div>
-						{isOpen && (
-							<ul className='absolute left-0 bg-[#4B4B4B] text-white rounded-md mt-2 w-full z-50'>
-								{languages.map((lang) => (
-									<li
-										key={lang.value}
-										className='flex items-center px-4 py-3 gap-2 cursor-pointer hover:bg-[#3a3a3a]'
-										onClick={() => handleLanguageChange(lang)}>
-										<img
-											src={lang.flag}
-											alt={lang.label}
-											className='w-6 h-6 '
-										/>
-										<span>{lang.label}</span>
-									</li>
-								))}
-							</ul>
-						)}
+						<div className='z-50'>
+							<ContactForm />
+						</div>
 					</div>
 				</div>
 			)}

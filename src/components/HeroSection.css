@@ -65,14 +65,15 @@ button {
 	align-items: center;
 	gap: 40px;
 	font-family: 'Inter', sans-serif;
+	margin-bottom: 20px;
 }
 .cta-button,
 .contact-button {
 	padding: 10px;
 	border-radius: 8px;
-	height: 60px;
+	/* height: 60px; */
 	font-size: 18px;
-	width: 158px;
+	/* width: 158px; */
 	font-weight: 500;
 	font-family: 'Inter', sans-serif;
 }
@@ -87,6 +88,7 @@ button {
 		gap: 12px;
 	}
 	.Home-section-buttons {
+		display: flex;
 		justify-content: center;
 		gap: 36px;
 	}
