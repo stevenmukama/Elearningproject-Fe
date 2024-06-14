@@ -383,7 +383,7 @@ const Navbar = () => {
 				<div className='inset-0 z-10 flex items-center justify-center mt-16 bg-black bg-opacity-50 '>
 					<div
 						ref={contactFormRef}
-						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:w-full'>
+						className='w-4/5 p-6 bg-white rounded shadow-lg '>
 						<div className='flex justify-end gap-4 pt-2 pr-16 max-md:gap-8'>
 							<span
 								onClick={() => setIsContactFormOpen(false)}
