@@ -74,7 +74,10 @@ function CertificationSection() {
 								))}
 							</div>
 						</div>
-						<img src='/blurcertificate.png' />
+						<img
+							src='/blurcertificate.png'
+							alt='certificate'
+						/>
 					</div>
 
 					<div className='flex gap-10 pb-5 text-start max-md:flex-col-reverse md:max-xl:flex-col-reverse'>

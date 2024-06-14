@@ -72,6 +72,7 @@ function WhyUs() {
 						<img
 							src='/ladywithcertificate.png'
 							alt='ladywithcertificate'
+							className='w-1/3'
 						/>
 					</div>
 				</section>
