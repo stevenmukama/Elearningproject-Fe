@@ -27,7 +27,6 @@ const Navbar = () => {
 		useState(false);
 	const buttonRef = useRef(null);
 	const smallScreenMenuRef = useRef(null);
-	const coursesDropdownRef = useRef(null);
 	const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] =
 		useState(false);
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -71,12 +70,6 @@ const Navbar = () => {
 			}
 			if (ItemRef.current && ItemRef.current.contains(event.target)) {
 				setIsSmallScreenMenuOpen(false);
-			}
-			if (
-				coursesDropdownRef.current &&
-				!coursesDropdownRef.current.contains(event.target)
-			) {
-				setIsCoursesDropdownOpen(false);
 			}
 		};
 
@@ -165,7 +158,6 @@ const Navbar = () => {
 						Home
 					</Link>
 					<div
-						ref={coursesDropdownRef}
 						className='relative nav-item max-md:hidden'
 						onMouseEnter={() => setIsCoursesDropdownOpen(true)}>
 						<div className='flex items-center w-full gap-2'>
@@ -355,7 +347,9 @@ const Navbar = () => {
 							/>
 						</span>
 					</div>
-					<div className='py-2'>
+					<div
+						className='py-2'
+						onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
 						{Array.from({ length: 5 }).map((_, rowIndex) => (
 							<div
 								key={rowIndex}
@@ -407,7 +401,7 @@ const Navbar = () => {
 				</div>
 			)}
 
-			<div className='border-b border-solid border-[#d6d2d2] mt-2 w-full'></div>
+			<div className='border-b border-solid border-[rgba(30,30,30,0.3)] mt-2 w-full'></div>
 		</>
 	);
 };

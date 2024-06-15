@@ -21,8 +21,6 @@ button {
 	text-align: left;
 	margin: 20px auto;
 	font-family: 'Inter', sans-serif;
-	font-optical-sizing: auto;
-	font-style: normal;
 }
 
 .main-herosection {
@@ -75,6 +73,8 @@ button {
 	font-size: 18px;
 	font-weight: 500;
 	font-family: 'Inter', sans-serif;
+	width: 168px;
+	height: 60px;
 }
 @media screen and (max-width: 768px) {
 	.cta-button,
@@ -100,9 +100,8 @@ button {
 }
 
 button.cta-button {
-	border-style: solid;
-	border-width: thick;
-	border-color: #f4ebff;
+	border: none;
+	outline: solid thick #f4ebff;
 }
 
 .cta-button:hover {
