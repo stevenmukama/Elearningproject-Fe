@@ -27,6 +27,7 @@ const Navbar = () => {
 		useState(false);
 	const buttonRef = useRef(null);
 	const smallScreenMenuRef = useRef(null);
+	const coursesDropdownRef = useRef(null);
 	const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] =
 		useState(false);
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -70,6 +71,12 @@ const Navbar = () => {
 			}
 			if (ItemRef.current && ItemRef.current.contains(event.target)) {
 				setIsSmallScreenMenuOpen(false);
+			}
+			if (
+				coursesDropdownRef.current &&
+				!coursesDropdownRef.current.contains(event.target)
+			) {
+				setIsCoursesDropdownOpen(false);
 			}
 		};
 
@@ -158,6 +165,7 @@ const Navbar = () => {
 						Home
 					</Link>
 					<div
+						ref={coursesDropdownRef}
 						className='relative nav-item max-md:hidden'
 						onMouseEnter={() => setIsCoursesDropdownOpen(true)}>
 						<div className='flex items-center w-full gap-2'>
@@ -250,6 +258,7 @@ const Navbar = () => {
 			</nav>
 			{isSmallScreenMenuOpen && (
 				<div
+					onMouseLeave={() => setIsCoursesDropdownOpen(false)}
 					ref={smallScreenMenuRef}
 					className='relative top-16'>
 					<div className='bg-[#4B4B4B] flex justify-between h-screen'>
