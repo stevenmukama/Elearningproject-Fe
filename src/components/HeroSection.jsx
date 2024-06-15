@@ -17,8 +17,8 @@ function HeroSection() {
 					src={circleBg}
 					alt='circleBg'
 				/>
-				<div className='main-herosection max-md:text-start max-md:text-3xl'>
-					<h1 className='hero-text font-[800] max-md:block max-md:text-2xl max-md:text-center max-md:font-extrabold'>
+				<div className='main-herosection '>
+					<h1 className='hero-text font-[800] max-md:block max-md:text-[30px] max-md:text-center max-md:font-extrabold'>
 						<span style={{ color: '#F49406' }}> Gain</span>{' '}
 						<span style={{ color: 'black' }}> Impressive</span>
 						<span style={{ color: '#20B486' }}> Skills</span>{' '}
@@ -38,7 +38,7 @@ function HeroSection() {
 						</span>{' '}
 					</h1>
 					<div>
-						<p className='hero-description text-[rgba(30,30,30,0.7)] leading-[1.8]  text-[23px] max-md:text-center'>
+						<p className='hero-description text-[rgba(30,30,30,0.7)] leading-[1.8] max-md:text-[15px] text-[23px] max-md:text-center'>
 							Discover vital courses that bring about real change in both
 							your personal and professional life. At SPID Education, we
 							prioritize practical learning through reading, ensuring you
