@@ -48,7 +48,7 @@ function CeoSection() {
 					</>
 				)}
 
-				<p className='mb-8 font-sans text-xl font-light text-white max-md:text-center max-md:text-xs max-md:pb-8'>
+				<p className='mb-8 text-[22px] leading-[1.8] font-Poppins text-white/80 max-md:text-center max-md:text-xs max-md:pb-8'>
 					We know that if you&apos;re reading this, it&apos;s because
 					you&apos;re eager to learn, and you&apos;re in the right place.
 					Our goal is to train individuals like you and help them gain

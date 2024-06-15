@@ -29,11 +29,11 @@ export default {
 			keyframes: {
 				scroll: {
 					'0%': { transform: 'translateX(100%)' },
-					'100%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(-500%)' },
 				},
 			},
 			animation: {
-				scroll: 'scroll 20s linear infinite',
+				scroll: 'scroll 5s linear infinite',
 			},
 		},
 	},
