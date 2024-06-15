@@ -92,16 +92,19 @@ function CourseSection() {
 					<h1 className='popular-courses max-md:text-xl'>
 						Our <span className='courses-title'>Courses</span>{' '}
 					</h1>
-
 					<div className='explore-course-container max-md:gap-0 max-md:items-center max-md:w-1/3'>
 						{windowWidth <= 768 ? (
-							<h2 className='Explore-courses font-koho max-md:text-[15px]'>
-								More Courses
-							</h2>
+							<Link to='/AllCoursesPage'>
+								<h2 className='Explore-courses font-koho max-md:text-[15px]'>
+									More Courses
+								</h2>
+							</Link>
 						) : (
-							<h2 className='Explore-courses font-koho'>
-								Explore courses
-							</h2>
+							<Link to='/AllCoursesPage'>
+								<h2 className='Explore-courses font-koho'>
+									Explore courses
+								</h2>
+							</Link>
 						)}
 
 						<img
@@ -136,32 +139,51 @@ function CourseSection() {
 								<div className='lessons-count '>
 									<img
 										src={numberImage}
-										className='number-image'
+										className='number-image max-md:w-5 max-md:h-5'
 									/>
-									<p className='lessons-number max-md:text-[1rem]'>
+									<p className='lessons-number max-md:text-xs'>
 										{' '}
 										10 Lessons
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
-									<img src={fullStar} />
-									<img src={fullStar} />
-									<img src={fullStar} />
-									<img src={halfStar} />
-									<img src={halfStar} />
+									<img
+										src={fullStar}
+										className='max-md:w-[13px] max-md:h-[13px]'
+										alt='rating-star'
+									/>
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={halfStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={halfStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
 								</div>
 							</div>
-							<h2 className='card-title'>
-								Professional Cleaning Mastery{' '}
-							</h2>
+							<h2 className='card-title'>Professional Cleaning Course </h2>
 							<p className='card-intro max-md:text-[15px]'>
-								Advanced Cleaning Techniques and Equipment Usage
+								Enhance Your Cleaning Skills, Learn Expert Techniques and
+								Gain Hands-On Experience!{' '}
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-md:text-[15px]'>
 										{' '}
-										$ 5
+										$ 8
 									</span>
 									<span className='dollar-numbers-twenty max-md:text-[15px]'>
 										{' '}
@@ -185,32 +207,53 @@ function CourseSection() {
 								<div className='lessons-count '>
 									<img
 										src={numberImage}
-										className='number-image'
+										className='number-image max-md:w-5 max-md:h-5'
 									/>
-									<p className='lessons-number max-md:text-[1rem]'>
+									<p className='lessons-number max-md:text-xs'>
 										{' '}
 										10 Lessons
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
-									<img src={fullStar} />
-									<img src={fullStar} />
-									<img src={fullStar} />
-									<img src={halfStar} />
-									<img src={halfStar} />
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={halfStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={halfStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
 								</div>
 							</div>
 							<h2 className='card-title'>
-								Professional Cleaning Mastery{' '}
+								Professional Babysitting Course
 							</h2>
 							<p className='card-intro max-md:text-[15px]'>
-								Advanced Cleaning Techniques and Equipment Usage
+								Gain skills with our Babysitting Course, Elevate your
+								childcare abilities!{' '}
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-md:text-[15px] '>
 										{' '}
-										$ 5
+										$ 8
 									</span>
 									<span className='dollar-numbers-twenty max-md:text-[15px]'>
 										{' '}
@@ -234,31 +277,52 @@ function CourseSection() {
 								<div className='lessons-count'>
 									<img
 										src={numberImage}
-										className='number-image'
+										className='number-image max-md:w-5 max-md:h-5'
 									/>
-									<p className='lessons-number max-md:text-[1rem]'>
+									<p className='lessons-number max-md:text-xs'>
 										10 Lessons
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
-									<img src={fullStar} />
-									<img src={fullStar} />
-									<img src={fullStar} />
-									<img src={halfStar} />
-									<img src={halfStar} />
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={fullStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={halfStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
+									<img
+										src={halfStar}
+										alt='rating-star'
+										className='max-md:w-[13px] max-md:h-[13px]'
+									/>
 								</div>
 							</div>
 							<h2 className='card-title max-md:text-[15px]'>
-								Professional Cleaning Mastery{' '}
+								Waiter and Waitress Course{' '}
 							</h2>
 							<p className='card-intro max-md:text-[15px]'>
-								Advanced Cleaning Techniques and Equipment Usage
+								Refine your service expertise and master hospitality with
+								our Waits Courses!{' '}
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-md:text-[15px]'>
 										{' '}
-										$ 5
+										$ 8
 									</span>
 									<span className='dollar-numbers-twenty max-md:text-[15px]'>
 										{' '}
