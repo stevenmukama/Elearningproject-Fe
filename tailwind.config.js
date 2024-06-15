@@ -26,16 +26,17 @@ export default {
 			koh: ['Koh Santepheap'],
 		},
 		extend: {
+			animation: {
+				scroll: 'scroll 30s linear infinite',
+			},
 			keyframes: {
 				scroll: {
-					'0%': { transform: 'translateX(100%)' },
-					'100%': { transform: 'translateX(-500%)' },
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(-100%)' },
 				},
-			},
-			animation: {
-				scroll: 'scroll 5s linear infinite',
 			},
 		},
 	},
+
 	plugins: [],
 };
