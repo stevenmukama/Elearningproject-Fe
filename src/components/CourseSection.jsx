@@ -93,8 +93,8 @@ function CourseSection() {
 						{courseLessons.map((courseLessons) => (
 							<div
 								key={courseLessons.id}
-								className='mb-6 animate-scroll'>
-								<button className='px-4 py-2 border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486]  max-md:text-[8px] max-md:flex '>
+								className='inline-block mb-6 whitespace-nowrap'>
+								<button className='px-4 py-2 inline-block border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486]  max-md:text-[8px]  '>
 									{courseLessons.text}
 								</button>
 							</div>
@@ -102,12 +102,12 @@ function CourseSection() {
 					</div>
 					<div
 						aria-hidden='true'
-						className='flex gap-4 animate-scroll group-hover:paused'>
+						className='flex gap-4 group-hover:paused'>
 						{courseLessons.map((courseLessons) => (
 							<div
 								key={courseLessons.id}
-								className='mb-6 animate-scroll'>
-								<button className='px-4 py-2 border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486]  max-md:text-[8px] max-md:flex '>
+								className='inline-block mb-6 whitespace-nowrap'>
+								<button className='px-4 py-2 inline-block border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486]  max-md:text-[8px]  '>
 									{courseLessons.text}
 								</button>
 							</div>
