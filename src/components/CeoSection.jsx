@@ -34,14 +34,14 @@ function CeoSection() {
 				) : (
 					<>
 						<h1 className='mb-8 font-bold font-koho max-md:mb-2 max-md:pt-14'>
-							<span className='text-3xl text-white max-md:text-[13px]'>
+							<span className='text-[40px] text-white max-md:text-[13px]'>
 								Experience Unlimited Learning
 							</span>
 							<br className='mt-2 max-md:hidden' />
-							<span className='text-3xl text-white max-md:text-[13px] max-md:pl-1'>
+							<span className='text-[40px] text-white max-md:text-[13px] max-md:pl-1'>
 								Potential
 							</span>
-							<span className='pl-1 text-[#24D198] text-3xl max-md:text-[13px]'>
+							<span className='pl-1 text-[#24D198] text-[40px] max-md:text-[13px]'>
 								with SPidEd!
 							</span>
 						</h1>
