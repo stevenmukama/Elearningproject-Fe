@@ -88,17 +88,21 @@ function CourseSection() {
 						/>
 					</div>
 				</div>
-				<div className='flex overflow-hidden group'>
+				<div
+					className='flex overflow-hidden group'
+					data-animated='true'>
 					<div className='flex gap-4 animate-scroll group-hover:paused'>
-						{courseLessons.map((courseLessons) => (
-							<div
-								key={courseLessons.id}
-								className='inline-block mb-6 whitespace-nowrap'>
-								<button className='px-4 py-2 inline-block border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486]  max-md:text-[8px]  '>
-									{courseLessons.text}
-								</button>
-							</div>
-						))}
+						{courseLessons
+							.concat(courseLessons)
+							.map((courseLesson, index) => (
+								<div
+									key={index}
+									className='inline-block mb-6 whitespace-nowrap'>
+									<button className='px-4 py-2 inline-block border rounded-md hoverTextButton hover:bg-[#20B486] active:bg-[#20B486] max-md:text-[8px]'>
+										{courseLesson.text}
+									</button>
+								</div>
+							))}
 					</div>
 					<div
 						aria-hidden='true'
