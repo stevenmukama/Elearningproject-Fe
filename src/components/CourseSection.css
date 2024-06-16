@@ -68,11 +68,8 @@
 	border-bottom-right-radius: 8px;
 }
 
-.card-image-item {
-	/* height: 300px; */
-}
-
 .card-item {
+	width: 33%;
 	font-family: 'Poppins', sans-serif;
 }
 
