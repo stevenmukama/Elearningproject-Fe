@@ -100,11 +100,7 @@ const Navbar = () => {
 
 	const toggleSmallScreenMenu = () => {
 		setIsSmallScreenMenuOpen((prevState) => !prevState);
-		console.log('clicked', isSmallScreenMenuOpen);
 	};
-	useEffect(() => {
-		console.log('clicked', isSmallScreenMenuOpen);
-	}, [isSmallScreenMenuOpen]);
 
 	const coursesDropdownItems = [
 		'Leadership',
@@ -383,10 +379,10 @@ const Navbar = () => {
 			)}
 
 			{isContactFormOpen && (
-				<div className='absolute inset-0 z-10 flex items-center justify-center h-screen mt-16 bg-black bg-opacity-50 top-36 '>
+				<div className='absolute z-10 flex items-center justify-center bg-black bg-opacity-50 top-10'>
 					<div
 						ref={contactFormRef}
-						className='w-4/5 p-6 bg-white rounded shadow-lg '>
+						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:mt-10'>
 						<div className='flex justify-end gap-4 pt-2 pr-16 max-md:gap-8'>
 							<span
 								onClick={() => setIsContactFormOpen(false)}
@@ -403,7 +399,7 @@ const Navbar = () => {
 								Close
 							</p>
 						</div>
-						<div className='z-50'>
+						<div className='z-50 '>
 							<ContactForm />
 						</div>
 					</div>
