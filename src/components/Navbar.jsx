@@ -379,7 +379,7 @@ const Navbar = () => {
 			)}
 
 			{isContactFormOpen && (
-				<div className='absolute z-10 flex items-center justify-center bg-black bg-opacity-50 top-10'>
+				<div className='absolute z-10 flex pt-10 pb-10 items-center justify-center bg-black bg-opacity-50 top-[6rem]'>
 					<div
 						ref={contactFormRef}
 						className='w-4/5 p-6 bg-white rounded shadow-lg max-md:mt-10'>
