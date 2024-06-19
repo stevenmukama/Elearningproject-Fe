@@ -66,9 +66,10 @@ function CeoSection() {
 					)}
 				</div>
 			</div>
-			<img
-				src='/ceoimge.png'
+			<video
+				src='/joinSpided.mp4'
 				className='object-contain w-[50%] max-md:w-full'
+				controls
 			/>
 		</div>
 	);
