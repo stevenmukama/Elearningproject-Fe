@@ -79,8 +79,8 @@ button {
 @media screen and (max-width: 768px) {
 	.cta-button,
 	.contact-button {
-		width: auto;
-		height: auto;
+		font-size: 16px;
+		height: 45px;
 	}
 	.Home-section {
 		display: flex;

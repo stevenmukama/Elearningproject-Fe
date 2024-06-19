@@ -2,8 +2,19 @@ import ladyimage from './../img/ladysitting.png';
 import circleBg from './../img/circlesbg.svg';
 import './HeroSection.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function HeroSection() {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleResize);
+	}, []);
+
 	return (
 		<>
 			<section className='Home-section md:max-xl:block max-md:flex-col-reverse max-md:pt-14 max-md:my-0 max-md:mx-[30px] max-md:pb-0'>
@@ -59,9 +70,15 @@ function HeroSection() {
 									alt='certification icon'
 									className='w-auto h-auto'
 								/>
-								<p className='max-md:text-sm md:text-[22px] font-medium'>
-									Cert Verification
-								</p>
+								{windowWidth <= 768 ? (
+									<p className='font-medium text-start max-md:text-[15px] gap-2'>
+										Cert Verify
+									</p>
+								) : (
+									<p className='max-md:text-sm md:text-[22px] font-medium'>
+										Cert Verification
+									</p>
+								)}
 							</Link>
 						</div>
 					</div>
