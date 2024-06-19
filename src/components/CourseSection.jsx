@@ -173,7 +173,7 @@ function CourseSection() {
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-md:text-[15px]'>
 										{' '}
-										$ 8
+										$ 10
 									</span>
 									<span className='dollar-numbers-twenty max-md:text-[15px]'>
 										{' '}
@@ -243,7 +243,7 @@ function CourseSection() {
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-md:text-[15px] '>
 										{' '}
-										$ 8
+										$ 10
 									</span>
 									<span className='dollar-numbers-twenty max-md:text-[15px]'>
 										{' '}
@@ -312,7 +312,7 @@ function CourseSection() {
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
 									<span className='dollar-numbers-five max-md:text-[15px]'>
 										{' '}
-										$ 8
+										$ 10
 									</span>
 									<span className='dollar-numbers-twenty max-md:text-[15px]'>
 										{' '}
