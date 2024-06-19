@@ -381,28 +381,17 @@ const Navbar = () => {
 			{isContactFormOpen && (
 				<div className='absolute z-10 flex pt-10 pl-[30%] pb-10 items-center justify-center bg-black bg-opacity-50 top-[6rem]'>
 					<div
-						className='pt-3 pb-3 pr-8 bg-white rounded-tl-full rounded-bl-full cursor-pointer'
+						className='p-3 bg-white rounded-tl-full rounded-bl-full cursor-pointer'
 						onClick={() => setIsContactFormOpen(false)}>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth={1.5}
-							stroke='currentColor'
-							className='size-14'>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M15.75 19.5 8.25 12l7.5-7.5'
-							/>
-						</svg>
+						<img
+							src='/rightContactIcon.svg'
+							alt='rightContactIcon'
+							className='w-auto h-auto'
+						/>
 					</div>
-					{/* <div
-						ref={contactFormRef}
-						className='w-full p-6 bg-white rounded shadow-lg max-md:mt-10'> */}
 					<div
 						ref={contactFormRef}
-						className={`w-full p-6 bg-white rounded shadow-lg max-md:mt-10 transition-transform duration-500 ${
+						className={`w-full p-6 bg-white rounded-tl-3xl rounded-bl-3xl shadow-lg max-md:mt-10 transition-transform duration-500 ${
 							isContactFormOpen ? 'translate-x-0' : '-translate-x-full'
 						}`}>
 						<div className='flex justify-end gap-4 pt-2 pr-16 max-md:gap-8'>
