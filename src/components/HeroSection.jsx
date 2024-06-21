@@ -29,7 +29,7 @@ function HeroSection() {
 					alt='circleBg'
 				/>
 				<div className='main-herosection '>
-					<h1 className='hero-text font-[800] max-md:block max-md:text-[30px] max-md:text-center max-md:font-extrabold'>
+					<h1 className='hero-text font-[800] max-md:block max-md:text-[26px] max-md:text-center max-md:font-extrabold'>
 						<span style={{ color: '#F49406' }}> Gain</span>{' '}
 						<span style={{ color: 'black' }}> Impressive</span>
 						<span style={{ color: '#20B486' }}> Skills</span>{' '}
