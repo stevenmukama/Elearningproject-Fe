@@ -70,6 +70,8 @@ function CeoSection() {
 				src='/joinSpided.mp4'
 				className='object-contain w-[50%] max-md:w-full'
 				controls
+				playsInline
+				preload='metadata'
 			/>
 		</div>
 	);
