@@ -53,18 +53,18 @@ function ReviewSection() {
 	const handleSwipe = (index) => {
 		setActiveIndex(index);
 		setClickedIndex(index);
-		setTimeout(() => setClickedIndex(null), 300); // Reset clickedIndex after 300ms
+		setTimeout(() => setClickedIndex(null), 300);
 	};
 
 	const handleDotClick = (index) => {
 		setActiveIndex(index);
 		setClickedIndex(index);
-		setTimeout(() => setClickedIndex(null), 300); // Reset clickedIndex after 300ms
+		setTimeout(() => setClickedIndex(null), 300);
 	};
 
 	return (
 		<>
-			<div className='bg-[#F0FAF7]'>
+			<div className='bg-[#F0FAF7] pb-4'>
 				<section
 					className='p-8 mb-11 mt-11 max-md:text-center max-md:p-0'
 					onTouchStart={handleTouchStart}
@@ -105,8 +105,8 @@ function ReviewSection() {
 										width:
 											index === activeIndex || index === clickedIndex
 												? '48px'
-												: '16px',
-										height: '16px',
+												: '10px',
+										height: '10px',
 									}}></button>
 							))}
 						</div>
