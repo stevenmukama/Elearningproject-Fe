@@ -69,7 +69,7 @@ function CourseSection() {
 					<div className='explore-course-container max-md:gap-0 max-md:items-center max-md:w-1/3'>
 						{windowWidth <= 768 ? (
 							<Link to='/AllCoursesPage'>
-								<h2 className='Explore-courses font-koho max-md:text-[15px]'>
+								<h2 className='Explore-courses font-koho max-md:text-[15px] font-bold '>
 									More Courses
 								</h2>
 							</Link>
@@ -167,7 +167,7 @@ function CourseSection() {
 							<h2 className='card-title'>Professional Cleaning Course </h2>
 							<p className='card-intro max-md:text-[15px]'>
 								Enhance Your Cleaning Skills, Learn Expert Techniques and
-								Gain Hands-On Experience!{' '}
+								Gain Experience!{' '}
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>

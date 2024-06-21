@@ -107,6 +107,7 @@ const Navbar = () => {
 		'House Cleaning',
 		'Baby sitting',
 		'Chief Cook',
+		'Coming Soon',
 		'Elderly caretaker',
 		'Waiter & Waitress',
 		'Receptionist',
@@ -338,42 +339,46 @@ const Navbar = () => {
 			)}
 
 			{isCoursesDropdownOpen && (
-				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-3/4 rounded-md shadow-lg bg-[#F0FAF7] '>
-					<div className='relative flex justify-between pt-6 pl-4 pr-8'>
-						<span className='text-[#24D198] text-2xl font-bold font-koho'>
-							Course Categories
-						</span>
-						<span className='flex items-center gap-1 cursor-pointer bg-white p-3 text-black hover:text-[#24D198]'>
-							View All
-							<img
-								src='/arrowRightIcon.svg'
-								alt='arrowRightUpIcon'
-								className='w-auto h-auto'
-							/>
-						</span>
-					</div>
-					<div
-						className='py-2'
-						onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
-						{Array.from({ length: 5 }).map((_, rowIndex) => (
-							<div
-								key={rowIndex}
-								className='flex'>
-								{Array.from({ length: 5 }).map((_, colIndex) => {
-									const course =
-										coursesDropdownItems[rowIndex * 5 + colIndex];
-									return (
-										<div
-											key={colIndex}
-											className={`px-4 py-2 text-start w-1/5 text-black hover:text-[#24D198] cursor-pointer ${
-												course === 'Coming Soon' ? 'bg-white p-2' : ''
-											}`}>
-											{course}
-										</div>
-									);
-								})}
-							</div>
-						))}
+				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-full rounded-md shadow-lg bg-[#F0FAF7] '>
+					<div className='px-[40px]'>
+						<div className='relative flex justify-between pt-6 pl-4 w-[95%]'>
+							<span className='text-[#24D198] text-2xl font-bold font-koho'>
+								Course Categories
+							</span>
+							<span className='flex items-center gap-1 cursor-pointer p-3 text-black hover:text-[#24D198]'>
+								View All
+								<img
+									src='/arrowRightIcon.svg'
+									alt='arrowRightUpIcon'
+									className='w-auto h-auto'
+								/>
+							</span>
+						</div>
+						<div
+							className='py-2'
+							onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
+							{Array.from({ length: 5 }).map((_, rowIndex) => (
+								<div
+									key={rowIndex}
+									className='flex'>
+									{Array.from({ length: 5 }).map((_, colIndex) => {
+										const course =
+											coursesDropdownItems[rowIndex * 5 + colIndex];
+										return (
+											<div
+												key={colIndex}
+												className={`px-4 py-2 text-start w-1/5 text-black hover:text-[#24D198] cursor-pointer ${
+													course === 'Coming Soon'
+														? 'bg-white py-2 px-10 w-fit'
+														: ''
+												}`}>
+												{course}
+											</div>
+										);
+									})}
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			)}

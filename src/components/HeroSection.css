@@ -27,7 +27,6 @@ button {
 	overflow: visible;
 	position: relative;
 	width: 100%;
-	margin-top: 15%;
 }
 
 .circleBg {
@@ -50,10 +49,11 @@ button {
 }
 
 .Home-section {
+	position: relative;
+	top: 100px;
 	margin: 0px 60px;
 	display: flex;
 	justify-content: center;
-	gap: 60px;
 	align-items: center;
 	padding-bottom: 100px;
 }
@@ -73,24 +73,7 @@ button {
 	font-size: 18px;
 	font-weight: 500;
 	font-family: 'Inter', sans-serif;
-	width: 168px;
 	height: 60px;
-}
-@media screen and (max-width: 768px) {
-	.cta-button,
-	.contact-button {
-		font-size: 16px;
-		height: 45px;
-	}
-	.Home-section {
-		display: flex;
-		gap: 12px;
-	}
-	.Home-section-buttons {
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-	}
 }
 
 .cta-button,
@@ -135,10 +118,11 @@ button.cta-button {
 }
 
 .lady-sitting-image {
-	width: 95%;
 	padding-top: 30px;
+	height: 580px;
 	position: relative;
 	z-index: 9;
+	object-fit: cover;
 	padding-right: 50px;
 }
 
@@ -146,4 +130,25 @@ button.cta-button {
 	background-color: #ffffff;
 	color: #1e1e1e;
 	border: 1px solid #1e1e1e;
+}
+
+@media screen and (max-width: 768px) {
+	.cta-button,
+	.contact-button {
+		font-size: 16px;
+		height: 45px;
+	}
+	.Home-section {
+		display: flex;
+		gap: 12px;
+		top: 80px;
+	}
+	.Home-section-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+	.lady-sitting-image {
+		height: 272.45px;
+	}
 }

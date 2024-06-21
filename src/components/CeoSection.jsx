@@ -15,7 +15,7 @@ function CeoSection() {
 		};
 	}, []);
 	return (
-		<div className="items-start flex mt-16 bg-cover mb-11 pt-[8rem] p-16 max-md:py-7 max-md:px-7 gap-16 max-md:flex-col max-md:pt-3 max-md: max-md:h-full md:max-xl:h-full md:max-xl:gap-3 bg-[url('/ceoBgImg.svg')] max-md:bg-[url('/phoneBg.svg')] max-md:bg-center">
+		<div className="items-start flex mt-16 max-md:mt-[6rem] bg-cover mb-11 pt-[8rem] p-16 max-md:py-7 max-md:px-7 gap-16 max-md:flex-col max-md:pt-3 max-md: max-md:h-full md:max-xl:h-full md:max-xl:gap-3 bg-[url('/ceoBgImg.svg')] max-md:bg-[url('/phoneBg.svg')] max-md:bg-center">
 			<div className='w-1/2 max-md:w-full max-md:pt-20'>
 				{windowWidth <= 768 ? (
 					<>

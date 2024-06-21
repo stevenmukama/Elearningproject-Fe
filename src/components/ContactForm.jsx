@@ -130,12 +130,19 @@ const ContactForm = () => {
 						</div>
 					</div>
 				</div>
-				<div className='relative w-[100%] flex px-12 bg-[#F9F8EC] rounded-lg  max-md:pl-2'>
-					<img
-						src='/lineContact.svg'
-						className='w-4 pt-9 h-[61%] max-md:h-[353px]'
-					/>
-					<form className='relative w-full px-3 font-Poppins'>
+				<div className='relative w-[100%] flex px-12  max-md:pr-[1rem] bg-[#F9F8EC] rounded-lg  max-md:pl-2'>
+					{windowWidth <= 768 ? (
+						<img
+							src=' /phoneLineContact.svg'
+							className='w-4 pt-9 h-[61%] max-md:object-cover'
+						/>
+					) : (
+						<img
+							src='/lineContact.svg'
+							className='w-4 pt-9 h-[61%] max-md:object-cover'
+						/>
+					)}
+					<form className='relative w-full px-2 font-Poppins'>
 						{FormData.map((data, index) => (
 							<div
 								key={index}
@@ -147,7 +154,7 @@ const ContactForm = () => {
 								</label>
 								{data.type === 'textarea' ? (
 									<textarea
-										className={`w-full px-3 py-2 leading-tight bg-[#F9F8EC] text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline ml-2 ${
+										className={`w-full px-3 py-2 leading-tight bg-[#F9F8EC] text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline ml-2 ${
 											touchedFields[data.textLabel] &&
 											errors[data.textLabel]
 												? 'border-red-500'
@@ -163,7 +170,7 @@ const ContactForm = () => {
 									/>
 								) : (
 									<input
-										className={`w-full px-3 py-2 leading-tight bg-[#F9F8EC] text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline ml-2 ${
+										className={`w-full px-3 py-2 leading-tight bg-[#F9F8EC] text-gray-700 border rounded  appearance-none focus:outline-none focus:shadow-outline ml-2 ${
 											touchedFields[data.textLabel] &&
 											errors[data.textLabel]
 												? 'border-red-500'

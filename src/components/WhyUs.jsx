@@ -19,7 +19,7 @@ function WhyUs() {
 		<>
 			<div className='bg-[#20B486] '>
 				<section className='py-8 rounded-2xl max-md:px-0'>
-					<div className='flex gap-5 text-white justify-evenly text-start  max-md:text-[22px] max-md:flex-col-reverse md:max-xl:flex-col-reverse'>
+					<div className='flex gap-5 text-white justify-between text-start  max-md:text-[22px] max-md:flex-col-reverse md:max-xl:flex-col-reverse'>
 						<div className='max-md:flex max-md:flex-col'>
 							{windowWidth <= 768 ? (
 								<h2 className='font-bold font-koho text-start max-md:text-xl max-md:mb-8'>

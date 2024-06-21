@@ -28,7 +28,7 @@ function HowItWorks() {
 				{' '}
 				How Spid-Education Works
 			</h1>
-			<div className='flex gap-10 max-md:flex-col max-md:m-0'>
+			<div className='flex max-md:flex-col max-md:m-0'>
 				<div className='flex-col items-center justify-center h-full pt-6 mt-8 max-md:mt-2'>
 					{SpidProcess.map((process) => (
 						<div

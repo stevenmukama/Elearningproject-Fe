@@ -17,7 +17,7 @@ function HeroSection() {
 
 	return (
 		<>
-			<section className='Home-section md:max-xl:block max-md:flex-col-reverse max-md:pt-14 max-md:my-0 max-md:mx-[30px] max-md:pb-0'>
+			<section className='Home-section md:max-xl:block max-md:flex-col-reverse max-md:pt-2 max-md:my-0 max-md:mx-[30px] max-md:pb-0'>
 				<img
 					className='circleBg max-md:hidden'
 					src={circleBg}
@@ -64,14 +64,14 @@ function HeroSection() {
 							</button>
 							<Link
 								to='/certificationPage'
-								className='flex gap-4 font-Poppins hover:text-[#20B486]'>
+								className='flex gap-4 max-md:gap-2 items-center font-Poppins hover:text-[#20B486]'>
 								<img
 									src='/certificationVector.svg'
 									alt='certification icon'
-									className='w-auto h-auto'
+									className='w-auto h-auto max-md:w-5 max-md:h-5'
 								/>
 								{windowWidth <= 768 ? (
-									<p className='font-medium text-start max-md:text-[15px] gap-2'>
+									<p className='font-medium text-start max-md:text-[15px]'>
 										Cert Verify
 									</p>
 								) : (
@@ -83,7 +83,7 @@ function HeroSection() {
 						</div>
 					</div>
 				</div>
-				<div className='herosection-lady max-md:flex max-md:mt-6'>
+				<div className='herosection-lady max-md:flex '>
 					<div className='box-herosection'></div>
 					<img
 						src={ladyimage}
