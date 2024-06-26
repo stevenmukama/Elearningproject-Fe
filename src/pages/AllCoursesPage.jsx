@@ -281,7 +281,7 @@ function AllCoursesPage() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsSmallScreen(window.innerWidth <= 768);
+			setIsSmallScreen(window.innerWidth <= 1024);
 		};
 
 		window.addEventListener('resize', handleResize);
@@ -384,7 +384,7 @@ function AllCoursesPage() {
 
 							<div
 								className={`card-image-item ${course.imageClass} bg-cover bg-center w-full h-[410px] rounded-t-md`}></div>
-							<div className='card-info  max-md:h-[500px] flex flex-col gap-[22px]'>
+							<div className='card-info  lg:h-[435px] max-md:h-435px max-md:h-auto flex flex-col gap-[22px]'>
 								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 									<div className='flex items-center mb-2 lessons-count'>
 										<img
@@ -424,8 +424,8 @@ function AllCoursesPage() {
 										? truncateText(course.intro, 12)
 										: course.intro}
 								</p>
-								<div className='discount-section '>
-									<div className='dollar-discounted md:max-lg:text-[17px] flex items-center'>
+								<div className='discount-section max-lg:text-[15px]'>
+									<div className='flex items-center dollar-discounted'>
 										<span className='mr-2 text-3xl dollar-numbers-five '>
 											{course.price.discounted}
 										</span>
