@@ -133,7 +133,7 @@ function CourseSection() {
 									/>
 									<p className='lessons-number max-md:text-xs'>
 										{' '}
-										10 Lessons
+										10 Modules
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
@@ -201,7 +201,7 @@ function CourseSection() {
 									/>
 									<p className='lessons-number max-md:text-xs'>
 										{' '}
-										10 Lessons
+										10 Modules
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
@@ -270,7 +270,7 @@ function CourseSection() {
 										className='number-image max-md:w-5 max-md:h-5'
 									/>
 									<p className='lessons-number max-md:text-xs'>
-										10 Lessons
+										10 Modules
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>

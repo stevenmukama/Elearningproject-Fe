@@ -38,5 +38,16 @@ export default {
 		},
 	},
 
-	plugins: [],
+	plugins: [
+		function ({ addUtilities }) {
+			addUtilities({
+				'.truncate-words-10': {
+					overflow: 'hidden',
+					display: '-webkit-box',
+					'-webkit-line-clamp': '3', // Adjust this number based on the number of lines you want
+					'-webkit-box-orient': 'vertical',
+				},
+			});
+		},
+	],
 };

@@ -255,7 +255,6 @@ const Navbar = () => {
 			</nav>
 			{isSmallScreenMenuOpen && (
 				<div
-					onMouseLeave={() => setIsCoursesDropdownOpen(false)}
 					ref={smallScreenMenuRef}
 					className='relative top-16'>
 					<div className='bg-[#4B4B4B] flex justify-between h-screen'>
@@ -343,20 +342,20 @@ const Navbar = () => {
 					<div className='px-[40px]'>
 						<div className='relative flex justify-between pt-6 pl-4 w-[95%]'>
 							<span className='text-[#24D198] text-2xl font-bold font-koho'>
-								Course Categories
+								<Link to='/AllCoursesPage'>Course Categories</Link>
 							</span>
-							<span className='flex items-center gap-1 cursor-pointer p-3 text-black hover:text-[#24D198]'>
-								View All
-								<img
-									src='/arrowRightIcon.svg'
-									alt='arrowRightUpIcon'
-									className='w-auto h-auto'
-								/>
-							</span>
+							<Link to='/AllCoursesPage'>
+								<span className='flex items-center gap-1 cursor-pointer p-3 text-black hover:text-[#24D198]'>
+									View All
+									<img
+										src='/arrowRightIcon.svg'
+										alt='arrowRightUpIcon'
+										className='w-auto h-auto'
+									/>
+								</span>
+							</Link>
 						</div>
-						<div
-							className='py-2'
-							onMouseLeave={() => setIsCoursesDropdownOpen(false)}>
+						<div className='py-2'>
 							{Array.from({ length: 5 }).map((_, rowIndex) => (
 								<div
 									key={rowIndex}
@@ -372,7 +371,11 @@ const Navbar = () => {
 														? 'bg-white py-2 px-10 w-fit'
 														: ''
 												}`}>
-												{course}
+												<Link
+													key={rowIndex}
+													to='/AllCoursesPage'>
+													{course}
+												</Link>
 											</div>
 										);
 									})}
