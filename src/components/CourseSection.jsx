@@ -164,18 +164,20 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title'>Professional Cleaning Course </h2>
-							<p className='card-intro max-md:text-[15px]'>
+							<h2 className='card-title max-sm:text-[15px]'>
+								Professional Cleaning Course{' '}
+							</h2>
+							<p className='card-intro max-md:text-[15px] max-sm:text-[14px]'>
 								Enhance Your Cleaning Skills, Learn Expert Techniques and
 								Gain Experience!{' '}
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='dollar-numbers-five max-md:text-[15px]'>
+									<span className='dollar-numbers-five max-sm:text-[20px]'>
 										{' '}
 										$ 10
 									</span>
-									<span className='dollar-numbers-twenty max-md:text-[15px]'>
+									<span className='dollar-numbers-twenty max-sm:text-[17px]'>
 										{' '}
 										$ 20
 									</span>
@@ -232,7 +234,7 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title'>
+							<h2 className='card-title max-sm:text-[15px]'>
 								Professional Babysitting Course
 							</h2>
 							<p className='card-intro max-md:text-[15px]'>
@@ -241,11 +243,11 @@ function CourseSection() {
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='dollar-numbers-five max-md:text-[15px] '>
+									<span className='dollar-numbers-five max-md:text-[20px] '>
 										{' '}
 										$ 10
 									</span>
-									<span className='dollar-numbers-twenty max-md:text-[15px]'>
+									<span className='dollar-numbers-twenty max-md:text-[17px]'>
 										{' '}
 										$ 20
 									</span>
@@ -301,7 +303,7 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-md:text-[15px]'>
+							<h2 className='card-title max-sm:text-[15px]'>
 								Waiter and Waitress Course{' '}
 							</h2>
 							<p className='card-intro max-md:text-[15px]'>
@@ -310,11 +312,11 @@ function CourseSection() {
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='dollar-numbers-five max-md:text-[15px]'>
+									<span className='dollar-numbers-five max-md:text-[20px]'>
 										{' '}
 										$ 10
 									</span>
-									<span className='dollar-numbers-twenty max-md:text-[15px]'>
+									<span className='dollar-numbers-twenty max-md:text-[17px]'>
 										{' '}
 										$ 20
 									</span>
