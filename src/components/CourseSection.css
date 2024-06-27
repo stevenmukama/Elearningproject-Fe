@@ -193,7 +193,7 @@ span.dollar-numbers-twenty {
 
 @media screen and (min-width: 768px) {
 	.card-intro {
-		height: 140px;
+		height: 100px;
 	}
 	.Enroll {
 		font-size: 15px;
@@ -216,10 +216,3 @@ span.dollar-numbers-twenty {
 		height: 325px;
 	}
 }
-
-/* laptop max-screen 1240px */
-/* @media screen and (min-width: 1240px) {
-	.card-info {
-		height: auto;
-	}
-} */

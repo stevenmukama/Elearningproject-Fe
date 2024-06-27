@@ -211,7 +211,7 @@ function AllCoursesPage() {
 			],
 		},
 		{
-			title: 'Operations & Supply Chain Ma..',
+			title: 'Operations & Supply Chain Management',
 			intro:
 				'Excel in planning & controlling business operations while managing the supply chain to boost efficiency in any industry.',
 			imageClass: 'bg-[url("/Operations&SupplyChain.png")]',
@@ -314,7 +314,7 @@ function AllCoursesPage() {
 	return (
 		<>
 			<Navbar />
-			<section className='pt-16 max-md:mx-8 md:max-xl:pt-0'>
+			<section className='pt-16 max-sm:mx-8 '>
 				<div className='bg-[#07614C] pt-10 pb-8 max-sm:py-12 flex-col rounded-[30px] mt-8 h-[689px] max-sm:h-auto'>
 					<h1 className='font-koho pt-[123px] max-sm:pt-0 font-bold text-[70px] max-sm:text-[30px] text-[#F49406]'>
 						Our Courses{' '}
@@ -324,7 +324,7 @@ function AllCoursesPage() {
 						Selection of Courses and Find The Ideal One for Your Learning
 						Adventure!
 					</p>
-					<div className='block w-2/5 mx-auto h-[62px] max-sm:h-[40px] bg-white/50 rounded-xl max-sm:w-[85%]'>
+					<div className='block w-1/2  mx-auto h-[62px] max-sm:h-[40px] bg-white/50 rounded-xl '>
 						<div className='flex items-center  h-[62px] max-sm:h-[40px] justify-center text-[rgba(30,30,30,0.5)]'>
 							<img
 								src='/searchCourses.svg'
@@ -336,22 +336,6 @@ function AllCoursesPage() {
 								className='w-full p-2 outline-none text-xl max-sm:text-[12px] text- bg-transparent font-Poppins'
 								placeholder='Search a course'
 							/>
-							<div className='flex px-[10px] max-sm:h-[40px] gap-[10px] max-sm:text-xs h-[62px] bg-white rounded-r-xl cursor-pointer items-center justify-center'>
-								Courses
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 24 24'
-									strokeWidth={2.5}
-									stroke='currentColor'
-									className='size-6 max-sm:size-3'>
-									<path
-										strokeLinecap='round'
-										strokeLinejoin='round'
-										d='m19.5 8.25-7.5 7.5-7.5-7.5'
-									/>
-								</svg>{' '}
-							</div>
 						</div>
 					</div>
 				</div>
@@ -383,13 +367,13 @@ function AllCoursesPage() {
 							)}
 
 							<div
-								className={`card-image-item ${course.imageClass} bg-cover  w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
-							<div className='card-info  lg:h-[435px] max-md:h-435px max-md:h-auto flex flex-col gap-[22px] max-sm:gap-2  '>
+								className={`card-image-item ${course.imageClass} bg-cover  md:bg-center w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
+							<div className='card-info max-md:h-435px max-md:h-auto flex flex-col gap-[22px] max-sm:gap-2  '>
 								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 									<div className='flex items-center mb-2 lessons-count'>
 										<img
 											src={numberImage}
-											className='number-image max-md:w-5 max-md:h-5'
+											className='number-image max-md:w-5 max-md:h-5 '
 										/>
 										<p className='text-[16.68px] font-Poppins font-medium max-md:text-xs'>{`${course.lessons} Modules`}</p>
 									</div>
@@ -416,12 +400,12 @@ function AllCoursesPage() {
 											))}
 									</div>
 								</div>
-								<h2 className='font-bold font-koh max-sm:text-[15px] leading-[0.8] card-title'>
+								<h2 className='font-bold font-koh md:h-[66px] max-sm:text-[15px] card-title'>
 									{course.title}
 								</h2>
 								<p className='card-intro max-sm:text-[14px]'>
 									{isSmallScreen
-										? truncateText(course.intro, 12)
+										? truncateText(course.intro, 10)
 										: course.intro}
 								</p>
 								<div className='discount-section max-lg:text-[15px]'>
