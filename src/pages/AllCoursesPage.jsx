@@ -60,7 +60,7 @@ function AllCoursesPage() {
 			title: 'Public Speaking Course',
 			intro:
 				'Master the art of public speaking ! Build confidence and captivate any audience with your impactful presentations!',
-			imageClass: 'bg-[url("/usheringCourse.png")]',
+			imageClass: 'bg-[url("/PublicSpeakingCourse.png")]',
 			lessons: 6,
 			price: { discounted: '$10', original: '$20' },
 		},
@@ -314,29 +314,29 @@ function AllCoursesPage() {
 	return (
 		<>
 			<Navbar />
-			<section className='pt-16 max-md:mx-8 md:max-xl:pt-0 max-md:pt-0'>
-				<div className='bg-[#07614C] pt-10 pb-8 flex-col rounded-[30px] mt-8 h-[689px]'>
-					<h1 className='font-koho pt-[123px] font-bold text-[70px] text-[#F49406]'>
+			<section className='pt-16 max-md:mx-8 md:max-xl:pt-0'>
+				<div className='bg-[#07614C] pt-10 pb-8 max-sm:py-12 flex-col rounded-[30px] mt-8 h-[689px] max-sm:h-auto'>
+					<h1 className='font-koho pt-[123px] max-sm:pt-0 font-bold text-[70px] max-sm:text-[30px] text-[#F49406]'>
 						Our Courses{' '}
 					</h1>
-					<p className='py-14 w-[85%] mx-auto text-center text-white font-medium text-[25px] font-Poppins'>
+					<p className='py-14 max-sm:py-6 w-[85%] max-sm:leading-[2] mx-auto text-center text-white font-medium text-[25px] max-sm:text-[15px] font-Poppins'>
 						Begin Your Exciting Journey of Exploration: Dive Into Our Wide
 						Selection of Courses and Find The Ideal One for Your Learning
 						Adventure!
 					</p>
-					<div className='block w-2/5 mx-auto h-[62px] bg-white/50 rounded-xl'>
-						<div className='flex items-center  h-[62px] justify-center  text-black/50 '>
+					<div className='block w-2/5 mx-auto h-[62px] max-sm:h-[40px] bg-white/50 rounded-xl max-sm:w-[85%]'>
+						<div className='flex items-center  h-[62px] max-sm:h-[40px] justify-center  text-black/50 '>
 							<img
 								src='/searchCourses.svg'
 								alt='searchCourses'
-								className='w-auto pl-[10px]'
+								className='w-auto pl-[10px] max-sm:h-[13px]'
 							/>
 							<input
 								type='text'
-								className='w-full h-[62px] text-xl bg-transparent font-Poppins p-2'
+								className='w-full p-2 outline-none text-xl max-sm:text-[12px] bg-transparent font-Poppins'
 								placeholder='Search a course'
 							/>
-							<div className='flex px-[10px] gap-[10px] h-[62px] bg-white rounded-r-xl cursor-pointer items-center justify-center'>
+							<div className='flex px-[10px] max-sm:h-[40px] gap-[10px] max-sm:text-xs h-[62px] bg-white rounded-r-xl cursor-pointer items-center justify-center'>
 								Courses
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -344,7 +344,7 @@ function AllCoursesPage() {
 									viewBox='0 0 24 24'
 									strokeWidth={2.5}
 									stroke='currentColor'
-									className='size-6'>
+									className='size-6 max-sm:size-3'>
 									<path
 										strokeLinecap='round'
 										strokeLinejoin='round'
@@ -383,8 +383,8 @@ function AllCoursesPage() {
 							)}
 
 							<div
-								className={`card-image-item ${course.imageClass} bg-cover bg-center w-full h-[410px] rounded-t-md`}></div>
-							<div className='card-info  lg:h-[435px] max-md:h-435px max-md:h-auto flex flex-col gap-[22px]'>
+								className={`card-image-item ${course.imageClass} bg-cover  w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
+							<div className='card-info  lg:h-[435px] max-md:h-435px max-md:h-auto flex flex-col gap-[22px] max-sm:gap-2  '>
 								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 									<div className='flex items-center mb-2 lessons-count'>
 										<img
@@ -416,24 +416,24 @@ function AllCoursesPage() {
 											))}
 									</div>
 								</div>
-								<h2 className='font-bold font-Santepheap card-title'>
+								<h2 className='font-bold font-koh max-sm:text-[15px] leading-[0.8] card-title'>
 									{course.title}
 								</h2>
-								<p className='card-intro max-lg:text-[15px]'>
+								<p className='card-intro max-sm:text-[14px]'>
 									{isSmallScreen
 										? truncateText(course.intro, 12)
 										: course.intro}
 								</p>
 								<div className='discount-section max-lg:text-[15px]'>
 									<div className='flex items-center dollar-discounted'>
-										<span className='mr-2 text-3xl dollar-numbers-five '>
+										<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five  '>
 											{course.price.discounted}
 										</span>
-										<span className='dollar-numbers-twenty'>
+										<span className='max-sm:text-[17px] dollar-numbers-twenty'>
 											{course.price.original}
 										</span>
 									</div>
-									<button className='px-4 py-2 mt-2 text-white rounded Enroll max-md:pt-3 max-md:w-auto'>
+									<button className='px-4 py-2 mt-2 max-sm:font-semibold max-sm:py-0  max-sm:h-[30px] max-sm:w-[83px] max-sm:px-0 max-sm:text-[12px] text-white rounded Enroll max-md:pt-3 max-md:w-auto'>
 										Enroll Now
 									</button>
 								</div>
@@ -445,10 +445,10 @@ function AllCoursesPage() {
 					{Array.from({ length: totalPages }, (_, i) => (
 						<button
 							key={i + 1}
-							className={`mx-1 px-3 py-1 border border-black rounded-full ${
+							className={`mx-1 cursor-pointer px-3 py-1  rounded-full ${
 								currentPage === i + 1
 									? 'bg-[#24D198] border-[#24D198] text-[#1E1E1E]'
-									: 'bg-none'
+									: 'bg-none border border-black '
 							}`}
 							onClick={() => setCurrentPage(i + 1)}>
 							{i + 1}

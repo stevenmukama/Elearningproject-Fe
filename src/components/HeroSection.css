@@ -132,6 +132,13 @@ button.cta-button {
 	border: 1px solid #1e1e1e;
 }
 
+/* min-width 1240px */
+@media screen and (max-width: 1240px) {
+	.box-herosection {
+		left: 35%;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.cta-button,
 	.contact-button {

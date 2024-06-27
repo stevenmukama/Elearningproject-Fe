@@ -22,7 +22,6 @@ export default {
 			],
 			Poppins: ['Poppins', 'sans-serif'],
 			koho: ['KoHo', 'sans-serif'],
-			Santepheap: ['Santepheap'],
 			koh: ['Koh Santepheap'],
 		},
 		extend: {

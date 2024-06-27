@@ -22,16 +22,8 @@
 	left: -23px;
 }
 
-@media screen and (max-width: 768px) {
-	.courses-title::after {
-		bottom: -16px;
-		left: 13px;
-	}
-}
-
 .card-intro {
 	font-size: 18px;
-	/* height: 150px; */
 }
 
 .card-image,
@@ -66,18 +58,14 @@
 	border-top: none;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
-	height: 435px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 22px;
 }
 
 .card-item {
 	width: 33%;
 	font-family: 'Poppins', sans-serif;
-}
-
-@media screen and (max-width: 768px) {
-	.card-item {
-		width: 100%;
-	}
 }
 
 .card-title {
@@ -90,7 +78,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 0;
+	padding-top: 10px;
 }
 
 .lessons-count {
@@ -186,3 +174,52 @@ span.dollar-numbers-twenty {
 .hoverTextButton:hover {
 	color: #fff;
 }
+
+/* at max-screen: 640px */
+@media screen and (max-width: 640px) {
+	.card-item {
+		width: 100%;
+	}
+
+	.courses-title::after {
+		bottom: -16px;
+		left: 13px;
+	}
+
+	.card-info {
+		height: auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.card-intro {
+		height: 140px;
+	}
+	.Enroll {
+		font-size: 15px;
+	}
+}
+
+/* at max-screen: 768px */
+@media screen and (max-width: 768px) {
+	.card-item {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1240px) {
+	.card-intro {
+		height: 150px;
+	}
+
+	.card-info {
+		height: 325px;
+	}
+}
+
+/* laptop max-screen 1240px */
+/* @media screen and (min-width: 1240px) {
+	.card-info {
+		height: auto;
+	}
+} */
