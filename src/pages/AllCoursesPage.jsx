@@ -325,7 +325,7 @@ function AllCoursesPage() {
 						Adventure!
 					</p>
 					<div className='block w-2/5 mx-auto h-[62px] max-sm:h-[40px] bg-white/50 rounded-xl max-sm:w-[85%]'>
-						<div className='flex items-center  h-[62px] max-sm:h-[40px] justify-center  text-black/50 '>
+						<div className='flex items-center  h-[62px] max-sm:h-[40px] justify-center text-[rgba(30,30,30,0.5)]'>
 							<img
 								src='/searchCourses.svg'
 								alt='searchCourses'
@@ -333,7 +333,7 @@ function AllCoursesPage() {
 							/>
 							<input
 								type='text'
-								className='w-full p-2 outline-none text-xl max-sm:text-[12px] bg-transparent font-Poppins'
+								className='w-full p-2 outline-none text-xl max-sm:text-[12px] text- bg-transparent font-Poppins'
 								placeholder='Search a course'
 							/>
 							<div className='flex px-[10px] max-sm:h-[40px] gap-[10px] max-sm:text-xs h-[62px] bg-white rounded-r-xl cursor-pointer items-center justify-center'>
