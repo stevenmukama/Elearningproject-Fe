@@ -348,16 +348,16 @@ function AllCoursesPage() {
 							className='w-[29%] max-lg:w-2/5 max-md:w-[90%] bg-white rounded-md max-md:flex-col max-md:my-0 max-md:mx-auto'>
 							{course.courseHours && (
 								<div className='py-6 bg-white rounded-lg'>
-									<div className='flex px-3  text-[rgba(0.3,0.3,0.3,0.5)] text-[13px] justify-around font-Poppins'>
+									<div className='flex px-3  text-[rgba(0.3,0.3,0.3,0.5)] text-[13px]  font-Poppins'>
 										{course.courseHours.map((hour, index) => (
 											<p
 												key={index}
-												className={`border  border-[rgba(32,180,134,0.5)] ${
+												className={`${
 													index === 0
-														? 'border-r-0 px-2 max-sm:px-0'
+														? 'border-r-0 mr-2 border border-[rgba(32,180,134,0.5)] '
 														: index === 2
-															? 'border-l-0 px-2 '
-															: 'px-2 max-sm:px-0'
+															? 'border-l-0 ml-2 px-2 border border-[rgba(32,180,134,0.5)]  '
+															: 'px-0 border border-[rgba(32,180,134,0.5)] '
 												}`}>
 												{hour}
 											</p>
@@ -368,7 +368,7 @@ function AllCoursesPage() {
 
 							<div
 								className={`card-image-item ${course.imageClass} bg-cover  md:bg-center w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
-							<div className='card-info max-md:h-435px max-md:h-auto flex flex-col gap-[22px] max-sm:gap-2  '>
+							<div className='card-info lg:h-[402.8px] max-md:h-435px max-md:h-auto  max-sm:gap-2  '>
 								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 									<div className='flex items-center mb-2 lessons-count'>
 										<img
@@ -400,7 +400,7 @@ function AllCoursesPage() {
 											))}
 									</div>
 								</div>
-								<h2 className='font-bold font-koh md:h-[66px] max-sm:text-[15px] card-title'>
+								<h2 className='font-bold font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
 									{course.title}
 								</h2>
 								<p className='card-intro max-sm:text-[14px]'>
