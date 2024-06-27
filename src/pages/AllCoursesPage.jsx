@@ -370,10 +370,10 @@ function AllCoursesPage() {
 												key={index}
 												className={`border  border-[rgba(32,180,134,0.5)] ${
 													index === 0
-														? 'border-r-0 px-2'
+														? 'border-r-0 px-2 max-sm:px-0'
 														: index === 2
-															? 'border-l-0 px-2'
-															: 'px-2'
+															? 'border-l-0 px-2 '
+															: 'px-2 max-sm:px-0'
 												}`}>
 												{hour}
 											</p>
