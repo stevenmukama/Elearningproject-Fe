@@ -173,11 +173,11 @@ function CourseSection() {
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='dollar-numbers-five max-sm:text-[20px]'>
+									<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five'>
 										{' '}
 										$ 10
 									</span>
-									<span className='dollar-numbers-twenty max-sm:text-[17px]'>
+									<span className='max-sm:text-[17px] dollar-numbers-twenty'>
 										{' '}
 										$ 20
 									</span>
@@ -243,11 +243,11 @@ function CourseSection() {
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='dollar-numbers-five max-md:text-[20px] '>
+									<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five'>
 										{' '}
 										$ 10
 									</span>
-									<span className='dollar-numbers-twenty max-md:text-[17px]'>
+									<span className='max-sm:text-[17px] dollar-numbers-twenty'>
 										{' '}
 										$ 20
 									</span>
@@ -312,11 +312,11 @@ function CourseSection() {
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='dollar-numbers-five max-md:text-[20px]'>
+									<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five'>
 										{' '}
 										$ 10
 									</span>
-									<span className='dollar-numbers-twenty max-md:text-[17px]'>
+									<span className='max-sm:text-[17px] dollar-numbers-twenty'>
 										{' '}
 										$ 20
 									</span>
