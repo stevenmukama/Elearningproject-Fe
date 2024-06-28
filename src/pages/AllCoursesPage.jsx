@@ -284,7 +284,7 @@ function AllCoursesPage() {
 		const handleResize = () => {
 			setIsSmallScreen(
 				setIsSmallScreen(
-					window.innerWidth > 768 && window.innerWidth < 1024
+					window.innerWidth > 768 && window.innerWidth > 1024
 				)
 			);
 		};
