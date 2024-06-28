@@ -284,7 +284,7 @@ function AllCoursesPage() {
 		const handleResize = () => {
 			setIsSmallScreen(
 				setIsSmallScreen(
-					window.innerWidth > 768 && window.innerWidth > 1024
+					window.innerWidth < 768 && window.innerWidth > 1024
 				)
 			);
 		};
@@ -353,7 +353,7 @@ function AllCoursesPage() {
 							className='w-[29%] max-lg:w-2/5 max-md:w-[90%] bg-white rounded-md max-md:flex-col max-md:my-0 max-md:mx-auto'>
 							{course.courseHours && (
 								<div className='py-6 bg-white rounded-lg'>
-									<div className='flex px-3  text-[rgba(0.3,0.3,0.3,0.5)] text-[13px]  font-Poppins'>
+									<div className='flex px-3 max-sm:px-0 justify-center  text-[rgba(0.3,0.3,0.3,0.5)] text-[13px]  font-Poppins'>
 										{course.courseHours.map((hour, index) => (
 											<p
 												key={index}
