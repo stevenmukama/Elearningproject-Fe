@@ -338,9 +338,9 @@ const Navbar = () => {
 			)}
 
 			{isCoursesDropdownOpen && (
-				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-full rounded-md shadow-lg bg-[#F0FAF7] '>
+				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-full rounded-md shadow-lg bg-[#F0FAF7]'>
 					<div className='px-[40px]'>
-						<div className='relative flex justify-between pt-6 pl-4 w-[95%]'>
+						<div className='relative flex justify-between pt-6 pl-4 w-[99%]'>
 							<span className='text-[#24D198] text-2xl font-bold font-koho'>
 								<Link to='/AllCoursesPage'>Course Categories</Link>
 							</span>
@@ -355,7 +355,7 @@ const Navbar = () => {
 								</span>
 							</Link>
 						</div>
-						<div className='py-2'>
+						<div className='py-2 w-[99%]'>
 							{Array.from({ length: 5 }).map((_, rowIndex) => (
 								<div
 									key={rowIndex}
@@ -366,9 +366,9 @@ const Navbar = () => {
 										return (
 											<div
 												key={colIndex}
-												className={`px-4 py-2 text-start w-1/5 text-black hover:text-[#24D198] cursor-pointer ${
+												className={`px-4 py-2 text-start w-[23%] text-black hover:text-[#24D198] cursor-pointer ${
 													course === 'Coming Soon'
-														? 'bg-white py-2 px-10 w-fit'
+														? 'bg-white py-2 pr-10 w-fit'
 														: ''
 												}`}>
 												<Link
