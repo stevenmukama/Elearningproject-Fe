@@ -405,7 +405,7 @@ function AllCoursesPage() {
 											))}
 									</div>
 								</div>
-								<h2 className='font-bold font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
+								<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
 									{course.title}
 								</h2>
 								<p
