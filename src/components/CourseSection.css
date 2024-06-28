@@ -60,7 +60,7 @@
 	border-bottom-right-radius: 8px;
 	display: flex;
 	flex-direction: column;
-	row-gap: 22px;
+	/* row-gap: 22px; */
 }
 
 .card-item {
@@ -209,10 +209,10 @@ span.dollar-numbers-twenty {
 
 @media screen and (min-width: 1240px) {
 	.card-intro {
-		height: 150px;
+		height: 81px;
 	}
 
-	.card-info {
+	/* .card-info {
 		height: 402.8px;
-	}
+	} */
 }

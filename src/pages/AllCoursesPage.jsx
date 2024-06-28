@@ -276,16 +276,16 @@ function AllCoursesPage() {
 			],
 		},
 	];
-	// limit card intro text
+
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsSmallScreen(window.innerWidth <= 1024);
+			setIsSmallScreen(window.innerWidth > 768);
 		};
 
 		window.addEventListener('resize', handleResize);
-		handleResize(); // Initial check
+		handleResize();
 
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
@@ -324,7 +324,7 @@ function AllCoursesPage() {
 						Selection of Courses and Find The Ideal One for Your Learning
 						Adventure!
 					</p>
-					<div className='block w-1/2  mx-auto h-[62px] max-sm:h-[40px] bg-white/50 rounded-xl '>
+					<div className='block w-1/2 max-sm:w-2/3  mx-auto h-[62px] max-sm:h-[40px] bg-white/50 rounded-xl '>
 						<div className='flex items-center  h-[62px] max-sm:h-[40px] justify-center text-[rgba(30,30,30,0.5)]'>
 							<img
 								src='/searchCourses.svg'
@@ -368,7 +368,7 @@ function AllCoursesPage() {
 
 							<div
 								className={`card-image-item ${course.imageClass} bg-cover  md:bg-center w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
-							<div className='card-info lg:h-[402.8px] max-md:h-435px max-md:h-auto  max-sm:gap-2  '>
+							<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2 '>
 								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 									<div className='flex items-center mb-2 lessons-count'>
 										<img
@@ -403,7 +403,9 @@ function AllCoursesPage() {
 								<h2 className='font-bold font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
 									{course.title}
 								</h2>
-								<p className='card-intro max-sm:text-[14px]'>
+								<p
+									className='card-intro max-sm:text-[14px] overflow-hidden'
+									style={{ height: '81px' }}>
 									{isSmallScreen
 										? truncateText(course.intro, 10)
 										: course.intro}

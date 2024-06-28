@@ -29,7 +29,7 @@ function HeroSection() {
 					alt='circleBg'
 				/>
 				<div className='main-herosection '>
-					<h1 className='hero-text font-[800] max-md:block max-md:text-[26px] max-md:text-center max-md:font-extrabold'>
+					<h1 className='hero-text font-[800] max-md:block max-md:text-[26px] max-md:text-start max-md:font-extrabold'>
 						<span style={{ color: '#F49406' }}> Gain</span>{' '}
 						<span style={{ color: 'black' }}> Impressive</span>
 						<span style={{ color: '#20B486' }}> Skills</span>{' '}
@@ -84,10 +84,10 @@ function HeroSection() {
 					</div>
 				</div>
 				<div className='herosection-lady max-md:flex '>
-					<div className='box-herosection max-sm:left-[50%] '></div>
+					<div className='box-herosection  lg:left-[35%]  max-sm:left-[50%]'></div>
 					<img
 						src={ladyimage}
-						className='rounded-md lady-sitting-image max-md:w-full max-md:pt-3 max-md:pr-5'
+						className='rounded-md lady-sitting-image max-sm:h-[272.45px] max-md:w-full max-md:pt-3 max-md:pr-5'
 						alt='lady-sitting-image'
 					/>
 				</div>
