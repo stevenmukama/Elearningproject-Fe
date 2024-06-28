@@ -133,7 +133,7 @@ function CourseSection() {
 									/>
 									<p className='lessons-number max-md:text-xs'>
 										{' '}
-										10 Modules
+										5 Modules
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
@@ -164,7 +164,7 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-sm:text-[15px]'>
+							<h2 className='card-title max-sm:text-[15px] py-3'>
 								Professional Cleaning Course{' '}
 							</h2>
 							<p className='card-intro max-md:text-[15px] max-sm:text-[14px]'>
@@ -203,7 +203,7 @@ function CourseSection() {
 									/>
 									<p className='lessons-number max-md:text-xs'>
 										{' '}
-										10 Modules
+										8 Modules
 									</p>
 								</div>
 								<div className='rates max-md:size-auto'>
@@ -234,7 +234,7 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-sm:text-[15px]'>
+							<h2 className='card-title max-sm:text-[15px] py-3'>
 								Professional Babysitting Course
 							</h2>
 							<p className='card-intro max-md:text-[15px]'>
@@ -303,7 +303,7 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-sm:text-[15px]'>
+							<h2 className='card-title max-sm:text-[15px] py-3'>
 								Waiter and Waitress Course{' '}
 							</h2>
 							<p className='card-intro max-md:text-[15px]'>
