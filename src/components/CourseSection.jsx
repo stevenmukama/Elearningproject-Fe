@@ -131,7 +131,7 @@ function CourseSection() {
 										src={numberImage}
 										className='number-image max-md:w-5 max-md:h-5'
 									/>
-									<p className='lessons-number max-md:text-xs'>
+									<p className='lessons-number text-[16.68px] max-md:text-xs'>
 										{' '}
 										5 Modules
 									</p>
@@ -201,7 +201,7 @@ function CourseSection() {
 										src={numberImage}
 										className='number-image max-md:w-5 max-md:h-5'
 									/>
-									<p className='lessons-number max-md:text-xs'>
+									<p className='lessons-number text-[16.68px] max-md:text-xs'>
 										{' '}
 										8 Modules
 									</p>
@@ -271,7 +271,7 @@ function CourseSection() {
 										src={numberImage}
 										className='number-image max-md:w-5 max-md:h-5'
 									/>
-									<p className='lessons-number max-md:text-xs'>
+									<p className='lessons-number text-[16.68px] max-md:text-xs'>
 										10 Modules
 									</p>
 								</div>
