@@ -45,7 +45,6 @@ export default {
 					display: '-webkit-box',
 					'-webkit-line-clamp': '3', // Adjust this number based on the number of lines you want
 					'-webkit-box-orient': 'vertical',
-					maxHeight: '81px' /* Set the max height */,
 				},
 			});
 		},

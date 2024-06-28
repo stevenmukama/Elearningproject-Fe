@@ -84,7 +84,7 @@ function HeroSection() {
 					</div>
 				</div>
 				<div className='herosection-lady max-md:flex '>
-					<div className='box-herosection  lg:left-[35%]  max-sm:left-[50%]'></div>
+					<div className='box-herosection lg:max-xl:left-[35%] max-sm:left-[50%]'></div>
 					<img
 						src={ladyimage}
 						className='rounded-md lady-sitting-image max-sm:h-[272.45px] max-md:w-full max-md:pt-3 max-md:pr-5'
