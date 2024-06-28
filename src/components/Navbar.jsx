@@ -387,7 +387,7 @@ const Navbar = () => {
 			)}
 
 			{isContactFormOpen && (
-				<div className='absolute z-10 flex pt-10 pl-[20%] pb-10 items-center justify-center bg-black bg-opacity-50 top-[4rem]'>
+				<div className='absolute z-10 flex pt-10 pl-[20%] max-sm:pl-0 pb-10 items-center justify-center bg-black bg-opacity-50 top-[4rem]'>
 					<div
 						className='p-3 bg-white rounded-tl-full rounded-bl-full cursor-pointer'
 						onClick={() => setIsContactFormOpen(false)}>
