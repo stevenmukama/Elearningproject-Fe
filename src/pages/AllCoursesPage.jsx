@@ -359,18 +359,18 @@ function AllCoursesPage() {
 							key={index}
 							className='w-[29%] max-lg:w-2/5 max-md:w-[90%] bg-white rounded-md max-md:flex-col max-md:my-0 max-md:mx-auto'>
 							{course.courseHours && (
-								<div className='py-6 bg-white rounded-lg'>
-									<div className='flex px-3 text-classes max-sm:text-[11px] max-[375px]:text-[9px]  md:max-xl:text-[9px] max-sm:px-0 justify-center  text-[rgba(0.3,0.3,0.3,0.5)] text-[13px]  font-Poppins'>
+								<div className='py-4 bg-white rounded-lg'>
+									<div className='flex px-0 leading-[2] max-sm:text-[11px] max-[375px]:text-[9px]  md:max-xl:text-[13px] max-sm:px-0 justify-center  text-[rgba(0.3,0.3,0.3,0.5)] text-[15px]  font-Poppins'>
 										{course.courseHours.map((hour, index) => (
 											<p
 												key={index}
 												className={`${
 													index === 0
-														? 'border-r-0 mr-2 border border-[rgba(32,180,134,0.5)] '
+														? 'border-r-0 border-l rounded-l-md pl-1 mr-2 border border-[rgba(32,180,134,0.5)]'
 														: index === 2
-															? 'border-l-0 ml-2 px-2 border border-[rgba(32,180,134,0.5)]  '
-															: 'px-0 border border-[rgba(32,180,134,0.5)] '
-												}`}>
+															? 'border-l-0 ml-2 px-0  border border-[rgba(32,180,134,0.5)] rounded-r-md pr-1 '
+															: 'px-0 border border-[rgba(32,180,134,0.5)]  '
+												} py-1`}>
 												{hour}
 											</p>
 										))}
@@ -379,7 +379,7 @@ function AllCoursesPage() {
 							)}
 
 							<div
-								className={`card-image-item ${course.imageClass} bg-cover  md:bg-center w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
+								className={`card-image-item ${course.imageClass} bg-cover  md:bg-center w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat`}></div>
 							<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2 '>
 								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 									<div className='flex items-center mb-2 lessons-count'>

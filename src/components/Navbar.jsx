@@ -165,7 +165,10 @@ const Navbar = () => {
 					<div
 						ref={coursesDropdownRef}
 						className='relative nav-item max-md:hidden'
-						onMouseEnter={() => setIsCoursesDropdownOpen(true)}>
+						onMouseEnter={() => setIsCoursesDropdownOpen(true)}
+						onClick={() =>
+							setIsCoursesDropdownOpen(!isCoursesDropdownOpen)
+						}>
 						<div className='flex items-center w-full gap-2'>
 							Courses
 							<svg
@@ -272,7 +275,7 @@ const Navbar = () => {
 								onClick={() => {
 									closeSmallScreenMenu();
 								}}
-								to='/AllCoursesPage'
+								to='/coursesssssss'
 								className='pb-5 text-sm text-black'>
 								Courses
 							</Link>
@@ -345,9 +348,9 @@ const Navbar = () => {
 					<div className='px-[60px] max-md:px-[30px]  block mx-auto'>
 						<div className='relative flex justify-between pt-6'>
 							<span className='text-[#24D198] text-2xl font-bold font-koho'>
-								<Link to='/AllCoursesPage'>Course Categories</Link>
+								<Link to='/coursesssssss'>Course Categories</Link>
 							</span>
-							<Link to='/AllCoursesPage'>
+							<Link to='/coursesssssss'>
 								<span className='flex items-center gap-1 cursor-pointer p-3 text-black hover:text-[#24D198]'>
 									View All
 									<img
@@ -378,7 +381,7 @@ const Navbar = () => {
 												}`}>
 												<Link
 													key={rowIndex}
-													to='/AllCoursesPage'>
+													to='/coursesssssss'>
 													{course}
 												</Link>
 											</div>
