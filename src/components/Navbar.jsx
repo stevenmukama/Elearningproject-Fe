@@ -66,7 +66,8 @@ const Navbar = () => {
 			}
 			if (
 				contactFormRef.current &&
-				!contactFormRef.current.contains(event.target)
+				!contactFormRef.current.contains(event.target) &&
+				!event.target.closest('.contact-form-button')
 			) {
 				setIsContactFormOpen(false);
 			}
@@ -193,7 +194,7 @@ const Navbar = () => {
 						Cert Verification
 					</Link>
 					<a
-						className='nav-item max-md:hidden'
+						className='nav-item max-md:hidden contact-form-button'
 						onClick={() => {
 							setIsContactFormOpen((prevState) => !prevState);
 						}}>
@@ -289,10 +290,9 @@ const Navbar = () => {
 							</Link>
 
 							<div
-								className='pb-5 text-sm text-black'
+								className='pb-5 text-sm text-black contact-form-button'
 								onClick={() => {
 									setIsContactFormOpen((prevState) => !prevState);
-									closeSmallScreenMenu();
 								}}>
 								Contact us
 							</div>
@@ -397,7 +397,7 @@ const Navbar = () => {
 			{isContactFormOpen && (
 				<div className='fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50'>
 					<div
-						className='p-3 bg-white rounded-tl-full rounded-bl-full cursor-pointer'
+						className='p-3 bg-white rounded-tl-full rounded-bl-full cursor-pointer contact-form-button'
 						onClick={() => setIsContactFormOpen(false)}>
 						<img
 							src='/rightContactIcon.svg'
