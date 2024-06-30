@@ -288,6 +288,7 @@ const Navbar = () => {
 							<div
 								className='pb-5 text-sm text-black'
 								onClick={() => {
+									setIsContactFormOpen((prevState) => !prevState);
 									closeSmallScreenMenu();
 								}}>
 								Contact us
