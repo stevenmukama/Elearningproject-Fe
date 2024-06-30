@@ -278,7 +278,6 @@ function AllCoursesPage() {
 	];
 
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
-	//
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -313,6 +312,14 @@ function AllCoursesPage() {
 			page_number * page_size
 		);
 	};
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
+	useEffect(() => {
+		scrollToTop();
+	}, [currentPage]);
 
 	const currentCourses = paginate(courses, coursesPerPage, currentPage);
 
