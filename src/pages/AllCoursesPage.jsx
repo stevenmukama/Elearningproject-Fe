@@ -27,7 +27,7 @@ function AllCoursesPage() {
 		{
 			title: 'Waiter and Waitress Course',
 			intro:
-				'Refine your service expertise and master hospitality with our Waits Courses!',
+				'Refine your service expertise and master hospitality with our Waitress Courses!',
 			imageClass: 'bg-[url("/waitercourse.svg")]',
 			lessons: 10,
 			price: { discounted: '$10', original: '$20' },

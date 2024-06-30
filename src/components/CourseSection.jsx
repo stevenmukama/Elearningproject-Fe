@@ -5,6 +5,33 @@ import halfStar from './../img/halfStar.svg';
 import './CourseSection.css';
 import { Link } from 'react-router-dom';
 
+const Courses = [
+	{
+		title: 'Professional Cleaning Course',
+		intro:
+			'Enhance Your Cleaning Skills, Learn Expert Techniques and Gain Experience!',
+		imageClass: 'bg-[url("/professionalcleaningcentre.svg")]',
+		lessons: 5,
+		price: { discounted: '$10', original: '$20' },
+	},
+	{
+		title: 'Professional Babysitting Course',
+		intro:
+			'Gain skills with our Babysitting Course, Elevate your childcare abilities!',
+		imageClass: 'bg-[url("/babysitting.svg")]',
+		lessons: 8,
+		price: { discounted: '$10', original: '$20' },
+	},
+	{
+		title: 'Waiter and Waitress Course',
+		intro:
+			'Refine your service expertise and master hospitality with our Waitress Courses!',
+		imageClass: 'bg-[url("/waitercourse.svg")]',
+		lessons: 10,
+		price: { discounted: '$10', original: '$20' },
+	},
+];
+
 const courseLessons = [
 	{
 		id: 1,
@@ -118,222 +145,69 @@ function CourseSection() {
 						))}
 					</div>
 				</div>
-				<div className=' container-card-item max-md:flex-col max-md:my-0 max-md:mx-auto'>
-					<div className='card-item'>
-						<div className='card-image-item'>
-							<div className='card-image'></div>
-						</div>
-
-						<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2'>
-							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
-								<div className='lessons-count '>
-									<img
-										src={numberImage}
-										className='number-image max-md:w-5 max-md:h-5'
-									/>
-									<p className='lessons-number text-[16.68px] max-md:text-xs'>
-										{' '}
-										5 Modules
-									</p>
+				<div className='flex flex-wrap  justify-center pt-12 gap-x-10 gap-y-[62px]  font-Poppins'>
+					{Courses.map((course, index) => (
+						<div
+							key={index}
+							className='w-[31%] max-lg:w-2/5 max-md:w-[90%] bg-white rounded-md max-md:flex-col max-md:my-0 max-md:mx-auto'>
+							<div
+								className={`card-image-item ${course.imageClass} bg-cover  md:bg-center w-full h-[410px] max-sm:h-[214px]  max-sm:bg-cover max-sm:bg-no-repeat rounded-t-md`}></div>
+							<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2 '>
+								<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
+									<div className='flex items-center mb-2 lessons-count'>
+										<img
+											src={numberImage}
+											className='number-image max-md:w-5 max-md:h-5 '
+										/>
+										<p className='text-[16.68px] font-Poppins font-medium max-md:text-xs'>{`${course.lessons} Modules`}</p>
+									</div>
+									<div className='flex rates'>
+										{Array(3)
+											.fill()
+											.map((_, i) => (
+												<img
+													key={i}
+													src={fullStar}
+													alt='rating-star'
+													className='max-md:w-3.5 max-md:h-3.5'
+												/>
+											))}
+										{Array(2)
+											.fill()
+											.map((_, i) => (
+												<img
+													key={i}
+													src={halfStar}
+													alt='rating-star'
+													className='max-md:w-3.5 max-md:h-3.5'
+												/>
+											))}
+									</div>
 								</div>
-								<div className='rates max-md:size-auto'>
-									<img
-										src={fullStar}
-										className='max-md:w-[13px] max-md:h-[13px]'
-										alt='rating-star'
-									/>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={halfStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={halfStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-								</div>
-							</div>
-							<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
-								Professional Cleaning Course{' '}
-							</h2>
-							<p
-								className='card-intro max-sm:text-[14px] overflow-hidden'
-								style={{ height: '81px' }}>
-								Enhance Your Cleaning Skills, Learn Expert Techniques and
-								Gain Experience!{' '}
-							</p>
-							<div className='discount-section'>
-								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five'>
-										{' '}
-										$ 10
-									</span>
-									<span className='max-sm:text-[17px] dollar-numbers-twenty'>
-										{' '}
-										$ 20
-									</span>
-								</div>
-								<button className='Enroll max-md:text-xs max-md:pt-3 max-md:w-auto'>
-									Enroll Now
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<div className='card-item'>
-						<div className='card-image-item'>
-							<div className='card-image-2'></div>
-						</div>
-
-						<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2'>
-							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
-								<div className='lessons-count '>
-									<img
-										src={numberImage}
-										className='number-image max-md:w-5 max-md:h-5'
-									/>
-									<p className='lessons-number text-[16.68px] max-md:text-xs'>
-										{' '}
-										8 Modules
-									</p>
-								</div>
-								<div className='rates max-md:size-auto'>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={halfStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={halfStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
+								<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
+									{course.title}
+								</h2>
+								<p
+									className='card-intro max-sm:text-[14px] overflow-hidden'
+									style={{ height: '81px' }}>
+									{course.intro}
+								</p>
+								<div className='discount-section max-lg:text-[15px]'>
+									<div className='flex items-center dollar-discounted'>
+										<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five  '>
+											{course.price.discounted}
+										</span>
+										<span className='max-sm:text-[17px] dollar-numbers-twenty'>
+											{course.price.original}
+										</span>
+									</div>
+									<button className='px-4 py-2 mt-2 max-sm:font-semibold max-sm:py-0  max-sm:h-[30px] max-sm:w-[83px] max-sm:px-0 max-sm:text-[12px] text-white rounded Enroll max-md:pt-3 max-md:w-auto'>
+										Enroll Now
+									</button>
 								</div>
 							</div>
-							<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
-								Professional Babysitting Course
-							</h2>
-							<p
-								className='card-intro max-sm:text-[14px] overflow-hidden'
-								style={{ height: '81px' }}>
-								Gain skills with our Babysitting Course, Elevate your
-								childcare abilities!{' '}
-							</p>
-							<div className='discount-section'>
-								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five'>
-										{' '}
-										$ 10
-									</span>
-									<span className='max-sm:text-[17px] dollar-numbers-twenty'>
-										{' '}
-										$ 20
-									</span>
-								</div>
-								<button className='Enroll max-md:text-xs max-md:pt-3 max-md:w-auto'>
-									Enroll Now
-								</button>
-							</div>
 						</div>
-					</div>
-
-					<div className='card-item'>
-						<div className='card-image-item'>
-							<div className='card-image-3'></div>
-						</div>
-
-						<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2'>
-							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
-								<div className='lessons-count'>
-									<img
-										src={numberImage}
-										className='number-image max-md:w-5 max-md:h-5'
-									/>
-									<p className='lessons-number text-[16.68px] max-md:text-xs'>
-										10 Modules
-									</p>
-								</div>
-								<div className='rates max-md:size-auto'>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={fullStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={halfStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-									<img
-										src={halfStar}
-										alt='rating-star'
-										className='max-md:w-[13px] max-md:h-[13px]'
-									/>
-								</div>
-							</div>
-							<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
-								Waiter and Waitress Course{' '}
-							</h2>
-							<p
-								className='card-intro max-sm:text-[14px] overflow-hidden'
-								style={{ height: '81px' }}>
-								{' '}
-								Refine your service expertise and master hospitality with
-								our Waitress Courses!{' '}
-							</p>
-							<div className='discount-section'>
-								<div className='dollar-discounted md:max-xl:text-[17px]'>
-									<span className='mr-2 text-3xl max-sm:text-[20px] dollar-numbers-five'>
-										{' '}
-										$ 10
-									</span>
-									<span className='max-sm:text-[17px] dollar-numbers-twenty'>
-										{' '}
-										$ 20
-									</span>
-								</div>
-								<button className='Enroll max-md:text-xs max-md:pt-3 max-md:w-auto'>
-									Enroll Now
-								</button>
-							</div>
-						</div>
-					</div>
+					))}
 				</div>
 
 				<div className='flex items-center justify-center text-center max-md:flex-col max-md:my-0 max-md:mx-auto'>
