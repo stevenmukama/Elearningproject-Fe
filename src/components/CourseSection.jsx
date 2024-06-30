@@ -124,7 +124,7 @@ function CourseSection() {
 							<div className='card-image'></div>
 						</div>
 
-						<div className='card-info'>
+						<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2'>
 							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 								<div className='lessons-count '>
 									<img
@@ -164,10 +164,12 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-sm:text-[15px] py-3'>
+							<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
 								Professional Cleaning Course{' '}
 							</h2>
-							<p className='card-intro max-md:text-[15px] max-sm:text-[14px]'>
+							<p
+								className='card-intro max-sm:text-[14px] overflow-hidden'
+								style={{ height: '81px' }}>
 								Enhance Your Cleaning Skills, Learn Expert Techniques and
 								Gain Experience!{' '}
 							</p>
@@ -194,7 +196,7 @@ function CourseSection() {
 							<div className='card-image-2'></div>
 						</div>
 
-						<div className='card-info'>
+						<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2'>
 							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 								<div className='lessons-count '>
 									<img
@@ -234,10 +236,12 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-sm:text-[15px] py-3'>
+							<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
 								Professional Babysitting Course
 							</h2>
-							<p className='card-intro max-md:text-[15px]'>
+							<p
+								className='card-intro max-sm:text-[14px] overflow-hidden'
+								style={{ height: '81px' }}>
 								Gain skills with our Babysitting Course, Elevate your
 								childcare abilities!{' '}
 							</p>
@@ -264,7 +268,7 @@ function CourseSection() {
 							<div className='card-image-3'></div>
 						</div>
 
-						<div className='card-info'>
+						<div className='card-info max-md:h-435px max-md:h-auto max-sm:gap-2'>
 							<div className='lessons-rating md:max-xl:flex-col md:max-xl:items-start'>
 								<div className='lessons-count'>
 									<img
@@ -303,12 +307,15 @@ function CourseSection() {
 									/>
 								</div>
 							</div>
-							<h2 className='card-title max-sm:text-[15px] py-3'>
+							<h2 className='font-bold py-3 font-Poppins md:h-[66px] max-sm:text-[15px] card-title'>
 								Waiter and Waitress Course{' '}
 							</h2>
-							<p className='card-intro max-md:text-[15px]'>
+							<p
+								className='card-intro max-sm:text-[14px] overflow-hidden'
+								style={{ height: '81px' }}>
+								{' '}
 								Refine your service expertise and master hospitality with
-								our Waits Courses!{' '}
+								our Waitress Courses!{' '}
 							</p>
 							<div className='discount-section'>
 								<div className='dollar-discounted md:max-xl:text-[17px]'>

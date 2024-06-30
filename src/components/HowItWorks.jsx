@@ -29,7 +29,7 @@ function HowItWorks() {
 				How Spid-Education Works
 			</h1>
 			<div className='flex max-md:flex-col max-md:m-0'>
-				<div className='flex-col items-center justify-center h-full pt-6 mt-8 max-md:mt-2'>
+				<div className='flex-col items-center justify-center pt-6 mt-8 max-md:mt-2'>
 					{SpidProcess.map((process) => (
 						<div
 							key={process.id}
@@ -51,12 +51,10 @@ function HowItWorks() {
 						</div>
 					))}
 				</div>
-				<div className='flex-grow'>
-					<img
-						src='/womanSittingVector.svg'
-						className='h-full'
-					/>
-				</div>
+				<img
+					src='/womanSittingVector.svg'
+					className=''
+				/>
 			</div>
 		</section>
 	);

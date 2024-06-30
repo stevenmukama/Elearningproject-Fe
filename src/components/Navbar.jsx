@@ -17,7 +17,7 @@ const languages = [
 	},
 ];
 
-const Navbar = () => {
+const Navbar = ({ contactSectionRef }) => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
@@ -32,6 +32,14 @@ const Navbar = () => {
 		useState(false);
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 	const ItemRef = useRef(null);
+
+	const handleContactUsClick = () => {
+		if (windowWidth <= 768) {
+			contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+		} else {
+			setIsContactFormOpen((prevState) => !prevState);
+		}
+	};
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -190,9 +198,10 @@ const Navbar = () => {
 					</Link>
 					<a
 						className='nav-item max-md:hidden'
-						onClick={() =>
-							setIsContactFormOpen((prevState) => !prevState)
-						}>
+						onClick={() => {
+							handleContactUsClick();
+							closeSmallScreenMenu();
+						}}>
 						Contact us
 					</a>
 
@@ -256,15 +265,15 @@ const Navbar = () => {
 			{isSmallScreenMenuOpen && (
 				<div
 					ref={smallScreenMenuRef}
-					className='relative top-16'>
-					<div className='bg-[#4B4B4B] flex justify-between h-screen'>
+					className='relative top-12 '>
+					<div className=' fixed right-0 z-[999] text-black bg-white flex justify-between h-screen'>
 						<div className='relative flex flex-col flex-wrap w-full px-[30px] text-white rounded-lg pt-7'>
 							<Link
 								onClick={() => {
 									closeSmallScreenMenu();
 								}}
 								to='/'
-								className='pb-5 text-sm'>
+								className='pb-5 text-sm text-black'>
 								Home
 							</Link>
 							<Link
@@ -272,7 +281,7 @@ const Navbar = () => {
 									closeSmallScreenMenu();
 								}}
 								to='/AllCoursesPage'
-								className='pb-5 text-sm'>
+								className='pb-5 text-sm text-black'>
 								Courses
 							</Link>
 							<Link
@@ -280,11 +289,11 @@ const Navbar = () => {
 									closeSmallScreenMenu();
 								}}
 								to='/certificationPage'
-								className='pb-5 text-sm'>
+								className='pb-5 text-sm text-black'>
 								Cert Verification
 							</Link>
 							<div
-								className='pb-5 text-sm'
+								className='pb-5 text-sm text-black'
 								onClick={() => {
 									setIsContactFormOpen((prevState) => !prevState);
 									closeSmallScreenMenu();
@@ -330,7 +339,7 @@ const Navbar = () => {
 						<img
 							src='closeScreenButton.svg'
 							alt='closeScreenButton'
-							className='h-fit pt-[40px] pr-[30px]'
+							className='h-fit pt-[27px] pr-[30px]'
 							onClick={closeSmallScreenMenu}
 						/>
 					</div>
@@ -338,9 +347,9 @@ const Navbar = () => {
 			)}
 
 			{isCoursesDropdownOpen && (
-				<div className='absolute block mx-auto left-0 top-16 right-0 z-50 w-full rounded-md shadow-lg bg-[#F0FAF7]'>
-					<div className='px-[40px]'>
-						<div className='relative flex justify-between pt-6 pl-4 w-[99%]'>
+				<div className='fixed block mx-auto left-0 top-16 right-0 z-50 w-full rounded-md shadow-lg bg-[#F0FAF7]'>
+					<div className='px-[60px] max-md:px-[30px]  block mx-auto'>
+						<div className='relative flex justify-between pt-6'>
 							<span className='text-[#24D198] text-2xl font-bold font-koho'>
 								<Link to='/AllCoursesPage'>Course Categories</Link>
 							</span>
@@ -355,7 +364,7 @@ const Navbar = () => {
 								</span>
 							</Link>
 						</div>
-						<div className='py-2 w-[99%]'>
+						<div className='py-2'>
 							{Array.from({ length: 5 }).map((_, rowIndex) => (
 								<div
 									key={rowIndex}
@@ -366,9 +375,11 @@ const Navbar = () => {
 										return (
 											<div
 												key={colIndex}
-												className={`px-4 py-2 text-start w-[23%] text-black hover:text-[#24D198] cursor-pointer ${
+												className={`py-2 ${
+													colIndex === 4 ? 'text-end' : 'text-start'
+												} w-[23%] text-black hover:text-[#24D198] cursor-pointer ${
 													course === 'Coming Soon'
-														? 'bg-white py-2 pr-10 w-fit'
+														? 'bg-white py-2 pl-10 pr-2'
 														: ''
 												}`}>
 												<Link
@@ -418,7 +429,9 @@ const Navbar = () => {
 								Close
 							</p>
 						</div>
-						<div className='z-50 '>
+						<div
+							className='z-50 '
+							ref={contactSectionRef}>
 							<ContactForm />
 						</div>
 					</div>
