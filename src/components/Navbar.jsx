@@ -17,7 +17,7 @@ const languages = [
 	},
 ];
 
-const Navbar = ({ contactSectionRef }) => {
+const Navbar = () => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
@@ -32,14 +32,7 @@ const Navbar = ({ contactSectionRef }) => {
 		useState(false);
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 	const ItemRef = useRef(null);
-
-	const handleContactUsClick = () => {
-		if (windowWidth <= 768) {
-			contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-		} else {
-			setIsContactFormOpen((prevState) => !prevState);
-		}
-	};
+	const contactSectionRef = useRef(null);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -95,7 +88,7 @@ const Navbar = ({ contactSectionRef }) => {
 			window.removeEventListener('resize', handleResize);
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, []);
+	}, [windowWidth]);
 
 	const handleLanguageChange = (lang) => {
 		setSelectedLanguage(lang);
@@ -199,8 +192,7 @@ const Navbar = ({ contactSectionRef }) => {
 					<a
 						className='nav-item max-md:hidden'
 						onClick={() => {
-							handleContactUsClick();
-							closeSmallScreenMenu();
+							setIsContactFormOpen((prevState) => !prevState);
 						}}>
 						Contact us
 					</a>
@@ -292,14 +284,15 @@ const Navbar = ({ contactSectionRef }) => {
 								className='pb-5 text-sm text-black'>
 								Cert Verification
 							</Link>
+
 							<div
 								className='pb-5 text-sm text-black'
 								onClick={() => {
-									setIsContactFormOpen((prevState) => !prevState);
 									closeSmallScreenMenu();
 								}}>
 								Contact us
 							</div>
+
 							<div
 								className=' py-3 w-max bg-[#4B4B4B] text-white rounded-md cursor-pointer relative'
 								ref={dropdownRef}>
@@ -398,7 +391,7 @@ const Navbar = ({ contactSectionRef }) => {
 			)}
 
 			{isContactFormOpen && (
-				<div className='absolute z-10 flex pt-10 pl-[20%] max-sm:pl-0 pb-10 items-center justify-center bg-black bg-opacity-50 top-[4rem]'>
+				<div className='fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50'>
 					<div
 						className='p-3 bg-white rounded-tl-full rounded-bl-full cursor-pointer'
 						onClick={() => setIsContactFormOpen(false)}>
@@ -410,7 +403,7 @@ const Navbar = ({ contactSectionRef }) => {
 					</div>
 					<div
 						ref={contactFormRef}
-						className={`w-full p-6 bg-white rounded-tl-3xl rounded-bl-3xl shadow-lg max-md:mt-10 transition-transform duration-500 ${
+						className={`w-full max-h-[80vh] p-6 bg-white rounded-tl-3xl rounded-bl-3xl shadow-lg max-md:mt-10 transition-transform duration-500 overflow-y-auto ${
 							isContactFormOpen ? 'translate-x-0' : '-translate-x-full'
 						}`}>
 						<div className='flex justify-end gap-4 pt-2 pr-16 max-md:gap-8'>
@@ -430,7 +423,7 @@ const Navbar = ({ contactSectionRef }) => {
 							</p>
 						</div>
 						<div
-							className='z-50 '
+							className='z-50'
 							ref={contactSectionRef}>
 							<ContactForm />
 						</div>
