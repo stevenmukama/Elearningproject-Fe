@@ -47,21 +47,21 @@ function CertificationSection() {
 					<div className='flex items-center gap-10 mb-16 max-md:flex-col md:max-xl:flex-col'>
 						<div>
 							<div className='p-2 mb-3 bg-white rounded-md w-fit'>
-								<h1 className='text-start w-fit font-bold  text-[#20B486] text-xl max-md:text-sm'>
+								<h1 className='text-start w-fit font-bold max-sm:text-[16px]  text-[#20B486] text-xl max-md:text-sm'>
 									{' '}
 									Benefits!
 								</h1>
 							</div>
 							<h2
 								className='font-bold text-start pb-6 w-fit
-				 text-[#F49406] text-4xl font-koho max-md:text-xl md:max-xl:w-full'>
+				 text-[#F49406] text-[50px] max-sm:text-[25px] font-koho max-md:text-xl md:max-xl:w-full'>
 								Get Your Certificate!
 							</h2>
 							<div>
 								{BenefitsCourses.map((courseBenefit) => (
 									<div
 										key={courseBenefit.id}
-										className='mt-[22px] flex items-center gap-10 pb-5 text-xl max-sm:text-[14px] text-start '>
+										className='mt-[22px] flex items-center gap-10 pb-5 leading-[1.8] text-xl max-sm:text-[14px] text-start '>
 										<div className='p-4 bg-white rounded-full '>
 											<img
 												src={courseBenefit.imgSrc}
@@ -87,7 +87,7 @@ function CertificationSection() {
 							className='object-contain'
 						/>
 						<div>
-							<h1 className='mb-8 text-3xl font-bold font-koho text-[#20B486] md:max-xl:text-4xl'>
+							<h1 className='mb-8 text-[50px] font-bold font-koho max-sm:text-[25px] text-[#20B486] md:max-xl:text-4xl'>
 								Helping you Find a job!
 							</h1>
 							{moreBenefits.map((moreBenefit) => (
@@ -101,7 +101,7 @@ function CertificationSection() {
 											alt={moreBenefit.altText}
 										/>
 									</div>
-									<p className='max-md:text-[14px] max-md:pb-4'>
+									<p className='font-Poppins font-normal leading-[1.8] max-md:text-[14px] text-[20px]'>
 										{moreBenefit.text}{' '}
 									</p>
 								</div>

@@ -20,3 +20,22 @@ section {
 		margin: 0px 30px;
 	}
 }
+
+.underline-image {
+	position: relative;
+	display: inline-block;
+}
+
+.underline-image::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 30px;
+	top: 90px;
+	background-image: url('/public/underlinecertification.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}

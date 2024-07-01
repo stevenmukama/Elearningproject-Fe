@@ -24,7 +24,7 @@ function HowItWorks() {
 	];
 	return (
 		<section className='max-md:flex-col max-md:text-center max-md:justify-center'>
-			<h1 className='text-6xl font-bold text-[#20B486] mb-16 max-md:mb-4 max-md:text-2xl font-koho'>
+			<h1 className='text-[70px] font-bold text-[#20B486] mb-16 max-md:mb-4 max-md:text-2xl font-koho'>
 				{' '}
 				How Spid-Education Works
 			</h1>
@@ -33,7 +33,7 @@ function HowItWorks() {
 					{SpidProcess.map((process) => (
 						<div
 							key={process.id}
-							className='flex items-center gap-3 mb-10 border pl-10 border-[#21B573] border-opacity-35 rounded-md text-start p-8 max-md:p-4'>
+							className='flex items-center gap-3 mb-10 border pl-10 border-[#21B573] border-opacity-35 rounded-[16px] text-start p-8 max-md:p-4'>
 							<div className='p-4 mr-4 rounded-full bg-[#D9ECFF] w-fit'>
 								<img
 									src={process.imageSrc}
@@ -41,10 +41,10 @@ function HowItWorks() {
 								/>
 							</div>
 							<div>
-								<h1 className='mb-4 text-xl font-bold max-md:text-[17px]'>
+								<h1 className='mb-4 font-Poppins text-[22px] font-bold max-md:text-[17px]'>
 									{process.title}{' '}
 								</h1>
-								<p className='max-md:text-[16px]'>
+								<p className='font-Poppins text-[22px] max-md:text-[15px]'>
 									{process.description}{' '}
 								</p>
 							</div>
