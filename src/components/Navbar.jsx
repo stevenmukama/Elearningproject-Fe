@@ -276,7 +276,7 @@ const Navbar = () => {
 								onClick={() => {
 									closeSmallScreenMenu();
 								}}
-								to='/coursesssssss'
+								to='/AllCoursesPage'
 								className='pb-5 text-sm text-black'>
 								Courses
 							</Link>
@@ -348,9 +348,9 @@ const Navbar = () => {
 					<div className='px-[60px] max-md:px-[30px]  block mx-auto'>
 						<div className='relative flex justify-between pt-6'>
 							<span className='text-[#24D198] text-2xl font-bold font-koho'>
-								<Link to='/coursesssssss'>Course Categories</Link>
+								<Link to='/AllCoursesPage'>Course Categories</Link>
 							</span>
-							<Link to='/coursesssssss'>
+							<Link to='/AllCoursesPage'>
 								<span className='flex items-center gap-1 cursor-pointer p-3 text-black hover:text-[#24D198]'>
 									View All
 									<img
@@ -370,7 +370,8 @@ const Navbar = () => {
 										const course =
 											coursesDropdownItems[rowIndex * 5 + colIndex];
 										return (
-											<div
+											<Link
+												to='/AllCoursesPage'
 												key={colIndex}
 												className={`py-2 ${
 													colIndex === 4 ? 'text-end' : 'text-start'
@@ -379,12 +380,8 @@ const Navbar = () => {
 														? 'bg-white py-2 pl-10 pr-2'
 														: ''
 												}`}>
-												<Link
-													key={rowIndex}
-													to='/coursesssssss'>
-													{course}
-												</Link>
-											</div>
+												<Link key={rowIndex}>{course}</Link>
+											</Link>
 										);
 									})}
 								</div>

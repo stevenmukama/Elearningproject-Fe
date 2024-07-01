@@ -443,7 +443,7 @@ function AllCoursesPage() {
 					{Array.from({ length: totalPages }, (_, i) => (
 						<button
 							key={i + 1}
-							className={`mx-1 cursor-pointer px-3 py-1  rounded-full ${
+							className={`mx-1 cursor-pointer px-[10px] w-[50px] h-[50px] max-sm:h-[35px] max-sm:w-[35px] max-sm:text-[18px] rounded-full text-[22px] ${
 								currentPage === i + 1
 									? 'bg-[#24D198] border-[#24D198] text-[#1E1E1E]'
 									: 'bg-none border border-black '

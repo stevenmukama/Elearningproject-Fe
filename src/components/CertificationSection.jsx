@@ -61,7 +61,7 @@ function CertificationSection() {
 								{BenefitsCourses.map((courseBenefit) => (
 									<div
 										key={courseBenefit.id}
-										className='flex items-center gap-10 pb-5 text-start'>
+										className='mt-[22px] flex items-center gap-10 pb-5 text-xl max-sm:text-[14px] text-start '>
 										<div className='p-4 bg-white rounded-full '>
 											<img
 												src={courseBenefit.imgSrc}
