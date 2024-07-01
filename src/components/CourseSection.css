@@ -23,7 +23,7 @@
 }
 
 .card-intro {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .card-image,
@@ -104,6 +104,7 @@ img.number-image {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding-top: 10px;
 }
 
 .dollar-numbers-five {

@@ -417,7 +417,7 @@ function AllCoursesPage() {
 								</h2>
 								<p
 									className='card-intro max-sm:text-[14px] overflow-hidden'
-									style={{ height: '81px' }}>
+									style={{ height: '90px' }}>
 									{isSmallScreen
 										? truncateText(course.intro, 10)
 										: course.intro}

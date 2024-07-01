@@ -189,7 +189,7 @@ function CourseSection() {
 								</h2>
 								<p
 									className='card-intro max-sm:text-[14px] overflow-hidden'
-									style={{ height: '81px' }}>
+									style={{ height: '90px' }}>
 									{course.intro}
 								</p>
 								<div className='discount-section max-lg:text-[15px]'>
